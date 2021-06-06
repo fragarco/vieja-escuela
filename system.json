@@ -1,49 +1,37 @@
 {
-    "name": "mysystem",
-    "title": "Minimal World Building",
-    "description": "Many details here.",
-    "version": "1.0.0",
-    "templateVersion": 2,
-    "author": "John Doe",
-    "scripts": [
-      "scripts/system-script-1.js",
-      "scripts/system-script-2.js"
-    ],
+    "name": "vieja-escuela",
+    "title": "Vieja Escuela JdR",
+    "description": "Vieja Escuela JdR system for Foundry VTT",
+    "author": "Javier 'Dwayne Hicks' Garcia",
+    "authors": [],
+    "url": "https://github.com/fragarco/vieja-escuela",
+    "flags": {},
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "0.8.6",
+    "scripts": [],
     "esmodules": [
-      "scripts/system-module-1.mjs"
+      "module/viejaescuela.js"
     ],
     "styles": [
-      "styles/system-styles-1.css",
-      "styles/system-styles-2.css"
-    ],
-    "packs": [
-      {
-        "name": "monsters",
-        "label": "My Monsters",
-        "path": "packs/monsters.db",
-        "entity": "Actor"
-      },
-      {
-        "name": "items",
-        "label": "My Items",
-        "path": "packs/items.db",
-        "entity": "Item"
-      }
+      "css/viejaescuela.css"
     ],
     "languages": [
       {
-        "lang": "en",
-        "name": "English",
-        "path": "lang/en.json"
+        "lang": "es",
+        "name": "Spanish",
+        "path": "lang/es.json"
       }
     ],
-    "socket": false,
-    "initiative": "1d20",
-    "gridDistance": 10,
-    "gridUnits": "ft",
-    "primaryTokenAttribute": "resources.health",
-    "secondaryTokenAttribute": "resources.power",
-    "url": "https://your/hosted/system/repo/",
-    "manifest": "https://your/hosted/system/repo/system.json",
-    "download": "https://your/packaged/download/archive.zip"
-  }
+    "system": [],
+    "dependencies": [],
+    "socket": true,
+    "manifest": "https://github.com/fragarco/vieja-escuela/system.json",
+    "download": "https://github.com/fragarco/vieja-escuela/master.zip",
+    "protected": false,
+    "initiative": "",
+    "gridDistance": 3,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "",
+    "secondaryTokenAttribute": ""
+}
