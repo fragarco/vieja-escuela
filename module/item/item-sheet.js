@@ -16,7 +16,7 @@ export class VEItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/VE/templates/item";
+    const path = "systems/vieja-escuela/templates/item";
     // Return a single sheet for all item types.
     // return `${path}/item-sheet.html`;
 

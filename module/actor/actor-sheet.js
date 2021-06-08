@@ -8,7 +8,7 @@ export class VEActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["VE", "sheet", "actor"],
-      template: "systems/VE/templates/actor/actor-sheet.html",
+      template: "systems/vieja-escuela/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
@@ -33,7 +33,7 @@ export class VEActorSheet extends ActorSheet {
     data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
     // Prepare items.
-    if (this.actor.data.type == 'character') {
+    if (this.actor.data.type == 'pc-fantasy') {
       this._prepareCharacterItems(data);
     }
 
@@ -124,7 +124,7 @@ export class VEActorSheet extends ActorSheet {
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
-    if (this.actor.owner) {
+    if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
         if (li.classList.contains("inventory-header")) return;
