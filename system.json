@@ -1,37 +1,29 @@
 {
-    "name": "vieja-escuela",
-    "title": "Vieja Escuela JdR",
-    "description": "Vieja Escuela JdR system for Foundry VTT",
-    "author": "Javier 'Dwayne Hicks' Garcia",
-    "authors": [],
-    "url": "https://github.com/fragarco/vieja-escuela",
-    "flags": {},
-    "version": "0.0.1",
-    "minimumCoreVersion": "0.8.6",
-    "compatibleCoreVersion": "0.8.6",
-    "scripts": [],
-    "esmodules": [
-      "module/viejaescuela.js"
-    ],
-    "styles": [
-      "css/viejaescuela.css"
-    ],
-    "languages": [
-      {
-        "lang": "es",
-        "name": "Spanish",
-        "path": "lang/es.json"
-      }
-    ],
-    "system": [],
-    "dependencies": [],
-    "socket": true,
-    "manifest": "https://github.com/fragarco/vieja-escuela/system.json",
-    "download": "https://github.com/fragarco/vieja-escuela/master.zip",
-    "protected": false,
-    "initiative": "",
-    "gridDistance": 3,
-    "gridUnits": "m",
-    "primaryTokenAttribute": "",
-    "secondaryTokenAttribute": ""
+  "name": "vieja-escuela",
+  "title": "ViejaEscuela JdR",
+  "description": "Vieja Escuela JdR system for Foundry VTT",
+  "version": "0.0.1",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "0.8.6",
+  "templateVersion": 2,
+  "author": "Javier 'Dwayne Hicks' Garcia",
+  "esmodules": ["module/viejaescuela.js"],
+  "styles": ["css/viejaescuela.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    }
+  ],
+  "gridDistance": 3,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE"
 }
