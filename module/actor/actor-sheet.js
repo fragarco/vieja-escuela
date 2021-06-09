@@ -7,7 +7,7 @@ export class VEActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["VE", "sheet", "actor"],
+      classes: ["vieja-escuela", "sheet", "actor"],
       template: "systems/vieja-escuela/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
