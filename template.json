@@ -1,68 +1,160 @@
 {
   "Actor": {
     "types": ["pc-fantasy"],
-    "templates": {
-      "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        }
-      }
-    },
+    "templates": {},
     "pc-fantasy": {
-      "templates": ["base"],
-      "biography": "",
-      "attributes": {
+      "header": {
+        "name": {
+          "value": "",
+          "label": "Name"
+        },
+        "race": {
+          "value": "",
+          "label": "Race"
+        },
+        "class": {
+          "value": "",
+          "label": "Class"
+        },
         "level": {
-          "value": 1
+          "value": 1,
+          "min": 0,
+          "max": 20,
+          "label": "Level"
+        },
+        "xp": {
+          "value": 0,
+          "min": 0,
+          "max": 200,
+          "label": "Experience"
         }
       },
-      "abilities": {
+      "attributes": {
         "str": {
-          "value": 10
+          "value": 10,
+          "mod": 0,
+          "Label": "Strength"
         },
         "dex": {
-          "value": 10
+          "value": 10,
+          "mod": 0,
+          "label": "Dexterity"
         },
         "con": {
-          "value": 10
+          "value": 10,
+          "mod": 0,
+          "label": "Constitution"
         },
         "int": {
-          "value": 10
+          "value": 10,
+          "mod": 0,
+          "label": "Intelligence"
         },
         "wis": {
-          "value": 10
+          "value": 10,
+          "mod": 0,
+          "label": "Wisdom"
         },
         "cha": {
-          "value": 10
+          "value": 10,
+          "mod": 0,
+          "label": "Charisma"
         }
-      }
+      },
+      "skills": {
+        "alertness": {
+          "value": 0,
+          "label": "Alertness"
+        },
+        "communication": {
+          "value": 0,
+          "label": "Communication"
+        },
+        "lore": {
+          "value": 0,
+          "label": "Lore"
+        },
+        "manipulation": {
+          "value": 0,
+          "label": "Manipulation"
+        },
+        "stealth": {
+          "value": 0,
+          "label": "Stealth"
+        },
+        "survival": {
+          "value": 0,
+          "label": "Survival"
+        }
+      },
+      "traits": {
+        "hpMax": {
+          "value": 0,
+          "label": "Max Hit Points"
+        },
+        "hpCurrent": {
+          "value": 0,
+          "label": "Current Hit Points"
+        },
+        "mpMax": {
+          "value": 0,
+          "label": "Max Magic Points"
+        },
+        "mpCurrent": {
+          "value": 0,
+          "label": "Current Magic Points"
+        },
+        "mov": {
+          "value": 12,
+          "label": "Movement"
+        },
+        "def": {
+          "value": 10,
+          "label": "Defense"
+        },
+        "atk": {
+          "value": 0,
+          "label": "Attack Bonus"
+        },
+        "ins": {
+          "value": 0,
+          "label": "Instincts"
+        }
+      },
+      "biography": "",
+      "backgrounds": ""
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
-    "templates": {
-      "base": {
-        "description": ""
-      }
+    "types": ["weapon", "armor", "gear", "talent", "spell"],
+    "templates": {},
+    "weapon": {
+      "name": "",
+      "damage": "",
+      "rof": 1,
+      "range": 0,
+      "weight": 0,
+      "cost": 0
     },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0
+    "armor": {
+      "name": "",
+      "defMod": "",
+      "weight": 0,
+      "cost": 0
     },
-    "feature": {
-      "templates": ["base"]
+    "gear": {
+      "name": "",
+      "notes": "",
+      "weight": 0,
+      "cost": 0
+    },
+    "talent": {
+      "name": "",
+      "description": ""
     },
     "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+      "name": "",
+      "notes": ""
     }
   }
 }
