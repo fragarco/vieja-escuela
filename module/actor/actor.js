@@ -25,12 +25,13 @@ export class VEActor extends Actor {
   _prepareCharacterData(actorData) {
     const data = actorData.data;
 
-    // Make modifications to data here. For example:
-    // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, attribute] of Object.entries(data.attributes)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((attribute.value - 10) / 2);
+      // VE mods -2, -1, 0, +1, +2
+      if (attribute.value <= 3) attribute.mod = -2;
+      else if (attribute.value <= 6) attribute.mod = -1;
+      else if (attribute.value <= 14) attribute.mod = 0;
+      else if (attribute.value <= 17) attribure.mod = 1;
+      else attribute.mod = 2;
     }
   }
-
 }

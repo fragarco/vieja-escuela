@@ -52,44 +52,30 @@ export class VEActorSheet extends ActorSheet {
 
     // Initialize containers.
     const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
-    };
+    const talents = [];
+    const spells = [];
 
     // Iterate through items, allocating to containers
-    // let totalWeight = 0;
     for (let i of sheetData.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
-      if (i.type === 'item') {
+      if (['weapon','armor','gear'].includes(i.type)) {
         gear.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
+      // Append to talents.
+      else if (i.type === 'talent') {
+        talents.push(i);
       }
       // Append to spells.
       else if (i.type === 'spell') {
-        if (i.data.spellLevel != undefined) {
-          spells[i.data.spellLevel].push(i);
-        }
+        spells.push(i);
       }
     }
 
     // Assign and return
     sheetData.gear = gear;
-    sheetData.features = features;
+    sheetData.talents = talents;
     sheetData.spells = spells;
   }
 

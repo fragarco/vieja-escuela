@@ -4,10 +4,6 @@
     "templates": {},
     "pc-fantasy": {
       "header": {
-        "name": {
-          "value": "",
-          "label": "Name"
-        },
         "race": {
           "value": "",
           "label": "Race"
@@ -33,32 +29,32 @@
         "str": {
           "value": 10,
           "mod": 0,
-          "Label": "Strength"
+          "label": "VEJDR.str"
         },
         "dex": {
           "value": 10,
           "mod": 0,
-          "label": "Dexterity"
+          "label": "VEJDR.dex"
         },
         "con": {
           "value": 10,
           "mod": 0,
-          "label": "Constitution"
+          "label": "VEJDR.con"
         },
         "int": {
           "value": 10,
           "mod": 0,
-          "label": "Intelligence"
+          "label": "VEJDR.int"
         },
         "wis": {
           "value": 10,
           "mod": 0,
-          "label": "Wisdom"
+          "label": "VEJDR.wis"
         },
         "cha": {
           "value": 10,
           "mod": 0,
-          "label": "Charisma"
+          "label": "VEJDR.cha"
         }
       },
       "skills": {
@@ -88,21 +84,15 @@
         }
       },
       "traits": {
-        "hpMax": {
+        "hp": {
           "value": 0,
-          "label": "Max Hit Points"
+          "max": 0,
+          "label": "Hit Points"
         },
-        "hpCurrent": {
+        "mp": {
           "value": 0,
-          "label": "Current Hit Points"
-        },
-        "mpMax": {
-          "value": 0,
-          "label": "Max Magic Points"
-        },
-        "mpCurrent": {
-          "value": 0,
-          "label": "Current Magic Points"
+          "max": 0,
+          "label": "Magic Points"
         },
         "mov": {
           "value": 12,
@@ -129,7 +119,6 @@
     "types": ["weapon", "armor", "gear", "talent", "spell"],
     "templates": {},
     "weapon": {
-      "name": "",
       "damage": "",
       "rof": 1,
       "range": 0,
@@ -137,23 +126,19 @@
       "cost": 0
     },
     "armor": {
-      "name": "",
       "defMod": "",
       "weight": 0,
       "cost": 0
     },
     "gear": {
-      "name": "",
       "notes": "",
       "weight": 0,
       "cost": 0
     },
     "talent": {
-      "name": "",
       "description": ""
     },
     "spell": {
-      "name": "",
       "notes": ""
     }
   }

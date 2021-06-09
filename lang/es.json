@@ -1,1 +1,16 @@
-{}
+{
+    "VEJDR.Name": "Nombre",
+    "VEJDR.str": "FUE",
+    "VEJDR.dex": "DES",
+    "VEJDR.con": "CON",
+    "VEJDR.int": "INT",
+    "VEJDR.wis": "SAB",
+    "VEJDR.cha": "CAR",
+    "VEJDR.HP": "PV",
+    "VEJDR.MP": "Puntos Mágicos",
+    "VEJDR.Skills": "Habilidades",
+    "VEJDR.Description": "Descripción",
+    "VEJDR.Gear": "Equipo",
+    "VEJDR.Talents": "Talentos",
+    "VEJDR.Spells": "Conjuros"
+}
