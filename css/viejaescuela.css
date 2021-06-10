@@ -139,12 +139,17 @@
   margin-bottom: 10px;
 }
 
-.vieja-escuela .sheet-header .profile-img {
+.vieja-escuela .sheet-header .header-image-col {
+  display: block;
+  max-width: 150px;
+  padding: 15px;
+}
+
+.vieja-escuela .sheet-header .header-image-col .profile-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100px;
   flex: 0 0 100px;
   height: 100px;
-  margin-right: 10px;
 }
 
 .vieja-escuela .sheet-header .header-fields {

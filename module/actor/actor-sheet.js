@@ -158,11 +158,29 @@ export class VEActorSheet extends ActorSheet {
     const dataset = element.dataset;
 
     if (dataset.roll) {
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      let label = dataset.label ? `Rolling ${dataset.label}` : '';
-      roll.roll().toMessage({
+      let roll1 = new Roll(dataset.roll, this.actor.getRollData());
+      let roll2 = new Roll(dataset.roll, this.actor.getRollData());
+      let label = dataset.label ? 'Rolling ${dataset.label}' : '';
+
+      roll1.roll();
+      roll2.roll();
+      const msg = '\
+        <div class="dice-roll">\
+          <div class="dice-result">\
+            <div class="dice-formula">' + roll1.formula + '</div>\
+            <div class="dice-tooltip">\
+              <section class="tooltip-part">\
+                <div class="dice-formula">' + roll1.result + ' | ' + roll2.result + '</div>\
+              </section>\
+            </div>\
+            <h4 class="dice-total">' + roll1.total + ' | ' + roll2.total + '</h4>\
+          </div>\
+        </div>';
+    roll1.total + "|" + roll2.total;
+      ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label
+        flavor: label,
+        content: msg
       });
     }
   }

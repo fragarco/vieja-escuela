@@ -11,10 +11,15 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 
-  .profile-img {
-    flex: 0 0 100px;
-    height: 100px;
-    margin-right: 10px;
+  .header-image-col {
+    display: block;
+    max-width:150px;
+    padding:15px;
+
+    .profile-img {
+      flex: 0 0 100px;
+      height: 100px;
+    }
   }
 
   .header-fields {

@@ -1,40 +1,72 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
-
+<form class="{{cssClass}}" autocomplete="off">
     {{!-- Sheet Header --}}
     <header class="sheet-header">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <div class="header-image-col">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+            <div class="flexrow flex-group-center">                              
+                <label for="data.header.level.value" class="resource-label">{{localize "VEJDR.Level"}}</label>
+                <input type="text" name="data.header.level.value" value="{{data.header.level.value}}" data-dtype="Number"/>
+            </div>
+            <div class="flexrow flex-group-center">
+                <label for="data.header.xp.value" class="resource-label">{{localize "VEJDR.XP"}}</label>
+                <input type="text" name="data.header.xp.value" value="{{data.header.xp.value}}" data-dtype="Number"/>
+            </div>
+        </div>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "VEJDR.Name"}}"/></h1>
-            <div class="resources grid grid-2col">
-              <div class="resource flex-group-center">
-                  <label for="data.traits.hp.value" class="resource-label">{{localize "VEJDR.HP"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'VEJDR.Name'}}"/></h1>
+            <div class="grid grid-3col">
+                <div class="flexrow flex-group-center">
+                    <label for="data.header.race.value" class="resource-label">{{localize "VEJDR.Race"}}</label>
+                    <input type="text" name="data.header.race.value" value="{{data.header.race.value}}" data-dtype="String"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.header.class.value" class="resource-label">{{localize "VEJDR.Class"}}</label>
+                    <input type="text" name="data.header.class.value" value="{{data.header.class.value}}" data-dtype="String"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.traits.mov.value" class="resource-label">{{localize "VEJDR.Mov"}}</label>
+                    <input type="text" name="data.traits.mov.value" value="{{data.traits.mov.value}}" data-dtype="Number"/>
+                </div>
+            </div>
+            <div class="grid grid-3col">
+                {{#each data.attributes as |attribute key|}}
+                <div class="flexrow flex-group-center">
+                    <label for="data.attributes.{{key}}.value" class="resource-label">{{localize attribute.label}}</label>
+                    <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+                    <span class="rollable" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{numberFormat attribute.mod decimals=0 sign=true}}</span>
+                </div>
+                {{/each}}
+            </div>
+            <div class="grid grid-2col">
+                <div class="flexrow flex-group-center">
+                    <label for="data.traits.hp.value" class="resource-label">{{localize "VEJDR.HP"}}</label>
                     <input type="text" name="data.traits.hp.value" value="{{data.traits.hp.value}}" data-dtype="Number"/>
                     <span> / </span>
                     <input type="text" name="data.traits.hp.max" value="{{data.traits.hp.max}}" data-dtype="Number"/>
-                  </div>
-              </div>
-              <div class="resource flex-group-center">
-                  <label for="data.traits.mp.value" class="resource-label">{{localize "VEJDR.MP"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.traits.mp.value" class="resource-label">{{localize "VEJDR.MP"}}</label>
                     <input type="text" name="data.traits.mp.value" value="{{data.traits.mp.value}}" data-dtype="Number"/>
                     <span> / </span>
                     <input type="text" name="data.traits.mp.max" value="{{data.traits.mp.max}}" data-dtype="Number"/>
-                  </div>
-              </div>
-          </div>
-          <div class="abilities grid grid-3col">
-            {{#each data.attributes as |attribute key|}}
-              <div class="ability flexrow flex-group-center">
-                <label for="data.attributes.{{key}}.value" class="resource-label">{{localize attribute.label}}</label>
-                <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@attribute.{{key}}.mod" data-label="{{attribute.label}}">{{numberFormat attribute.mod decimals=0 sign=true}}</span>
-              </div>
-            {{/each}}
-          </div>
+                </div>
+            </div>
+            <div class="grid grid-3col">
+                <div class="flexrow flex-group-center">
+                    <label for="data.traits.atk.value" class="resource-label">{{localize "VEJDR.Atk"}}</label>
+                    <input type="text" name="data.traits.atk.value" value="{{data.traits.atk.value}}" data-dtype="Number"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.traits.def.value" class="resource-label">{{localize "VEJDR.Def"}}</label>
+                    <input type="text" name="data.traits.def.value" value="{{data.traits.def.value}}" data-dtype="Number"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.traits.ins.value" class="resource-label">{{localize "VEJDR.Ins"}}</label>
+                    <input type="text" name="data.traits.ins.value" value="{{data.traits.ins.value}}" data-dtype="Number"/>
+                </div>
+            </div>
         </div>
     </header>
-
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">{{localize "VEJDR.Description"}}</a>
@@ -55,11 +87,11 @@
         <div class="tab items" data-group="primary" data-tab="gear">
             <ol class="items-list">
                 <li class="item flexrow item-header">
-                  <div class="item-image"></div>
-                  <div class="item-name">{{localize "VEJDR.Name"}}</div>
-                  <div class="item-controls">
+                <div class="item-image"></div>
+                <div class="item-name">{{localize "VEJDR.Name"}}</div>
+                <div class="item-controls">
                     <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
-                  </div>
+                </div>
                 </li>
             {{#each gear as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
@@ -78,11 +110,11 @@
         <div class="tab features" data-group="primary" data-tab="talents">
             <ol class="items-list">
                 <li class="item flexrow item-header">
-                  <div class="item-image"></div>
-                  <div class="item-name">{{localize "VEJDR.Name"}}</div>
-                  <div class="item-controls">
+                <div class="item-image"></div>
+                <div class="item-name">{{localize "VEJDR.Name"}}</div>
+                <div class="item-controls">
                     <a class="item-control item-create" title="Create item" data-type="feature"><i class="fas fa-plus"></i> Add item</a>
-                  </div>
+                </div>
                 </li>
             {{#each talents as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
@@ -101,9 +133,9 @@
         <div class="tab spells" data-group="primary" data-tab="spells">
             <ol class="items-list">
                 <li class="item flexrow item-header">
-                  <div class="item-image"></div>
-                  <div class="item-name">{{localize "VEJDR.Name"}}</div>
-                  <div class="item-controls"></div>
+                <div class="item-image"></div>
+                <div class="item-name">{{localize "VEJDR.Name"}}</div>
+                <div class="item-controls"></div>
                 </li>
             {{#each spells as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
