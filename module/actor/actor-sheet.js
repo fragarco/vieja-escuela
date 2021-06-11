@@ -107,7 +107,8 @@ export class VEActorSheet extends ActorSheet {
     });
 
     // Rollable abilities.
-    html.find('.rollable').click(this._onRoll.bind(this));
+    html.find('.rollable').click(this._onSimpleDualRoll.bind(this));
+    html.find('.insroll').click(this._onInsRoll.bind(this));
 
     // Drag events for macros.
     if (this.actor.isOwner) {
@@ -148,40 +149,91 @@ export class VEActorSheet extends ActorSheet {
   }
 
   /**
-   * Handle clickable rolls.
+   * callback for clickable simple dual rolls.
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
+  async _onSimpleDualRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
+    await this.__handleSimpleDualRoll(dataset);
+  }
 
+  /**
+   * callback for INS rolls.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  async _onInsRoll(event) {
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const rolldata = this.actor.getRollData()
+    renderTemplate("systems/vieja-escuela/templates/dialog/insroll.html")
+    .then( (dlg) => {
+      const callroll = (attribute, name) => {
+        const newroll = dataset.roll + " + " + attribute;
+        const newlabel = dataset.label + "/" + game.i18n.localize(name);
+        this.__handleSimpleDualRoll({roll: newroll, label: newlabel});
+      }
+      new Dialog({
+        title: game.i18n.localize('VEJDR.INSDialog'),
+        content: dlg,
+        buttons: {
+          a: {
+            label: game.i18n.localize('VEJDR.str'),
+            callback: () => (callroll(rolldata.attributes.str.mod, "VEJDR.str")),
+          },
+          b: {
+            label: game.i18n.localize('VEJDR.dex'),
+            callback: () => (callroll(rolldata.attributes.dex.mod, "VEJDR.dex")),
+          },
+          c: {
+            label: game.i18n.localize('VEJDR.con'),
+            callback: () => (callroll(rolldata.attributes.con.mod, "VEJDR.con")),
+          },
+          d: {
+            label: game.i18n.localize('VEJDR.int'),
+            callback: () => (callroll(rolldata.attributes.int.mod, "VEJDR.int")),
+          },
+          e: {
+            label: game.i18n.localize('VEJDR.wis'),
+            callback: () => (callroll(rolldata.attributes.win.mod, "VEJDR.wis")),
+          },
+          f: {
+            label: game.i18n.localize('VEJDR.cha'),
+            callback: () => (callroll(rolldata.attributes.cha.mod, "VEJDR.cha")),
+          },
+        },
+        default: 'str'
+      }).render(true);
+    });
+  }
+
+    /**
+   * Handle simple dual rolls.
+   * @param {DOMSTringMap} dataset originating click event
+   * @private
+   */
+  async __handleSimpleDualRoll(dataset) {
+    const rollingstr = game.i18n.localize("VEJDR.Rolling") 
     if (dataset.roll) {
       let roll1 = new Roll(dataset.roll, this.actor.getRollData());
       let roll2 = new Roll(dataset.roll, this.actor.getRollData());
-      let label = dataset.label ? 'Rolling ${dataset.label}' : '';
+      let label = dataset.label ? `${rollingstr} ${dataset.label}` : '';
 
-      roll1.roll();
-      roll2.roll();
-      const msg = '\
-        <div class="dice-roll">\
-          <div class="dice-result">\
-            <div class="dice-formula">' + roll1.formula + '</div>\
-            <div class="dice-tooltip">\
-              <section class="tooltip-part">\
-                <div class="dice-formula">' + roll1.result + ' | ' + roll2.result + '</div>\
-              </section>\
-            </div>\
-            <h4 class="dice-total">' + roll1.total + ' | ' + roll2.total + '</h4>\
-          </div>\
-        </div>';
-    roll1.total + "|" + roll2.total;
-      ChatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        content: msg
-      });
+      await roll1.evaluate({async: true});
+      await roll2.evaluate({async: true});
+      renderTemplate("systems/vieja-escuela/templates/dice/simpledualroll.html",{roll1, roll2})
+      .then(
+        (msg) => {
+          ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: label,
+            content: msg,
+          });
+        }
+      );
     }
   }
 

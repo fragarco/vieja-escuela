@@ -31,9 +31,9 @@
             <div class="grid grid-3col">
                 {{#each data.attributes as |attribute key|}}
                 <div class="flexrow flex-group-center">
-                    <label for="data.attributes.{{key}}.value" class="resource-label">{{localize attribute.label}}</label>
+                    <label for="data.attributes.{{key}}.value" class="rollable resource-label" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
                     <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
-                    <span class="rollable" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{numberFormat attribute.mod decimals=0 sign=true}}</span>
+                    <span>{{numberFormat attribute.mod decimals=0 sign=true}}</span>
                 </div>
                 {{/each}}
             </div>
@@ -61,7 +61,7 @@
                     <input type="text" name="data.traits.def.value" value="{{data.traits.def.value}}" data-dtype="Number"/>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.traits.ins.value" class="resource-label">{{localize "VEJDR.Ins"}}</label>
+                    <label for="data.traits.ins.value" class="insroll resource-label" data-roll="1d20 + {{data.traits.ins.value}}" data-label="{{localize 'VEJDR.Ins'}}">{{localize "VEJDR.Ins"}}</label>
                     <input type="text" name="data.traits.ins.value" value="{{data.traits.ins.value}}" data-dtype="Number"/>
                 </div>
             </div>

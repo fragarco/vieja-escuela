@@ -4,6 +4,12 @@
   font-family: "Roboto", sans-serif;
 }
 
+.insroll:hover, .insroll:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
 .rollable:hover, .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;

@@ -20,5 +20,9 @@
     "VEJDR.Description": "Descripción",
     "VEJDR.Gear": "Equipo",
     "VEJDR.Talents": "Talentos",
-    "VEJDR.Spells": "Conjuros"
+    "VEJDR.Spells": "Conjuros",
+
+    "VEJDR.Rolling": "Tirada de",
+    "VEJDR.INSDialog": "Tirada de Instintos",
+    "VEJDR.InsRollDetails": "Selecciona el atributo relevante para esta tirada"
 }

@@ -30,7 +30,7 @@ export class VEActor extends Actor {
       if (attribute.value <= 3) attribute.mod = -2;
       else if (attribute.value <= 6) attribute.mod = -1;
       else if (attribute.value <= 14) attribute.mod = 0;
-      else if (attribute.value <= 17) attribure.mod = 1;
+      else if (attribute.value <= 17) attribute.mod = 1;
       else attribute.mod = 2;
     }
   }
