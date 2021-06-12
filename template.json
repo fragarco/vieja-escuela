@@ -60,27 +60,27 @@
       "skills": {
         "alertness": {
           "value": 0,
-          "label": "Alertness"
+          "label": "VEJDR.Alertness"
         },
         "communication": {
           "value": 0,
-          "label": "Communication"
+          "label": "VEJDR.Communication"
         },
         "lore": {
           "value": 0,
-          "label": "Lore"
+          "label": "VEJDR.Lore"
         },
         "manipulation": {
           "value": 0,
-          "label": "Manipulation"
+          "label": "VEJDR.Manipulation"
         },
         "stealth": {
           "value": 0,
-          "label": "Stealth"
+          "label": "VEJDR.Stealth"
         },
         "survival": {
           "value": 0,
-          "label": "Survival"
+          "label": "VEJDR.Survival"
         }
       },
       "traits": {
@@ -111,7 +111,7 @@
           "label": "Instincts"
         }
       },
-      "biography": "",
+      "description": "",
       "backgrounds": ""
     }
   },
@@ -131,7 +131,7 @@
       "cost": 0
     },
     "gear": {
-      "notes": "",
+      "description": "",
       "weight": 0,
       "cost": 0
     },
@@ -139,7 +139,7 @@
       "description": ""
     },
     "spell": {
-      "notes": ""
+      "description": ""
     }
   }
 }

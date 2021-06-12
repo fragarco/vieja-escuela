@@ -17,13 +17,18 @@
 }
 
 .grid,
-.grid-2col {
+.grid-1col {
   display: grid;
-  grid-column: span 2 / span 2;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column: span 1 / span 1;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
   margin: 10px 0;
   padding: 0;
+}
+
+.grid-2col {
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-3col {
@@ -186,7 +191,7 @@
 .vieja-escuela .sheet-body,
 .vieja-escuela .sheet-body .tab,
 .vieja-escuela .sheet-body .tab .editor {
-  height: 100%;
+  height: 50%;
 }
 
 .vieja-escuela .tox .tox-editor-container {

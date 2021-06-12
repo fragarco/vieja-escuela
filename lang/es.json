@@ -4,22 +4,37 @@
     "VEJDR.Race": "Raza",
     "VEJDR.Level": "Nivel",
     "VEJDR.XP": "Exp",
+    "VEJDR.Description": "Descripción",
+    "VEJDR.Backgrounds": "Trasfondos",
+
     "VEJDR.Mov": "Mov",
     "VEJDR.Ins": "Ins",
     "VEJDR.Atk": "Atq",
     "VEJDR.Def": "Def",
+    "VEJDR.HP": "PV",
+    "VEJDR.MP": "POD",
+
+    "VEJDR.Attributes": "Atributos",
     "VEJDR.str": "FUE",
     "VEJDR.dex": "DES",
     "VEJDR.con": "CON",
     "VEJDR.int": "INT",
     "VEJDR.wis": "SAB",
     "VEJDR.cha": "CAR",
-    "VEJDR.HP": "PV",
-    "VEJDR.MP": "POD",
+
     "VEJDR.Skills": "Habilidades",
-    "VEJDR.Description": "Descripción",
-    "VEJDR.Gear": "Equipo",
+    "VEJDR.Alertness": "Alerta",
+    "VEJDR.Communication": "Comunicación",
+    "VEJDR.Lore": "Conocimientos",
+    "VEJDR.Manipulation": "Manipulación",
+    "VEJDR.Stealth": "Subterfugio",
+    "VEJDR.Survival": "Superviviencia",
+
+    "VEJDR.AddTalent": "Nuevo Talento",
     "VEJDR.Talents": "Talentos",
+
+    "VEJDR.Gear": "Equipo",
+
     "VEJDR.Spells": "Conjuros",
 
     "VEJDR.Rolling": "Tirada de",
