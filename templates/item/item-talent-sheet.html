@@ -5,13 +5,17 @@
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{VEJDR.Name}}"/></h1>
         </div>
     </header>
+    
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "VEJDR.Description"}}</a>
+    </nav>
+
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        <div class="tab grid grid-1col">
-            <div>{{VEJDR.Description}}</div>
-            <div>
-                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-            </div>
+        {{!-- Description Tab --}}
+        <div class="tab description" data-group="primary" data-tab="description">
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>
