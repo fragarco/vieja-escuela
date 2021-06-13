@@ -1,0 +1,41 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{VEJDR.Name}}"/></h1>
+        </div>
+    </header>
+    
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">{{localize "VEJDR.Attributes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <div class="grid grid-3col">
+                <div class="flexrow flex-group-center">
+                    <label class="resource-label">{{localize VEJDR.Type}}</label>
+                    <select class="weapon-type" name="data.type">
+                        {{#select data.type}}
+                        <option value="onehand">{{localize VEJDR.WeapongOnehand}}</option>
+                        <option value="twohand">{{localize VEJDR.WeapongTwohand}}</option>
+                        <option value="missile">{{localize VEJDR.WeapongMissile}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.atacks" class="resource-label">{{localize VEJDR.Atacks}}</label>
+                    <input type="text" name="data.atacks" value="{{data.atacks}}" data-dtype="Number"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.atkmod" class="resource-label">{{localize VEJDR.Atkmod}}</label>
+                    <input type="text" name="data.atkmod" value="{{data.atkmod}}" data-dtype="Number"/>
+                </div>
+            </div>
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

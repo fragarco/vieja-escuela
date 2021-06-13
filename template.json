@@ -117,23 +117,27 @@
   },
   "Item": {
     "types": ["weapon", "armor", "gear", "talent", "spell"],
-    "templates": {},
+    "templates": {
+      "common": {
+        "description": "",
+        "weight": 1,
+        "cost": 0
+      }
+    },
     "weapon": {
+      "templates": ["common"],
+      "type": "",
+      "atacks": 1,
+      "atkmod": 0,
       "damage": "",
-      "rof": 1,
-      "range": 0,
-      "weight": 0,
-      "cost": 0
+      "range": 0
     },
     "armor": {
-      "defMod": "",
-      "weight": 0,
-      "cost": 0
+      "templates": ["common"],
+      "defmod": ""
     },
     "gear": {
-      "description": "",
-      "weight": 0,
-      "cost": 0
+      "templates": ["common"]
     },
     "talent": {
       "description": ""

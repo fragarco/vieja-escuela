@@ -71,6 +71,7 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="bio">Bio</a>
         <a class="item" data-tab="skills">{{localize "VEJDR.Skills"}}</a>
+        <a class="item" data-tab="weapons">{{localize "VEJDR.Weapons"}}</a>
         <a class="item" data-tab="gear">{{localize "VEJDR.Gear"}}</a>
         <a class="item" data-tab="spells">{{localize "VEJDR.Spells"}}</a>
     </nav>
@@ -124,6 +125,29 @@
                     </ol>
                 </div>
             </div>
+        </div>
+
+        {{!-- Owned Weapons Tab --}}
+        <div class="tab items" data-group="primary" data-tab="weapons">
+            <ol class="items-list">
+                <li class="item flexrow item-header">
+                <div class="item-image"></div>
+                <div class="item-name">{{localize "VEJDR.Name"}}</div>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
+                </div>
+                </li>
+            {{#each weapons as |weapon id|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                    <h4 class="item-name">{{weapon.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+            </ol>
         </div>
 
         {{!-- Owned Gear Tab --}}

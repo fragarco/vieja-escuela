@@ -1,5 +1,6 @@
 {
     "VEJDR.Name": "Nombre",
+    "VEJDR.Type": "Tipo",
     "VEJDR.Class": "Clase",
     "VEJDR.Race": "Raza",
     "VEJDR.Level": "Nivel",
@@ -32,6 +33,11 @@
 
     "VEJDR.AddTalent": "Nuevo Talento",
     "VEJDR.Talents": "Talentos",
+
+    "VEJDR.Weapons": "Armas",
+    "VEJDR.WeapongOnehand": "1M",
+    "VEJDR.WeapongTwohand": "2M",
+    "VEJDR.WeapongMissile": "Disp",
 
     "VEJDR.Gear": "Equipo",
 
