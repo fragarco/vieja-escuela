@@ -11,7 +11,7 @@ export class VEActorSheet extends ActorSheet {
       template: "systems/vieja-escuela/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "bio" }]
     });
   }
 
@@ -52,6 +52,8 @@ export class VEActorSheet extends ActorSheet {
 
     // Initialize containers.
     const gear = [];
+    const weapons = [];
+    const armor = [];
     const talents = [];
     const spells = [];
 
@@ -60,21 +62,19 @@ export class VEActorSheet extends ActorSheet {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
-      if (['weapon','armor','gear'].includes(i.type)) {
-        gear.push(i);
-      }
-      // Append to talents.
-      else if (i.type === 'talent') {
-        talents.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        spells.push(i);
+      switch (i.type) {
+        case 'weapon': gear.push(i); weapons.push(i); break;
+        case 'armor':  gear.push(i); armor.push(i); break;
+        case 'gear':   get.push(i); break;
+        case 'talent': talents.push(i); break;
+        case 'spell':  spells.push(i); break;
       }
     }
 
     // Assign and return
     sheetData.gear = gear;
+    sheetData.weapons = weapons;
+    sheetData.armor = armor;
     sheetData.talents = talents;
     sheetData.spells = spells;
   }

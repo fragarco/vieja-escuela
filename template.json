@@ -119,17 +119,22 @@
     "types": ["weapon", "armor", "gear", "talent", "spell"],
     "templates": {
       "common": {
+        "number": 1,
         "description": "",
         "weight": 1,
-        "cost": 0
+        "cost": {
+          "mo": 0,
+          "mp": 0,
+          "mc": 0
+        }
       }
     },
     "weapon": {
       "templates": ["common"],
-      "type": "",
-      "atacks": 1,
+      "weapontype": "",
+      "attacks": 1,
       "atkmod": 0,
-      "damage": "",
+      "damage": "1d4",
       "range": 0
     },
     "armor": {

@@ -33,7 +33,6 @@ export class VEItemSheet extends ItemSheet {
     // Re-define the template data references.
     data.item = itemData;
     data.data = itemData.data;
-
     return data;
   }
 

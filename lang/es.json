@@ -39,10 +39,23 @@
     "VEJDR.WeapongTwohand": "2M",
     "VEJDR.WeapongMissile": "Disp",
 
+    "VEJDR.Combat": "Combate",
+    "VEJDR.Attacks": "Ataques",
+    "VEJDR.AtkMod": "Mod",
+    "VEJDR.Range": "Alcance",
+    "VEJDR.Damage": "Daño",
+    
     "VEJDR.Gear": "Equipo",
+    "VEJDR.Number": "Existencias",
+    "VEJDR.Weight": "Carga",
+    "VEJDR.Cost": "Coste",
+    "VEJDR.CostMO": "mo",
+    "VEJDR.CostMP": "mp",
+    "VEJDR.CostMC": "mc",
 
     "VEJDR.Spells": "Conjuros",
 
+    "VEJDR.AddItem": "Nuevo",
     "VEJDR.Rolling": "Tirada de",
     "VEJDR.INSDialog": "Tirada de Instintos",
     "VEJDR.InsRollDetails": "Selecciona el atributo relevante para esta tirada"
