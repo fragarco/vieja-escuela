@@ -4,7 +4,7 @@
   "description": "Vieja Escuela JdR system for Foundry VTT",
   "version": "0.0.1",
   "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "0.8.7",
   "templateVersion": 2,
   "author": "Javier 'Dwayne Hicks' Garcia",
   "esmodules": ["module/viejaescuela.js"],
