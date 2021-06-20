@@ -139,7 +139,7 @@
     },
     "armor": {
       "templates": ["common"],
-      "defmod": ""
+      "defmod": 0
     },
     "gear": {
       "templates": ["common"]

@@ -41,9 +41,11 @@
 
     "VEJDR.Combat": "Combate",
     "VEJDR.Attacks": "Ataques",
-    "VEJDR.AtkMod": "Mod",
+    "VEJDR.AtkMod": "Mod Atq",
     "VEJDR.Range": "Alcance",
     "VEJDR.Damage": "Daño",
+    "VEJDR.Armor": "Protecciones",
+    "VEJDR.DefMod": "Mod Def",
     
     "VEJDR.Gear": "Equipo",
     "VEJDR.Number": "Existencias",
