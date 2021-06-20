@@ -65,7 +65,7 @@ export class VEActorSheet extends ActorSheet {
       switch (i.type) {
         case 'weapon': gear.push(i); weapons.push(i); break;
         case 'armor':  gear.push(i); armor.push(i); break;
-        case 'gear':   get.push(i); break;
+        case 'gear':   gear.push(i); break;
         case 'talent': talents.push(i); break;
         case 'spell':  spells.push(i); break;
       }
