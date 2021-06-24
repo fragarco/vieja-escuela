@@ -133,7 +133,9 @@
       "templates": ["common"],
       "weapontype": "",
       "attacks": 1,
-      "atkmod": 0,
+      "cacmod": 0,
+      "prjmod": 0,
+      "addmod": 0,
       "damage": "1d4",
       "range": 0
     },

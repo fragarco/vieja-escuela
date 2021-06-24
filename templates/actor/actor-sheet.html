@@ -109,7 +109,7 @@
                         <div class="item-image"></div>
                         <div class="item-name">{{localize "VEJDR.Talents"}}</div>
                         <div class="item-controls">
-                            <a class="item-control item-create" title="Create item" data-type="talent"><i class="fas fa-plus"></i>{{VEJDR.AddTalent}}</a>
+                            <a class="item-control item-create" title="{{localize 'VEJDR.AddTalent'}}" data-type="talent"><i class="fas fa-plus"></i>{{localize "VEJDR.AddTalent"}}</a>
                         </div>
                         </li>
                     {{#each talents as |item id|}}
@@ -117,8 +117,8 @@
                             <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                             <h4 class="item-name">{{item.name}}</h4>
                             <div class="item-controls">
-                                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                                <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
                             </div>
                         </li>
                     {{/each}}
@@ -133,18 +133,21 @@
                 <li class="item flexrow item-header">
                     <div class="item-image"></div>
                     <div class="item-name">{{localize "VEJDR.Weapons"}}</div>
-                    <div class="item-controls">
-                        <a class="item-control item-create" title="Create item" data-type="weapon"><i class="fas fa-plus"></i> {{localize "VEJDR.AddItem"}}</a>
-                    </div>
+                    <div class="item-name"></div>
+                    <div class="item-name">{{localize "VEJDR.HandToHand"}}</div>
+                    <div class="item-name">{{localize "VEJDR.Missile"}}</div>
+                    <div class="item-name">{{localize "VEJDR.Damage"}}</div>
+                    <div class="item-name">{{localize "VEJDR.Range"}}</div>
                 </li>
             {{#each weapons as |weapon id|}}
                 <li class="item flexrow" data-item-id="{{weapon._id}}">
                     <div class="item-image"><img src="{{weapon.img}}" title="{{weapon.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{weapon.name}}</h4>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    <span></span>
+                    <span class="rollable" data-roll="1d20 + {{weapon.data.cacmod}}" data-label="{{localize 'VEJDR.HandToHand'}}">{{numberFormat weapon.data.cacmod decimals=0 sign=true}}</span>
+                    <span class="rollable" data-roll="1d20 + {{weapon.data.cacmod}}" data-label="{{localize 'VEJDR.Missile'}}">{{numberFormat weapon.data.prjmod decimals=0 sign=true}}</span>
+                    <span>{{weapon.data.damage}}</span>
+                    <span>{{weapon.data.range}}</span>
                 </li>
             {{/each}}
             </ol>
@@ -152,18 +155,21 @@
                 <li class="item flexrow item-header">
                     <div class="item-image"></div>
                     <div class="item-name">{{localize "VEJDR.Armor"}}</div>
-                    <div class="item-controls">
-                        <a class="item-control item-create" title="Create item" data-type="armor"><i class="fas fa-plus"></i> {{localize "VEJDR.AddItem"}}</a>
-                    </div>
+                    <div class="item-name"></div>
+                    <div class="item-name">{{localize "VEJDR.Def"}}</div>
+                    <div class="item-name"></div>
+                    <div class="item-name"></div>
+                    <div class="item-name"></div>
                 </li>
             {{#each armor as |armor id|}}
                 <li class="item flexrow" data-item-id="{{armor._id}}">
                     <div class="item-image"><img src="{{armor.img}}" title="{{armor.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{armor.name}}</h4>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    <span></span>
+                    <span>{{numberFormat armor.data.defmod decimals=0 sign=true}}</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </li>
             {{/each}}
             </ol>
@@ -176,7 +182,7 @@
                 <div class="item-image"></div>
                 <div class="item-name">{{localize "VEJDR.Name"}}</div>
                 <div class="item-controls">
-                    <a class="item-control item-create" title="Create item" data-type="gear"><i class="fas fa-plus"></i> {{localize "VEJDR.AddItem"}}</a>
+                    <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="gear"><i class="fas fa-plus"></i> {{localize "VEJDR.AddItem"}}</a>
                 </div>
                 </li>
             {{#each gear as |item id|}}
@@ -184,8 +190,8 @@
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>
                     <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
                     </div>
                 </li>
             {{/each}}
@@ -205,8 +211,8 @@
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>
                     <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
                     </div>
                 </li>
             {{/each}}

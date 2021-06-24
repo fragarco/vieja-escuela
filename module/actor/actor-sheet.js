@@ -63,7 +63,12 @@ export class VEActorSheet extends ActorSheet {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       switch (i.type) {
-        case 'weapon': gear.push(i); weapons.push(i); break;
+        case 'weapon':
+          item.cacmod = item.addmod + actorData.data.attributes.str.mod;
+          item.prjmod = item.addmod + actorData.data.attributes.dex.mod;
+          gear.push(i);
+          weapons.push(i);
+          break;
         case 'armor':  gear.push(i); armor.push(i); break;
         case 'gear':   gear.push(i); break;
         case 'talent': talents.push(i); break;

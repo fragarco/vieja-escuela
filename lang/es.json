@@ -40,8 +40,10 @@
     "VEJDR.WeapongMissile": "Disp",
 
     "VEJDR.Combat": "Combate",
+    "VEJDR.HandToHand": "CaC",
+    "VEJDR.Missile": "Dist",
     "VEJDR.Attacks": "Ataques",
-    "VEJDR.AtkMod": "Mod Atq",
+    "VEJDR.AddMod": "Especial",
     "VEJDR.Range": "Alcance",
     "VEJDR.Damage": "Daño",
     "VEJDR.Armor": "Protecciones",
@@ -58,6 +60,8 @@
     "VEJDR.Spells": "Conjuros",
 
     "VEJDR.AddItem": "Nuevo",
+    "VEJDR.DelItem": "Borrar",
+    "VEJDR.ModItem": "Editar",
     "VEJDR.Rolling": "Tirada de",
     "VEJDR.INSDialog": "Tirada de Instintos",
     "VEJDR.InsRollDetails": "Selecciona el atributo relevante para esta tirada"
