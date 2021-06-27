@@ -31,8 +31,8 @@ Hooks.once('init', async function() {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("VE", VEItemSheet, { makeDefault: true });
 
-  // If you need to add Handlebars helpers, here are a few useful examples:
-  Handlebars.registerHelper('concat', function() {
+  // Handlebars helpers, we use prefix "ve_" to avoid problems with other modules
+  Handlebars.registerHelper('ve_concat', function() {
     var outStr = '';
     for (var arg in arguments) {
       if (typeof arguments[arg] != 'object') {
@@ -42,8 +42,12 @@ Hooks.once('init', async function() {
     return outStr;
   });
 
-  Handlebars.registerHelper('toLowerCase', function(str) {
+  Handlebars.registerHelper('ve_toLowerCase', function(str) {
     return str.toLowerCase();
+  });
+
+  Handlebars.registerHelper('ve_max', function(num1, num2) {
+    return Math.max(num1, num2);
   });
 });
 

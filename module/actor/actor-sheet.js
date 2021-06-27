@@ -114,7 +114,7 @@ export class VEActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').click(this._onSimpleDualRoll.bind(this));
     html.find('.insroll').click(this._onInsRoll.bind(this));
-
+    html.find('.attackroll').click(this._onAttackRoll.bind(this));
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
@@ -215,7 +215,26 @@ export class VEActorSheet extends ActorSheet {
     });
   }
 
-    /**
+  /**
+   * callback for clickable CaC attack rolls.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+   async _onAttackRoll(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const rolldata = this.actor.getRollData();
+    // reaplace attribute name by its value if it appears in the damage roll
+    const attributes = Object.keys(rolldata.attributes);
+    attributes.forEach((a) => {
+      const label = game.i18n.localize(rolldata.attributes[a].label);
+      dataset.damage = dataset.damage.replace(label, rolldata.attributes[a].mod);
+    });
+    await this.__handleAttackDualRoll(dataset);
+  }
+
+  /**
    * Handle simple dual rolls.
    * @param {DOMSTringMap} dataset originating click event
    * @private
@@ -242,4 +261,32 @@ export class VEActorSheet extends ActorSheet {
     }
   }
 
+  /**
+   * Handle simple dual rolls.
+   * @param {DOMSTringMap} dataset originating click event
+   * @private
+   */
+   async __handleAttackDualRoll(dataset) {
+    const rollingstr = game.i18n.localize("VEJDR.AttackWith");
+    if (dataset.roll) {
+      let roll1 = new Roll(dataset.roll, this.actor.getRollData());
+      let roll2 = new Roll(dataset.roll, this.actor.getRollData());
+      let damage = new Roll(dataset.damage, this.actor.getRollData());
+      let label = dataset.label ? `${rollingstr} ${dataset.label}` : '';
+
+      await roll1.evaluate({async: true});
+      await roll2.evaluate({async: true});
+      await damage.evaluate({async: true});
+      renderTemplate("systems/vieja-escuela/templates/dice/attackdualroll.html",{roll1, roll2, damage})
+      .then(
+        (msg) => {
+          ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: label,
+            content: msg,
+          });
+        }
+      );
+    }
+  }
 }

@@ -144,8 +144,8 @@
                     <div class="item-image"><img src="{{weapon.img}}" title="{{weapon.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{weapon.name}}</h4>
                     <span></span>
-                    <span class="rollable" data-roll="1d20 + {{weapon.data.cacmod}}" data-label="{{localize 'VEJDR.HandToHand'}}">{{numberFormat weapon.data.cacmod decimals=0 sign=true}}</span>
-                    <span class="rollable" data-roll="1d20 + {{weapon.data.cacmod}}" data-label="{{localize 'VEJDR.Missile'}}">{{numberFormat weapon.data.prjmod decimals=0 sign=true}}</span>
+                    <span class="attackroll resource-label" data-damage="{{weapon.data.damage}}" data-roll="1d20 + {{weapon.data.cacmod}}" data-label="{{weapon.name}}">{{numberFormat weapon.data.cacmod decimals=0 sign=true}}</span>
+                    <span class="attackroll resource-label" data-damage="{{weapon.data.damage}}" data-roll="1d20 + {{weapon.data.prjmod}}" data-label="{{weapon.name}}">{{numberFormat weapon.data.prjmod decimals=0 sign=true}}</span>
                     <span>{{weapon.data.damage}}</span>
                     <span>{{weapon.data.range}}</span>
                 </li>
