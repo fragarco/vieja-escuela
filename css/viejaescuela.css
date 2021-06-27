@@ -4,13 +4,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-.insroll:hover, .insroll:focus {
-  color: #000;
-  text-shadow: 0 0 10px red;
-  cursor: pointer;
-}
-
-.rollable:hover, .rollable:focus {
+.rollable:hover, .rollable:focus,
+.insroll:hover,
+.insroll:focus,
+.attackroll:hover,
+.attackroll:focus {
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
@@ -191,7 +189,7 @@
 .vieja-escuela .sheet-body,
 .vieja-escuela .sheet-body .tab,
 .vieja-escuela .sheet-body .tab .editor {
-  height: 50%;
+  height: 100%;
 }
 
 .vieja-escuela .tox .tox-editor-container {
