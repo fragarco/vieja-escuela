@@ -95,13 +95,15 @@
         {{!-- Owned Skills Tab --}}
         <div class="tab skills" data-group="primary" data-tab="skills">
             <div class="grid grid-2col">
-                <div class="grid grid-1col">
+                <div>
+                    <ol class="items-list">
                     {{#each data.skills as |skill key|}}
-                    <div class="flexrow flex-group-center">
-                        <label for="data.skills.{{key}}.value" class="rollable resource-label" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</label>
-                        <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
-                    </div>
+                        <li class="item flexrow">
+                            <h4 class="rollable resource-label" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</h4>
+                            <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+                        </li>
                     {{/each}}
+                    </ol>
                 </div>
                 <div>
                     <ol class="items-list">

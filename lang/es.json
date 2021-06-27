@@ -24,6 +24,7 @@
     "VEJDR.cha": "CAR",
 
     "VEJDR.Skills": "Habilidades",
+    "VEJDR.Ranks": "Rango",
     "VEJDR.Alertness": "Alerta",
     "VEJDR.Communication": "Comunicación",
     "VEJDR.Lore": "Conocimientos",
@@ -31,7 +32,7 @@
     "VEJDR.Stealth": "Subterfugio",
     "VEJDR.Survival": "Superviviencia",
 
-    "VEJDR.AddTalent": "Nuevo Talento",
+    "VEJDR.AddTalent": "Nuevo",
     "VEJDR.Talents": "Talentos",
 
     "VEJDR.Weapons": "Armas",

@@ -36,7 +36,7 @@ export class VEActorSheet extends ActorSheet {
     if (this.actor.data.type == 'pc-fantasy') {
       this._prepareCharacterItems(data);
     }
-
+    console.log("AAA actor-sheet data", data);
     return data;
   }
 
