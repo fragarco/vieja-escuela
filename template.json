@@ -116,7 +116,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "gear", "talent", "spell"],
+    "types": ["weapon-fantasy", "armor-fantasy", "gear-fantasy", "talent", "spell"],
     "templates": {
       "gear-common": {
         "number": 1,
