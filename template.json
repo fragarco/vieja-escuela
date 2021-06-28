@@ -121,7 +121,9 @@
       "gear-common": {
         "number": 1,
         "description": "",
-        "weight": 1
+        "weight": 1,
+        "capacity": 0,
+        "carried": true
       },
       "weapon-basic": {
         "weapontype": "",

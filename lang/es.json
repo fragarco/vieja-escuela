@@ -55,6 +55,7 @@
     "VEJDR.Gear": "Equipo",
     "VEJDR.Number": "Existencias",
     "VEJDR.Weight": "Carga",
+    "VEJDR.Capacity": "Capacidad",
     "VEJDR.Cost": "Coste",
     "VEJDR.CostMO": "mo",
     "VEJDR.CostMP": "mp",
