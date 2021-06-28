@@ -34,9 +34,8 @@ export class VEActorSheet extends ActorSheet {
 
     // Prepare items.
     if (this.actor.data.type == 'pc-fantasy') {
-      this._prepareCharacterItems(data);
+      this._prepareFantasyCharacterItems(data);
     }
-    console.log("AAA actor-sheet data", data);
     return data;
   }
 
@@ -47,7 +46,7 @@ export class VEActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareCharacterItems(sheetData) {
+  _prepareFantasyCharacterItems(sheetData) {
     const actorData = sheetData.actor;
 
     // Initialize containers.
@@ -63,14 +62,14 @@ export class VEActorSheet extends ActorSheet {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       switch (i.type) {
-        case 'weapon':
+        case 'weapon-fantasy':
           item.cacmod = item.addmod + actorData.data.attributes.str.mod;
           item.prjmod = item.addmod + actorData.data.attributes.dex.mod;
           gear.push(i);
           weapons.push(i);
           break;
-        case 'armor':  gear.push(i); armor.push(i); break;
-        case 'gear':   gear.push(i); break;
+        case 'armor-fantasy':  gear.push(i); armor.push(i); break;
+        case 'gear-fantasy':   gear.push(i); break;
         case 'talent': talents.push(i); break;
         case 'spell':  spells.push(i); break;
       }

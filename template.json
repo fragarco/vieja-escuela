@@ -118,10 +118,24 @@
   "Item": {
     "types": ["weapon", "armor", "gear", "talent", "spell"],
     "templates": {
-      "common": {
+      "gear-common": {
         "number": 1,
         "description": "",
-        "weight": 1,
+        "weight": 1
+      },
+      "weapon-basic": {
+        "weapontype": "",
+        "attacks": 1,
+        "cacmod": 0,
+        "prjmod": 0,
+        "addmod": 0,
+        "damage": "1d4",
+        "range": 0
+      },
+      "armor-basic": {
+        "defmod": 0
+      },
+      "cost-fantasy": {
         "cost": {
           "mo": 0,
           "mp": 0,
@@ -129,22 +143,14 @@
         }
       }
     },
-    "weapon": {
-      "templates": ["common"],
-      "weapontype": "",
-      "attacks": 1,
-      "cacmod": 0,
-      "prjmod": 0,
-      "addmod": 0,
-      "damage": "1d4",
-      "range": 0
+    "weapon-fantasy": {
+      "templates": ["gear-common", "cost-fantasy", "weapon-basic"]
     },
-    "armor": {
-      "templates": ["common"],
-      "defmod": 0
+    "armor-fantasy": {
+      "templates": ["gear-common", "cost-fantasy", "armor-basic"]
     },
-    "gear": {
-      "templates": ["common"]
+    "gear-fantasy": {
+      "templates": ["gear-common", "cost-fantasy"]
     },
     "talent": {
       "description": ""
