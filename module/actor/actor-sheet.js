@@ -51,6 +51,7 @@ export class VEActorSheet extends ActorSheet {
 
     // Initialize containers.
     const gear = [];
+    const stored = [];
     const weapons = [];
     const armor = [];
     const talents = [];
@@ -65,11 +66,16 @@ export class VEActorSheet extends ActorSheet {
         case 'weapon-fantasy':
           item.cacmod = item.addmod + actorData.data.attributes.str.mod;
           item.prjmod = item.addmod + actorData.data.attributes.dex.mod;
-          gear.push(i);
+          item.stored ? stored.push(i) : gear.push(i);
           weapons.push(i);
           break;
-        case 'armor-fantasy':  gear.push(i); armor.push(i); break;
-        case 'gear-fantasy':   gear.push(i); break;
+        case 'armor-fantasy':
+          item.stored ? stored.push(i) : gear.push(i);
+          armor.push(i);
+          break;
+        case 'gear-fantasy':
+          item.stored ? stored.push(i) : gear.push(i);
+          break;
         case 'talent': talents.push(i); break;
         case 'spell':  spells.push(i); break;
       }
@@ -77,6 +83,7 @@ export class VEActorSheet extends ActorSheet {
 
     // Assign and return
     sheetData.gear = gear;
+    sheetData.stored = stored;
     sheetData.weapons = weapons;
     sheetData.armor = armor;
     sheetData.talents = talents;

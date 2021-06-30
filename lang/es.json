@@ -53,6 +53,8 @@
     "VEJDR.DefMod": "Mod Def",
     
     "VEJDR.Gear": "Equipo",
+    "VEJDR.Carried": "Equipado",
+    "VEJDR.Stored": "Almacenado",
     "VEJDR.Number": "Existencias",
     "VEJDR.Weight": "Carga",
     "VEJDR.Capacity": "Capacidad",
