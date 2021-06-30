@@ -17,7 +17,6 @@ export class VEActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (actorData.type === 'pc-fantasy') this._prepareCharacterData(actorData);
-    console.log("AAA actorData", actorData);
   }
 
   /**

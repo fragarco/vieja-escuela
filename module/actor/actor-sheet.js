@@ -66,12 +66,20 @@ export class VEActorSheet extends ActorSheet {
         case 'weapon-fantasy':
           item.cacmod = item.addmod + actorData.data.attributes.str.mod;
           item.prjmod = item.addmod + actorData.data.attributes.dex.mod;
-          item.stored ? stored.push(i) : gear.push(i);
-          weapons.push(i);
+          if (item.stored) {
+            stored.push(i);
+           } else {
+            gear.push(i);
+            weapons.push(i);
+          }
           break;
         case 'armor-fantasy':
-          item.stored ? stored.push(i) : gear.push(i);
-          armor.push(i);
+          if (item.stored) {
+            stored.push(i);
+          } else {
+            gear.push(i);
+            armor.push(i);
+          }
           break;
         case 'gear-fantasy':
           item.stored ? stored.push(i) : gear.push(i);
@@ -118,11 +126,13 @@ export class VEActorSheet extends ActorSheet {
     });
 
     // Carry/Store inventory item
-    html.find('.storable').contextmenu(ev => {
+    html.find('.storable').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
-      item.stored = !item.stored;
+      const stored = !item.data.data.stored;
+      item.update({'data.stored': stored});
     });
+
     // Rollable abilities.
     html.find('.rollable').click(this._onSimpleDualRoll.bind(this));
     html.find('.insroll').click(this._onInsRoll.bind(this));

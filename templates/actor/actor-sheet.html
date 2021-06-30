@@ -187,10 +187,10 @@
             {{#each gear as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4 class="item-name storable">{{item.name}}</h4>
-                    <span>{{item.number}}</span>
-                    <span>{{item.weight}}</span>
-                    <span>{{item.capacity}}</span>
+                    <h4 class="storable">{{item.name}}</h4>
+                    <span>{{item.data.number}}</span>
+                    <span>{{item.data.weight}}</span>
+                    <span>{{item.data.capacity}}</span>
                     <div class="item-controls">
                         <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
@@ -209,10 +209,10 @@
             {{#each stored as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4 class="item-name storable">{{item.name}}</h4>
-                    <span>{{item.number}}</span>
-                    <span>{{item.weight}}</span>
-                    <span>{{item.capacity}}</span>
+                    <h4 class="storable">{{item.name}}</h4>
+                    <span>{{item.data.number}}</span>
+                    <span>{{item.data.weight}}</span>
+                    <span>{{item.data.capacity}}</span>
                     <div class="item-controls">
                         <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
@@ -234,7 +234,7 @@
                 <li class="item flexrow" data-item-id="{{item._id}}">
                     <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                     <h4 class="item-name">{{item.name}}</h4>
-                    <span>{{item.description}}</span>
+                    <span>{{item.data.description}}</span>
                     <div class="item-controls">
                         <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
