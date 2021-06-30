@@ -117,6 +117,12 @@ export class VEActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
+    // Carry/Store inventory item
+    html.find('.storable').contextmenu(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      item.stored = !item.stored;
+    });
     // Rollable abilities.
     html.find('.rollable').click(this._onSimpleDualRoll.bind(this));
     html.find('.insroll').click(this._onInsRoll.bind(this));
