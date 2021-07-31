@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Cabin Condensed";
+  src: url("../assets/fonts/CabinCondensed.ttf");
+}
+
+@font-face {
+  font-family: "Cabin Condensed";
+  src: url("../assets/fonts/CabinCondensedMedium.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cabin Condensed";
+  src: url("../assets/fonts/CabinCondensedBold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Cabin Condensed";
+  src: url("../assets/fonts/CabinCondensedSemibold.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+.regular-font {
+  font-family: "Cabin Condensed", sans-serif;
+  font-style: normal;
+}
+  
+.bold-font {
+  font-family: "Cabin Condensed", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+  
+.semi-font {
+  font-family: "Cabin Condensed", sans-serif;
+  font-style: italic;
+}
+  
+.semibold-font {
+  font-family: "Cabin Condensed", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+  

@@ -1,0 +1,28 @@
+
+.vieja-escuela.sheet.actor {
+    min-width: 700px;
+    min-height: 600px;
+}
+
+.vieja-escuela.sheet .avatar img {
+    flex: 0 0 160px;
+    max-width: 160px;
+    height: 160px;
+}
+
+.vieja-escuela.sheet .avatar img:hover {
+    box-shadow: 0 0 10px var(--color-highlight);
+    cursor: pointer;
+}
+
+.vieja-escuela.sheet .sheet-header h1.charname {
+    height: 60px;
+    padding: 0;
+}
+
+.vieja-escuela.sheet .sheet-header h1.charname input {
+    height: 40px;
+    margin: 10px 0;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
