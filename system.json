@@ -8,7 +8,11 @@
   "templateVersion": 2,
   "author": "Javier 'Dwayne Hicks' Garcia",
   "esmodules": ["module/viejaescuela.js"],
-  "styles": ["css/viejaescuela.css"],
+  "styles": [
+    "css/fonts.css",
+    "css/viejaescuela.css",
+    "css/actor.css"
+  ],
   "scripts": [],
   "packs": [],
   "languages": [

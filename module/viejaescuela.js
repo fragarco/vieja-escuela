@@ -3,6 +3,7 @@ import { VEActor } from "./actor/actor.js";
 import { VEActorSheet } from "./actor/actor-sheet.js";
 import { VEItem } from "./item/item.js";
 import { VEItemSheet } from "./item/item-sheet.js";
+import { preloadHandlebarsTemplates } from "./preloadtemplates.js";
 
 Hooks.once('init', async function() {
 
@@ -49,6 +50,8 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('ve_max', function(num1, num2) {
     return Math.max(num1, num2);
   });
+
+  await preloadHandlebarsTemplates();
 });
 
 Hooks.once("ready", async function() {
