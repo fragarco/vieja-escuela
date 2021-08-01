@@ -1,7 +1,8 @@
 <div class="avatar flex0">
     <img class="profile-img" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
 </div>
-<section class="flex1 flexrow">
+<section class="flex1">
+    <div class="flexrow">
     <h1 class="charname flexcol">
         <input name="header.name" type="text" value="{{actor.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
         <label class="velabel">{{localize 'VEJDR.Name'}}</label>
@@ -16,4 +17,21 @@
             <label class="velabel">{{localize "VEJDR.XP"}}</label>
         </li>
     </lu>
+    </div>
+    <div class="flexrow">
+    <lu class="summary flexrow">
+        <li>
+            <input type="text" name="header.class" value="{{data.header.class.value}}" data-dtype="String"/>
+            <label class="velabel">{{localize "VEJDR.Class"}}</label>
+        </li>
+        <li>
+            <input type="text" name="header.race" value="{{data.header.race.value}}" data-dtype="String"/>
+            <label class="velabel">{{localize "VEJDR.Race"}}</label>
+        </li>
+        <li style="max-width: 8em;">
+            <input type="text" name="traits.mov" value="{{data.traits.mov.value}}" data-dtype="Number"/>
+            <label class="velabel">{{localize "VEJDR.Mov"}}</label>
+        </li>
+    </lu>
+    </div>
 </section>
