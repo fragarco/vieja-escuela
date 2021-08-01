@@ -2,7 +2,18 @@
     <img class="profile-img" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
 </div>
 <section class="flex1 flexrow">
-    <h1 class="charname">
-        <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'DND5E.Name' }}"/>
+    <h1 class="charname flexcol">
+        <input name="header.name" type="text" value="{{actor.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
+        <label class="velabel">{{localize 'VEJDR.Name'}}</label>
     </h1>
+    <lu class="level-box flexrow">
+        <li>
+            <input name="header.level" type="text" value="{{data.header.level.value}}" data-dtype="Number"/>
+            <label class="velabel">{{localize "VEJDR.Level"}}</label>
+        </li>
+        <li>
+            <input name="header.xp" type="text" value="{{data.header.xp.value}}" data-dtype="Number"/>
+            <label class="velabel">{{localize "VEJDR.XP"}}</label>
+        </li>
+    </lu>
 </section>

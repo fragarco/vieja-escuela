@@ -22,7 +22,32 @@
 
 .vieja-escuela.sheet .sheet-header h1.charname input {
     height: 40px;
-    margin: 10px 0;
+    margin: 0;
     border: 0;
+    border-bottom: 1px solid var(--color-label);
+    border-radius: 0;
     background-color: rgba(255, 255, 255, 0);
+}
+
+.vieja-escuela.sheet label.velabel {
+    font-size: 10px;
+    vertical-align: top;
+    color: var(--color-label);
+}
+
+.vieja-escuela.sheet .sheet-header lu.level-box {
+    list-style: none;
+    max-width: 8em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20px; 
+  }
+
+  .vieja-escuela.sheet .sheet-header lu input {
+    height: 20px;
+    margin: 0;
+    border: 1px solid var(--color-label);
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
 }
