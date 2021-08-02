@@ -54,7 +54,7 @@
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.atk.value" value="{{data.traits.atk.value}}" data-dtype="Number"/>
+                <input type="text" name="data.traits.atk.value" value="{{numberFormat data.traits.atk.value decimals=0 sign=true}}" data-dtype="Number"/>
             </div>
             <h4>{{localize "VEJDR.Atk"}}</h4>
         </li>
@@ -66,7 +66,7 @@
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.ins.value" value="{{data.traits.ins.value}}" data-dtype="Number"/>
+                <input type="text" name="data.traits.ins.value" value="{{numberFormat data.traits.ins.value decimals=0 sign=true}}" data-dtype="Number"/>
             </div>
             <h4>{{localize "VEJDR.Ins"}}</h4>
         </li>

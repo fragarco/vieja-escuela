@@ -67,7 +67,6 @@
 }
 
 .vieja-escuela.sheet .sheet-header ul.traits {
-    /* flex: 0 0 60px; */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -87,7 +86,7 @@
 
 .vieja-escuela.sheet ul.traits span {
     font-size: 15px;
-    margin: 3px 0 0 0;
+    margin: 4px 0 0 0;
     max-width: 0.5em;
 }
 
