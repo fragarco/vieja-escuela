@@ -8,12 +8,12 @@
     "VEJDR.Description": "Descripción",
     "VEJDR.Backgrounds": "Trasfondos",
 
-    "VEJDR.Mov": "Mov",
-    "VEJDR.Ins": "Ins",
-    "VEJDR.Atk": "Atq",
-    "VEJDR.Def": "Def",
-    "VEJDR.HP": "PV",
-    "VEJDR.MP": "POD",
+    "VEJDR.Mov": "Movimiento Base",
+    "VEJDR.Ins": "INSTINTOS",
+    "VEJDR.Atk": "ATAQUE BASE",
+    "VEJDR.Def": "DEFENSA",
+    "VEJDR.HP": "VIDA",
+    "VEJDR.MP": "PODER",
 
     "VEJDR.Attributes": "Atributos",
     "VEJDR.str": "FUE",

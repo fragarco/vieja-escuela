@@ -4,34 +4,72 @@
 <section class="flex1">
     <div class="flexrow">
     <h1 class="charname flexcol">
-        <input name="header.name" type="text" value="{{actor.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
+        <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
         <label class="velabel">{{localize 'VEJDR.Name'}}</label>
     </h1>
-    <lu class="level-box flexrow">
+    <ul class="level-box flexrow">
         <li>
-            <input name="header.level" type="text" value="{{data.header.level.value}}" data-dtype="Number"/>
+            <input name="data.header.level.value" type="text" value="{{data.header.level.value}}" data-dtype="Number"/>
             <label class="velabel">{{localize "VEJDR.Level"}}</label>
         </li>
         <li>
-            <input name="header.xp" type="text" value="{{data.header.xp.value}}" data-dtype="Number"/>
+            <input name="data.header.xp.value" type="text" value="{{data.header.xp.value}}" data-dtype="Number"/>
             <label class="velabel">{{localize "VEJDR.XP"}}</label>
         </li>
-    </lu>
+    </ul>
     </div>
     <div class="flexrow">
-    <lu class="summary flexrow">
+    <ul class="summary flexrow">
         <li>
-            <input type="text" name="header.class" value="{{data.header.class.value}}" data-dtype="String"/>
+            <input type="text" name="data.header.class.value" value="{{data.header.class.value}}" data-dtype="String"/>
             <label class="velabel">{{localize "VEJDR.Class"}}</label>
         </li>
         <li>
-            <input type="text" name="header.race" value="{{data.header.race.value}}" data-dtype="String"/>
+            <input type="text" name="data.header.race.value" value="{{data.header.race.value}}" data-dtype="String"/>
             <label class="velabel">{{localize "VEJDR.Race"}}</label>
         </li>
         <li style="max-width: 8em;">
-            <input type="text" name="traits.mov" value="{{data.traits.mov.value}}" data-dtype="Number"/>
+            <input type="text" name="data.traits.mov.value" value="{{data.traits.mov.value}}" data-dtype="Number"/>
             <label class="velabel">{{localize "VEJDR.Mov"}}</label>
         </li>
-    </lu>
+    </ul>
+    </div>
+    <div class="flexrow">
+    <ul class="traits flexrow">
+        <li>
+            <div class="flexrow">
+                <input type="text" name="data.traits.hp.value" value="{{data.traits.hp.value}}" data-dtype="Number"/>
+                <span>|</span>
+                <input type="text" name="data.traits.hp.max" value="{{data.traits.hp.max}}" data-dtype="Number"/>
+            </div>
+            <h4>{{localize "VEJDR.HP"}}</h4>
+        </li>
+        <li>
+            <div class="flexrow">
+                <input type="text" name="data.traits.mp.value" value="{{data.traits.mp.value}}" data-dtype="Number"/>
+                <span>|</span>
+                <input type="text" name="data.traits.mp.max" value="{{data.traits.mp.max}}" data-dtype="Number"/>
+            </div>
+            <h4>{{localize "VEJDR.MP"}}</h4>
+        </li>
+        <li>
+            <div class="flexrow">
+                <input type="text" name="data.traits.atk.value" value="{{data.traits.atk.value}}" data-dtype="Number"/>
+            </div>
+            <h4>{{localize "VEJDR.Atk"}}</h4>
+        </li>
+        <li>
+            <div class="flexrow">
+                <input type="text" name="data.traits.def.value" value="{{data.traits.def.value}}" data-dtype="Number"/>
+            </div>
+            <h4>{{localize "VEJDR.Def"}}</h4>
+        </li>
+        <li>
+            <div class="flexrow">
+                <input type="text" name="data.traits.ins.value" value="{{data.traits.ins.value}}" data-dtype="Number"/>
+            </div>
+            <h4>{{localize "VEJDR.Ins"}}</h4>
+        </li>
+    </ul>
     </div>
 </section>

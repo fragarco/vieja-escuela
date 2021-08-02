@@ -35,7 +35,7 @@
     color: var(--color-label);
 }
 
-.vieja-escuela.sheet .sheet-header lu.level-box {
+.vieja-escuela.sheet .sheet-header ul.level-box {
     list-style: none;
     max-width: 8em;
     margin: 0;
@@ -44,7 +44,7 @@
     top: 20px; 
   }
 
-  .vieja-escuela.sheet .sheet-header lu input {
+.vieja-escuela.sheet .sheet-header ul.level-box input {
     height: 20px;
     margin: 0;
     border: 1px solid var(--color-label);
@@ -52,8 +52,49 @@
     text-align: center;
 }
 
-.vieja-escuela.sheet .sheet-header lu.summary {
+.vieja-escuela.sheet .sheet-header ul.summary {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
+}
+
+.vieja-escuela.sheet .sheet-header ul.summary input {
+    height: 20px;
+    margin: 0;
+    border: 1px solid var(--color-label);
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+.vieja-escuela.sheet .sheet-header ul.traits {
+    /* flex: 0 0 60px; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vieja-escuela.sheet ul.traits li {
+    height: 60px;
+    margin: 0 0 0 0;
+    border: 2px groove #eeede0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.vieja-escuela.sheet ul.traits div {
+    margin: 0.5rem 0 0 0;
+}
+
+.vieja-escuela.sheet ul.traits span {
+    font-size: 15px;
+    margin: 3px 0 0 0;
+    max-width: 0.5em;
+}
+
+.vieja-escuela.sheet ul.traits input {
+    font-size: 20px;
+    margin: 0 0 0 0;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
