@@ -9,6 +9,7 @@
   "author": "Javier 'Dwayne Hicks' Garcia",
   "esmodules": ["module/viejaescuela.js"],
   "styles": [
+    "css/grid.css",
     "css/fonts.css",
     "css/viejaescuela.css",
     "css/actor.css",
