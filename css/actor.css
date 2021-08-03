@@ -97,3 +97,25 @@
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
 }
+
+.vieja-escuela.sheet .skills-tab h3.subhead {
+    flex: 0;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: lightgray;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*
+.vieja-escuela.sheet .attributes {
+    font-size: 20px;
+    color: red;
+}
+
+.vieja-escuela.sheet .skills {
+    font-size: 20px;
+    color: blue;
+}
+*/

@@ -1,6 +1,7 @@
-<div class="grid grid-3col">
-    <div>
-        <ol class="attributes flexcol">
+<div class="skills-tab grid grid-3col">
+    <div class="attributes flexcol">
+        <h3 class="subhead">{{localize "VEJDR.Attributes"}}</h3>
+        <ol>
             {{#each data.attributes as |attribute key|}}
             <li class="item flexrow">
                 <label for="data.attributes.{{key}}.value" class="rollable resource-label" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
@@ -11,7 +12,8 @@
         </ol>
     </div>
     <div class="skills flexcol">
-        <ol class="attributes flexcol">
+        <h3 class="subhead">{{localize "VEJDR.Skills"}}</h3>
+        <ol>
             {{#each data.skills as |skill key|}}
                 <li class="item flexrow">
                     <h4 class="rollable resource-label" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</h4>
@@ -21,6 +23,6 @@
         </ol>
     </div>
     <div class="talents flexcol">
-        Talentos
+        <h3 class="subhead">{{localize "VEJDR.Talents"}}</h3>
     </div>
 </div>
