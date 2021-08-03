@@ -1,0 +1,9 @@
+.rollable:hover, .rollable:focus,
+.insroll:hover,
+.insroll:focus,
+.attackroll:hover,
+.attackroll:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}

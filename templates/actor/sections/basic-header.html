@@ -68,7 +68,7 @@
             <div class="flexrow">
                 <input type="text" name="data.traits.ins.value" value="{{numberFormat data.traits.ins.value decimals=0 sign=true}}" data-dtype="Number"/>
             </div>
-            <h4>{{localize "VEJDR.Ins"}}</h4>
+            <h4 class="insroll" data-roll="1d20 + {{data.traits.ins.value}}" data-label="{{localize 'VEJDR.Ins'}}">{{localize "VEJDR.Ins"}}</h4>
         </li>
     </ul>
     </div>
