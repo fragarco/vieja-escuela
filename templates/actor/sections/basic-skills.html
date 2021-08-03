@@ -1,1 +1,26 @@
-<div>skills</div>
+<div class="grid grid-3col">
+    <div>
+        <ol class="attributes flexcol">
+            {{#each data.attributes as |attribute key|}}
+            <li class="item flexrow">
+                <label for="data.attributes.{{key}}.value" class="rollable resource-label" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
+                <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+                <span>{{numberFormat attribute.mod decimals=0 sign=true}}</span>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    <div class="skills flexcol">
+        <ol class="attributes flexcol">
+            {{#each data.skills as |skill key|}}
+                <li class="item flexrow">
+                    <h4 class="rollable resource-label" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</h4>
+                    <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+                </li>
+            {{/each}}
+        </ol>
+    </div>
+    <div class="talents flexcol">
+        Talentos
+    </div>
+</div>
