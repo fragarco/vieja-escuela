@@ -5,6 +5,11 @@ export const preloadHandlebarsTemplates = async function () {
         //Actor partials
         'systems/vieja-escuela/templates/actor/sections/basic-header.html',
         //Sheet tabs
+        'systems/vieja-escuela/templates/actor/sections/basic-skills.html',
+        'systems/vieja-escuela/templates/actor/sections/basic-combat.html',
+        'systems/vieja-escuela/templates/actor/sections/basic-gear.html',
+        'systems/vieja-escuela/templates/actor/sections/basic-spells.html',
+        'systems/vieja-escuela/templates/actor/sections/basic-bio.html'
     ];
     
     return loadTemplates(templatePaths);
