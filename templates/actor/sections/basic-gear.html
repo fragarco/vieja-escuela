@@ -1,1 +1,42 @@
-<div>gear</div>
+<ol class="items-list">
+    <li class="item flexrow gear-header">
+        <div class="item-name">{{localize "VEJDR.Carried"}}</div>
+        <div class="item-name">{{localize "VEJDR.Number"}}</div>
+        <div class="item-name">{{localize "VEJDR.Weight"}}</div>
+        <div class="item-name">{{localize "VEJDR.Capacity"}}</div>
+    </li>
+{{#each gear as |item id|}}
+    <li class="item flexrow" data-item-id="{{item._id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <h4 class="storable">{{item.name}}</h4>
+        <span>{{item.data.number}}</span>
+        <span>{{item.data.weight}}</span>
+        <span>{{item.data.capacity}}</span>
+        <div class="item-controls">
+            <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+        </div>
+    </li>
+{{/each}}
+</ol>
+<ol class="items-list">
+    <li class="item flexrow gear-header">
+        <div class="item-name">{{localize "VEJDR.Stored"}}</div>
+        <div class="item-name">{{localize "VEJDR.Number"}}</div>
+        <div class="item-name">{{localize "VEJDR.Weight"}}</div>
+        <div class="item-name">{{localize "VEJDR.Capacity"}}</div>
+    </li>
+{{#each stored as |item id|}}
+    <li class="item flexrow" data-item-id="{{item._id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <h4 class="storable">{{item.name}}</h4>
+        <span>{{item.data.number}}</span>
+        <span>{{item.data.weight}}</span>
+        <span>{{item.data.capacity}}</span>
+        <div class="item-controls">
+            <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+        </div>
+    </li>
+{{/each}}
+</ol>

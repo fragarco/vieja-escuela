@@ -177,3 +177,16 @@
     text-align: center;
     padding-top: 8px;
 }
+
+.vieja-escuela.sheet .gear ol {
+    padding: 0;
+}
+
+.vieja-escuela.sheet .gear li.gear-header {
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: lightgray;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
