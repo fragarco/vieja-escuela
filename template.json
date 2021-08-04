@@ -111,12 +111,11 @@
           "label": "Instincts"
         }
       },
-      "description": "",
-      "backgrounds": ""
+      "description": ""
     }
   },
   "Item": {
-    "types": ["weapon-fantasy", "armor-fantasy", "gear-fantasy", "talent", "spell"],
+    "types": ["weapon-fantasy", "armor-fantasy", "gear-fantasy", "talent", "spell", "background"],
     "templates": {
       "gear-common": {
         "number": 1,
@@ -158,6 +157,9 @@
       "description": ""
     },
     "spell": {
+      "description": ""
+    },
+    "background": {
       "description": ""
     }
   }

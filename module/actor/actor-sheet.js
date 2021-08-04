@@ -55,6 +55,7 @@ export class VEActorSheet extends ActorSheet {
     const weapons = [];
     const armor = [];
     const talents = [];
+    const backgrounds = [];
     const spells = [];
 
     // Iterate through items, allocating to containers
@@ -86,6 +87,7 @@ export class VEActorSheet extends ActorSheet {
           break;
         case 'talent': talents.push(i); break;
         case 'spell':  spells.push(i); break;
+        case 'background': backgrounds.push(i); break;
       }
     }
 
@@ -96,6 +98,7 @@ export class VEActorSheet extends ActorSheet {
     sheetData.armor = armor;
     sheetData.talents = talents;
     sheetData.spells = spells;
+    sheetData.backgrounds = backgrounds;
   }
 
   /* -------------------------------------------- */
