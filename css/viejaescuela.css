@@ -9,6 +9,7 @@
 :root {
   --color-highlight: red;
   --color-label:  #4b4a44;
+  --size-label: 10px;
   --attribute-size: 20px;
   --skills-size: 20px;
 }
