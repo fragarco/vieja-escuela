@@ -30,7 +30,7 @@
 }
 
 .vieja-escuela.sheet label.velabel {
-    font-size: 10px;
+    font-size: var(--size-label);
     vertical-align: top;
     color: var(--color-label);
 }
@@ -91,7 +91,7 @@
 }
 
 .vieja-escuela.sheet ul.traits input {
-    font-size: 20px;
+    font-size: var(--attribute-size);
     margin: 0 0 0 0;
     border: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -109,7 +109,7 @@
 }
 
 .vieja-escuela.sheet .attributes {
-    font-size: 20px;
+    font-size: var(--attribute-size);
     font-style: italic;
     font-weight: bold;
 }
@@ -134,9 +134,19 @@
     color: var(--color-label);
 }
 
-/*
 .vieja-escuela.sheet .skills {
-    font-size: 20px;
-    color: blue;
+    font-size: var(--attribute-size);
 }
-*/
+
+.vieja-escuela.sheet .skills label{
+    margin: 5px 1em 0 0;
+    text-align: right;
+}
+
+.vieja-escuela.sheet .skills input{
+    max-width: 3em;
+    border: 2px groove black;
+    border-radius: 4px;
+    text-align: center;
+    height: auto;
+}

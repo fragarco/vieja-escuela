@@ -3,8 +3,8 @@
         <h3 class="subhead">{{localize "VEJDR.Attributes"}}</h3>
         <ol>
             {{#each data.attributes as |attribute key|}}
-            <li class="item flexrow">
-                <label class="rollable resource-label" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
+            <li class="flexrow">
+                <label class="rollable" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
                 <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
                 <span>{{numberFormat attribute.mod decimals=0 sign=true}}</span>
             </li>
@@ -15,9 +15,9 @@
         <h3 class="subhead">{{localize "VEJDR.Skills"}}</h3>
         <ol>
             {{#each data.skills as |skill key|}}
-                <li class="item flexrow">
-                    <h4 class="rollable resource-label" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</h4>
-                    <input type="text" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+                <li class="flexrow">
+                    <label class="rollable" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</label>
+                    <input type="number" name="data.skills.{{key}}.value" value="{{numberFormat skill.value decimals=0 sign=true}}" data-dtype="Number"/>
                 </li>
             {{/each}}
         </ol>
