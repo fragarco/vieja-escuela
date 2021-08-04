@@ -4,7 +4,7 @@
         <ol>
             {{#each data.attributes as |attribute key|}}
             <li class="item flexrow">
-                <label for="data.attributes.{{key}}.value" class="rollable resource-label" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
+                <label class="rollable resource-label" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
                 <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
                 <span>{{numberFormat attribute.mod decimals=0 sign=true}}</span>
             </li>

@@ -108,12 +108,33 @@
     font-size: 15px;
 }
 
-/*
 .vieja-escuela.sheet .attributes {
     font-size: 20px;
-    color: red;
+    font-style: italic;
+    font-weight: bold;
 }
 
+.vieja-escuela.sheet .attributes label{
+    text-align: center;
+    margin: 4px 0 0 0;
+}
+
+.vieja-escuela.sheet .attributes input{
+    max-width: 3em;
+    border: 2px groove black;
+    border-radius: 4px;
+    text-align: center;
+    height: auto;
+}
+
+.vieja-escuela.sheet .attributes span{
+    border: 2px groove #eeede0;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--color-label);
+}
+
+/*
 .vieja-escuela.sheet .skills {
     font-size: 20px;
     color: blue;
