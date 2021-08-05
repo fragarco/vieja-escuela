@@ -98,6 +98,15 @@
     text-align: center;
 }
 
+.vieja-escuela .sheet-body .tab,
+.vieja-escuela .sheet-body .tab .editor {
+  height: 100%;
+}
+
+.vieja-escuela .tox .tox-editor-container {
+  background: #fff;
+}
+
 .vieja-escuela.sheet .skills-tab h3.subhead {
     flex: 0;
     border: 1px solid black;
@@ -156,6 +165,7 @@
     padding: 0;
 }
 
+.vieja-escuela.sheet .gear .item-image img,
 .vieja-escuela.sheet .backgrounds img,
 .vieja-escuela.sheet .talents img {
     flex: 0 0 25px;
