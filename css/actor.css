@@ -109,12 +109,17 @@
 
 .vieja-escuela.sheet .skills-tab h3.subhead {
     flex: 0;
-    border: 1px solid black;
-    border-radius: 0px;
-    background-color: lightgray;
     text-align: center;
+    font-size: 14px;
+    border: 1px solid black;
+    /*
+    border-radius: 0px;
     font-weight: bold;
-    font-size: 15px;
+    background-color: lightgray; */
+    background: rgba(0, 0, 0, 0.5);
+    color: #f0f0e0;
+    text-shadow: 1px 1px black;
+    /* border-bottom: 1px solid #000; */
 }
 
 .vieja-escuela.sheet .attributes {
