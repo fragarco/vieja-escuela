@@ -194,6 +194,8 @@
   cursor: pointer;
 }
 
+.vieja-escuela.sheet .combat table td,
+.vieja-escuela.sheet .combat table th,
 .vieja-escuela.sheet .gear table td,
 .vieja-escuela.sheet .gear table th,
 .vieja-escuela.sheet .spells table td,
@@ -201,11 +203,13 @@
     padding: 0;
 }
 
+.vieja-escuela.sheet .combat .item-list,
 .vieja-escuela.sheet .gear .item-list,
 .vieja-escuela.sheet .spells .item-list {
     width: 100%;
 }
 
+.vieja-escuela.sheet .combat img.item-image,
 .vieja-escuela.sheet .gear img.item-image,
 .vieja-escuela.sheet .spells img.item-image {
     flex: 0 0 20px;
@@ -214,10 +218,12 @@
     margin: 2px 5px 2px 2px;
 }
 
+.vieja-escuela.sheet .combat td.gear-values,
 .vieja-escuela.sheet .gear td.gear-values {
     text-align: center;
 }
 
+.vieja-escuela.sheet .combat span.gear-name,
 .vieja-escuela.sheet .gear span.gear-name,
 .vieja-escuela.sheet .spells span.spell-name {
     padding: 2px 0 0 0;

@@ -44,6 +44,7 @@
 
     "VEJDR.Combat": "Combate",
     "VEJDR.Attack": "Ataque",
+    "VEJDR.ItemDef": "Defensa",
     "VEJDR.AttackWith": "Ataque con",
     "VEJDR.HandToHand": "CaC",
     "VEJDR.Missile": "Dist",
