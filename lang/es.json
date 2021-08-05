@@ -73,5 +73,9 @@
     "VEJDR.ModItem": "Editar",
     "VEJDR.Rolling": "Tirada de",
     "VEJDR.INSDialog": "Tirada de Instintos",
-    "VEJDR.InsRollDetails": "Selecciona el atributo relevante para esta tirada"
+    "VEJDR.InsRollDetails": "Selecciona el atributo relevante para esta tirada",
+
+    "VEJDR.Story": "Historial, personalidad, aspecto físico, etc.",
+    "VEJDR.Allies": "Aliados",
+    "VEJDR.Enemies": "Enemigos"
 }

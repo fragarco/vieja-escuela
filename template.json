@@ -111,7 +111,9 @@
           "label": "Instincts"
         }
       },
-      "description": ""
+      "story": "",
+      "enemies": "",
+      "allies": ""
     }
   },
   "Item": {
