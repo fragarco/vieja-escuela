@@ -4,29 +4,22 @@
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
         </div>
+        <div class="resource">
+            <label class="resource-label">{{localize "VEJDR.Description"}}</label>
+            <input type="text" name="data.description" value="{{data.description}}" data-dtype="String"/>
+        </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="notes">{{localize "VEJDR.Notes"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-
-        {{!-- Description Tab --}}
-        <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
-
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-            {{!-- As you add new fields, add them in here! --}}
-            <div class="resource">
-              <label class="resource-label">Spell Level</label>
-                <input type="text" name="data.spellLevel" value="{{data.spellLevel}}" data-dtype="Number"/>
-            </div>
+        {{!-- Notes Tab --}}
+        <div class="tab" data-group="primary" data-tab="notes">
+            {{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>
