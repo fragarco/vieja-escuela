@@ -112,14 +112,9 @@
     text-align: center;
     font-size: 14px;
     border: 1px solid black;
-    /*
-    border-radius: 0px;
-    font-weight: bold;
-    background-color: lightgray; */
     background: rgba(0, 0, 0, 0.5);
     color: #f0f0e0;
     text-shadow: 1px 1px black;
-    /* border-bottom: 1px solid #000; */
 }
 
 .vieja-escuela.sheet .attributes {
@@ -192,19 +187,6 @@
     padding-top: 8px;
 }
 
-.vieja-escuela.sheet .gear ol {
-    padding: 0;
-}
-
-.vieja-escuela.sheet .gear li.gear-header {
-    border: 1px solid black;
-    border-radius: 0px;
-    background-color: lightgray;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-}
-
 .storable:hover,
 .storable:focus {
   color: #000;
@@ -213,15 +195,19 @@
 }
 
 .vieja-escuela.sheet .gear table td,
-.vieja-escuela.sheet .gear table th {
+.vieja-escuela.sheet .gear table th,
+.vieja-escuela.sheet .spells table td,
+.vieja-escuela.sheet .spells table th {
     padding: 0;
 }
 
-.vieja-escuela.sheet .gear .item-list {
+.vieja-escuela.sheet .gear .item-list,
+.vieja-escuela.sheet .spells .item-list {
     width: 100%;
 }
 
-.vieja-escuela.sheet .gear img.item-image {
+.vieja-escuela.sheet .gear img.item-image,
+.vieja-escuela.sheet .spells img.item-image {
     flex: 0 0 20px;
     max-width: 20px;
     height: 20px;
@@ -232,6 +218,7 @@
     text-align: center;
 }
 
-.vieja-escuela.sheet .gear span.gear-name {
+.vieja-escuela.sheet .gear span.gear-name,
+.vieja-escuela.sheet .spells span.spell-name {
     padding: 2px 0 0 0;
 }

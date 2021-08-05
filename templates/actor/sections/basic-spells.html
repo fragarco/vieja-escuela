@@ -1,0 +1,29 @@
+<table class="items-list">
+    <colgroup>
+        <col span="1" style="width: 30%;">
+        <col span="1" style="width: 60%;">
+        <col span="1" style="width: 10%;">
+     </colgroup>
+    <thead class="item gear-header">
+        <th class="item-name">{{localize "VEJDR.Name"}}</th>
+        <th class="item-name">{{localize "VEJDR.Description"}}</th>
+        <th><!-- controls to edit/delete item --></th>
+    </thead>
+    <tbody>
+        {{#each spells as |item id|}}
+        <tr class="item" data-item-id="{{item._id}}">
+            <td class="flexrow">
+                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span class="spell-name">{{item.name}}</span>
+            </td>
+            <td>{{item.data.description}}</td>
+            <td style="text-align: center;">
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
