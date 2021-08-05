@@ -1,42 +1,70 @@
-<ol class="items-list">
-    <li class="item flexrow gear-header">
-        <div class="item-name">{{localize "VEJDR.Carried"}}</div>
-        <div class="item-name">{{localize "VEJDR.Number"}}</div>
-        <div class="item-name">{{localize "VEJDR.Weight"}}</div>
-        <div class="item-name">{{localize "VEJDR.Capacity"}}</div>
-    </li>
-{{#each gear as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <h4 class="storable">{{item.name}}</h4>
-        <span>{{item.data.number}}</span>
-        <span>{{item.data.weight}}</span>
-        <span>{{item.data.capacity}}</span>
-        <div class="item-controls">
-            <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
-        </div>
-    </li>
-{{/each}}
-</ol>
-<ol class="items-list">
-    <li class="item flexrow gear-header">
-        <div class="item-name">{{localize "VEJDR.Stored"}}</div>
-        <div class="item-name">{{localize "VEJDR.Number"}}</div>
-        <div class="item-name">{{localize "VEJDR.Weight"}}</div>
-        <div class="item-name">{{localize "VEJDR.Capacity"}}</div>
-    </li>
-{{#each stored as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <h4 class="storable">{{item.name}}</h4>
-        <span>{{item.data.number}}</span>
-        <span>{{item.data.weight}}</span>
-        <span>{{item.data.capacity}}</span>
-        <div class="item-controls">
-            <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
-        </div>
-    </li>
-{{/each}}
-</ol>
+<table class="items-list">
+    <colgroup>
+        <col span="1" style="width: 30%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 10%;">
+     </colgroup>
+    <thead class="item gear-header">
+        <th class="item-name">{{localize "VEJDR.Carried"}}</th>
+        <th class="item-name">{{localize "VEJDR.Number"}}</th>
+        <th class="item-name">{{localize "VEJDR.Weight"}}</th>
+        <th class="item-name">{{localize "VEJDR.Capacity"}}</th>
+        <th><!-- controls to edit/delete item --></th>
+    </thead>
+    <tbody>
+        {{#each gear as |item id|}}
+        <tr class="item" data-item-id="{{item._id}}">
+            <td class="flexrow">
+                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span class="storable gear-name">{{item.name}}</span>
+            </td>
+            <td class="gear-values">{{item.data.number}}</td>
+            <td class="gear-values">{{item.data.weight}}</td>
+            <td class="gear-values">{{item.data.capacity}}</td>
+            <td class="gear-values">
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<table class="items-list">
+    <colgroup>
+        <col span="1" style="width: 30%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 10%;">
+     </colgroup>
+    <thead class="item gear-header">
+        <th class="item-name">{{localize "VEJDR.Stored"}}</th>
+        <th class="item-name">{{localize "VEJDR.Number"}}</th>
+        <th class="item-name">{{localize "VEJDR.Weight"}}</th>
+        <th class="item-name">{{localize "VEJDR.Capacity"}}</th>
+        <th><!-- controls to edit/delete item --></th>
+    </thead>
+    <tbody>
+        {{#each stored as |item id|}}
+        <tr class="item" data-item-id="{{item._id}}">
+            <td class="flexrow">
+                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span class="storable gear-name">{{item.name}}</span>
+            </td>
+            <td class="gear-values">{{item.data.number}}</td>
+            <td class="gear-values">{{item.data.weight}}</td>
+            <td class="gear-values">{{item.data.capacity}}</td>
+            <td class="gear-values">
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

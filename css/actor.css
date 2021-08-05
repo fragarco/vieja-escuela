@@ -165,12 +165,11 @@
     padding: 0;
 }
 
-.vieja-escuela.sheet .gear .item-image img,
 .vieja-escuela.sheet .backgrounds img,
 .vieja-escuela.sheet .talents img {
-    flex: 0 0 25px;
-    max-width: 25px;
-    height: 25px;
+    flex: 0 0 24px;
+    max-width: 24px;
+    height: 24px;
     margin: 5px;
 }
 
@@ -199,4 +198,35 @@
     text-align: center;
     font-weight: bold;
     font-size: 15px;
+}
+
+.storable:hover,
+.storable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.vieja-escuela.sheet .gear table td,
+.vieja-escuela.sheet .gear table th {
+    padding: 0;
+}
+
+.vieja-escuela.sheet .gear .item-list {
+    width: 100%;
+}
+
+.vieja-escuela.sheet .gear img.item-image {
+    flex: 0 0 20px;
+    max-width: 20px;
+    height: 20px;
+    margin: 2px 5px 2px 2px;
+}
+
+.vieja-escuela.sheet .gear td.gear-values {
+    text-align: center;
+}
+
+.vieja-escuela.sheet .gear span.gear-name {
+    padding: 2px 0 0 0;
 }
