@@ -44,7 +44,8 @@
     top: 20px; 
   }
 
-.vieja-escuela.sheet .sheet-header ul.level-box input {
+.vieja-escuela.sheet .sheet-header ul.level-box input,
+.vieja-escuela.sheet .gear ul.money-box input {
     height: 20px;
     margin: 0;
     border: 1px solid var(--color-label);
@@ -244,6 +245,13 @@
     font-size: 12px;
     padding-top: 1px;
     text-align: center;
+}
+
+.vieja-escuela.sheet .gear ul.money-box {
+    list-style: none;
+    max-width: 12em;
+    margin: 0;
+    padding: 0;
 }
 
 .vieja-escuela.sheet .bio div.textinfo {
