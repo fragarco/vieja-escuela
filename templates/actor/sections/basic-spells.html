@@ -7,7 +7,11 @@
     <thead class="item gear-header">
         <th class="item-name">{{localize "VEJDR.Name"}}</th>
         <th class="item-name">{{localize "VEJDR.Description"}}</th>
-        <th><!-- controls to edit/delete item --></th>
+        <th class="add-button">
+            <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="spell">
+                <i class="fas fa-plus"></i>
+            </a>
+        </th>
     </thead>
     <tbody>
         {{#each spells as |item id|}}

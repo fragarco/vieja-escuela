@@ -118,6 +118,13 @@
     text-shadow: 1px 1px black;
 }
 
+.vieja-escuela.sheet .skills-tab span.add-button {
+    flex: 0 0 1em;
+    font-size: 12px;
+    padding-top: 1px;
+    padding-right: 1px;
+}
+
 .vieja-escuela.sheet .attributes {
     font-size: var(--attribute-size);
     font-style: italic;
@@ -229,6 +236,14 @@
 .vieja-escuela.sheet .gear span.gear-name,
 .vieja-escuela.sheet .spells span.spell-name {
     padding: 2px 0 0 0;
+}
+
+.vieja-escuela.sheet .combat .add-button,
+.vieja-escuela.sheet .gear .add-button,
+.vieja-escuela.sheet .spells .add-button {
+    font-size: 12px;
+    padding-top: 1px;
+    text-align: center;
 }
 
 .vieja-escuela.sheet .bio div.textinfo {

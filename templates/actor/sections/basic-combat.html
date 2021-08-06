@@ -13,7 +13,11 @@
         <th class="item-name">{{localize "VEJDR.Missile"}}</th>
         <th class="item-name">{{localize "VEJDR.Range"}}</th>
         <th class="item-name">{{localize "VEJDR.Damage"}}</th>
-        <th><!-- controls to edit/delete item --></th>
+        <th class="add-button">
+            <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="weapon-fantasy">
+                <i class="fas fa-plus"></i>
+            </a>
+        </th>
     </thead>
     <tbody>
         {{#each weapons as |item id|}}
@@ -50,7 +54,11 @@
         <th class="item-name">{{localize "VEJDR.Armor"}}</th>
         <th class="item-name">{{localize "VEJDR.ItemDef"}}</th>
         <th></th>
-        <th><!-- controls to edit/delete item --></th>
+        <th class="add-button">
+            <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="armor-fantasy">
+                <i class="fas fa-plus"></i>
+            </a>
+        </th>
     </thead>
     <tbody>
         {{#each armor as |item id|}}

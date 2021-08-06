@@ -23,7 +23,14 @@
         </ol>
     </div>
     <div class="talents flexcol">
-        <h3 class="subhead">{{localize "VEJDR.Talents"}}</h3>
+        <h3 class="subhead flexrow">
+            <i class="flex1">{{localize "VEJDR.Talents"}}</i>
+            <span class="add-button">
+                <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="talent">
+                    <i class="fas fa-plus"></i>
+                </a>
+            </span>
+        </h3>
         <ol>
             {{#each talents as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
@@ -36,7 +43,14 @@
                 </li>
             {{/each}}
         </ol>
-        <h3 class="subhead">{{localize "VEJDR.Backgrounds"}}</h3>
+        <h3 class="subhead flexrow">
+            <i class="flex1">{{localize "VEJDR.Backgrounds"}}</i>
+            <span class="add-button">
+                <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="background">
+                    <i class="fas fa-plus"></i>
+                </a>
+            </span>
+        </h3>
         <ol>
             {{#each backgrounds as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
