@@ -42,10 +42,11 @@ export class VEActor extends Actor {
     }
     data.encumbrance.current = encumbrance;
   }
+
   /**
    * Prepare Character type specific data
    */
-  _prepareCharacterData(actorData) {
+   _prepareAttributesData(actorData) {
     const data = actorData.data;
 
     // attribute mods
@@ -57,6 +58,13 @@ export class VEActor extends Actor {
       else if (attribute.value <= 17) attribute.mod = 1;
       else attribute.mod = 2;
     }
+  }
+
+  /**
+   * Prepare Character type specific data
+   */
+  _prepareCharacterData(actorData) {
+    this._prepareAttributesData(actorData);
     this._prepareEncumbranceData(actorData);
   }
 }
