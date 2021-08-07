@@ -20,6 +20,29 @@ export class VEActor extends Actor {
   }
 
   /**
+   * 
+   * calculate encumbrance data 
+   */
+  _prepareEncumbranceData(actorData) {
+    const data = actorData.data;
+
+    data.encumbrance.max = data.attributes.str.value;
+    // encumbrance due to coins
+    const coins = data.money.gp + data.money.sp + data.money.cp;
+    let encumbrance = Math.floor(coins/100);
+
+    // encumbrance due to carried items
+    for (let i of actorData.items) {
+      const item = i.data;
+      if (item.type === 'weapon-fantasy' || item.type === 'armor-fantasy' || item.type === 'gear-fantasy') {
+        if (!item.data.stored) {
+          encumbrance = encumbrance + item.data.weight;
+        }
+      }
+    }
+    data.encumbrance.current = encumbrance;
+  }
+  /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
@@ -34,8 +57,6 @@ export class VEActor extends Actor {
       else if (attribute.value <= 17) attribute.mod = 1;
       else attribute.mod = 2;
     }
-
-    // encumbrance values
-    data.encumbrance.max = data.attributes.str.value;
+    this._prepareEncumbranceData(actorData);
   }
 }
