@@ -1,12 +1,23 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+        <div class="flex0">
+            <img class="profile-img" src="{{item.img}}" title="{{item.name}}" data-edit="img"/>
         </div>
-        <div class="resource">
-            <label class="resource-label">{{localize "VEJDR.Description"}}</label>
-            <input type="text" name="data.description" value="{{data.description}}" data-dtype="String"/>
+        <section class="flex1">
+            <div class="name-line flexrow">
+                <h1 class="charname flexcol">
+                    <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
+                    <label class="velabel">{{localize 'VEJDR.Name'}}</label>
+                </h1>
+                <div class="name-side-box">
+                    <input name="data.minmp" type="text" value="{{data.minmp}}" data-dtype="Number"/>
+                    <label class="velabel">{{localize "VEJDR.SpellMinPow"}}</label>
+                </div>
+            </div>
+            <div>
+                <input class="description-line" type="text" name="data.description" value="{{data.description}}" data-dtype="String"/>
+                <label class="velabel">{{localize "VEJDR.Description"}}</label>
+            </div>
         </div>
     </header>
 

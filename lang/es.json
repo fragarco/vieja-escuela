@@ -67,7 +67,9 @@
     "VEJDR.CostMC": "mc",
     "VEJDR.Encumbrance": "Carga",
     "VEJDR.MaxEncumbrance": "Carga Máxima",
+
     "VEJDR.Spells": "Conjuros",
+    "VEJDR.SpellMinPow": "Poder Mínimo",
 
     "VEJDR.AddItem": "Nuevo",
     "VEJDR.DelItem": "Borrar",

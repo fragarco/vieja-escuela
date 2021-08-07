@@ -1,0 +1,78 @@
+
+.vieja-escuela.sheet.item img {
+    flex: 0 0 120px;
+    max-width: 120px;
+    height: 120px;
+}
+
+.vieja-escuela.sheet.item img:hover {
+    box-shadow: 0 0 10px var(--color-highlight);
+    cursor: pointer;
+}
+
+.vieja-escuela.sheet.item .sheet-header h1.charname {
+    height: 60px;
+    padding: 0;
+}
+
+.vieja-escuela.sheet.item .sheet-header h1.charname input {
+    height: 40px;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid var(--color-label);
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.vieja-escuela.sheet.item label.velabel {
+    font-size: var(--size-label);
+    vertical-align: top;
+    color: var(--color-label);
+}
+
+.vieja-escuela.sheet.item .name-line div.name-side-box {
+    position: relative; 
+    top: 20px;
+    max-width: 8em;
+}
+
+.vieja-escuela.sheet.item .name-line input {
+    height: 20px;
+    margin: 0;
+    border: 1px solid var(--color-label);
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+.vieja-escuela.sheet.item input.description-line {
+    height: 20px;
+    margin: 0;
+    border: 1px solid var(--color-label);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/*
+.vieja-escuela.sheet .sheet-header ul.level-box {
+    list-style: none;
+    max-width: 8em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20px; 
+  }
+
+.vieja-escuela.sheet .sheet-header ul.level-box input,
+.vieja-escuela.sheet .gear ul.money-box input {
+    height: 20px;
+    margin: 0;
+    border: 1px solid var(--color-label);
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+.vieja-escuela.sheet .sheet-header ul.summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+*/
