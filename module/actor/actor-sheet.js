@@ -59,6 +59,7 @@ export class VEActorSheet extends ActorSheet {
     const spells = [];
 
     // Iterate through items, allocating to containers
+    let encumbrance = 0;
     for (let i of sheetData.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
@@ -71,6 +72,7 @@ export class VEActorSheet extends ActorSheet {
             stored.push(i);
            } else {
             gear.push(i);
+            encumbrance = encumbrance + item.weight;
             weapons.push(i);
           }
           break;
@@ -79,17 +81,26 @@ export class VEActorSheet extends ActorSheet {
             stored.push(i);
           } else {
             gear.push(i);
+            encumbrance = encumbrance + item.weight;
             armor.push(i);
           }
           break;
         case 'gear-fantasy':
-          item.stored ? stored.push(i) : gear.push(i);
+          if (item.stored) {
+            stored.push(i);
+          } else {
+            gear.push(i);
+            encumbrance = encumbrance + item.weight;
+          }
           break;
         case 'talent': talents.push(i); break;
         case 'spell':  spells.push(i); break;
         case 'background': backgrounds.push(i); break;
       }
     }
+    // encumbrance due to coins
+    const coins = actorData.data.money.gp + actorData.data.money.sp + actorData.data.money.cp;
+    encumbrance = encumbrance + Math.floor(coins/100);
 
     // Assign and return
     sheetData.gear = gear;
@@ -99,6 +110,7 @@ export class VEActorSheet extends ActorSheet {
     sheetData.talents = talents;
     sheetData.spells = spells;
     sheetData.backgrounds = backgrounds;
+    actorData.data.encumbrance.current = encumbrance;
   }
 
   /* -------------------------------------------- */

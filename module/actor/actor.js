@@ -25,6 +25,7 @@ export class VEActor extends Actor {
   _prepareCharacterData(actorData) {
     const data = actorData.data;
 
+    // attribute mods
     for (let [key, attribute] of Object.entries(data.attributes)) {
       // VE mods -2, -1, 0, +1, +2
       if (attribute.value <= 3) attribute.mod = -2;
@@ -33,5 +34,8 @@ export class VEActor extends Actor {
       else if (attribute.value <= 17) attribute.mod = 1;
       else attribute.mod = 2;
     }
+
+    // encumbrance values
+    data.encumbrance.max = data.attributes.str.value;
   }
 }

@@ -111,6 +111,10 @@
           "label": "Instincts"
         }
       },
+      "encumbrance": {
+        "current": 0,
+        "max": 0
+      },
       "money": {
         "gp": 0,
         "sp": 0,

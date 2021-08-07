@@ -1,17 +1,33 @@
-<ul class="money-box flexrow">
-    <li>
-        <input name="data.money.gp" type="text" value="{{data.money.gp}}" data-dtype="Number"/>
-        <label class="velabel">{{localize "VEJDR.CostMO"}}</label>
-    </li>
-    <li>
-        <input name="data.money.sp" type="text" value="{{data.money.sp}}" data-dtype="Number"/>
-        <label class="velabel">{{localize "VEJDR.CostMP"}}</label>
-    </li>
-    <li>
-        <input name="data.money.cp" type="text" value="{{data.money.cp}}" data-dtype="Number"/>
-        <label class="velabel">{{localize "VEJDR.CostMC"}}</label>
-    </li>
-</ul>
+<div class="flexrow">
+    <div style="text-align: center;">
+        <ul class="money-box flexrow">
+            <li>
+                <input name="data.money.gp" type="text" value="{{data.money.gp}}" data-dtype="Number"/>
+                <label class="velabel">{{localize "VEJDR.CostMO"}}</label>
+            </li>
+            <li>
+                <input name="data.money.sp" type="text" value="{{data.money.sp}}" data-dtype="Number"/>
+                <label class="velabel">{{localize "VEJDR.CostMP"}}</label>
+            </li>
+            <li>
+                <input name="data.money.cp" type="text" value="{{data.money.cp}}" data-dtype="Number"/>
+                <label class="velabel">{{localize "VEJDR.CostMC"}}</label>
+            </li>
+        </ul>
+    </div>
+    <div style="text-align: center;">
+        <ul class="weight-box flexrow">
+            <li>
+                <input name="data.encumbrance.current" type="text" value="{{data.encumbrance.current}}" data-dtype="Number" readonly/>
+                <label class="velabel">{{localize "VEJDR.Encumbrance"}}</label>
+            </li>
+            <li>
+                <input name="data.encumbrance.max" type="text" value="{{data.encumbrance.max}}" data-dtype="Number" readonly/>
+                <label class="velabel">{{localize "VEJDR.MaxEncumbrance"}}</label>
+            </li>
+        </ul>
+    </div>
+</div>
 <table class="items-list">
     <colgroup>
         <col span="1" style="width: 30%;">

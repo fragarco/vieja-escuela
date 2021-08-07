@@ -59,13 +59,14 @@
     "VEJDR.Carried": "Equipado",
     "VEJDR.Stored": "Almacenado",
     "VEJDR.Number": "Cantidad",
-    "VEJDR.Weight": "Carga",
+    "VEJDR.Weight": "Peso",
     "VEJDR.Capacity": "Capacidad",
     "VEJDR.Cost": "Coste",
     "VEJDR.CostMO": "mo",
     "VEJDR.CostMP": "mp",
     "VEJDR.CostMC": "mc",
-
+    "VEJDR.Encumbrance": "Carga",
+    "VEJDR.MaxEncumbrance": "Carga Máxima",
     "VEJDR.Spells": "Conjuros",
 
     "VEJDR.AddItem": "Nuevo",
