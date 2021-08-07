@@ -65,8 +65,6 @@ export class VEActorSheet extends ActorSheet {
       // Append to gear.
       switch (i.type) {
         case 'weapon-fantasy':
-          item.cacmod = item.addmod + actorData.data.attributes.str.mod;
-          item.prjmod = item.addmod + actorData.data.attributes.dex.mod;
           if (item.stored) {
             stored.push(i);
            } else {

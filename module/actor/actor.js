@@ -44,7 +44,7 @@ export class VEActor extends Actor {
   }
 
   /**
-   * Prepare Character type specific data
+   * Calculate character attribute modificators
    */
    _prepareAttributesData(actorData) {
     const data = actorData.data;
@@ -60,6 +60,11 @@ export class VEActor extends Actor {
     }
   }
 
+  /**
+   * 
+   * Calculate Defense value. It adds base value to armor equiped. 
+   * Dex modificator should be added by hand by the user to the base value. 
+   */
   _prepareDefenseData(actorData) {
     const data = actorData.data;
     let def = data.traits.def.base;
@@ -73,11 +78,29 @@ export class VEActor extends Actor {
   }
 
   /**
+   * 
+   * Calculate attack values for all equiped weapons.
+   */
+   _prepareAttackData(actorData) {
+    const data = actorData.data;
+    let def = data.traits.def.base;
+    for (let i of actorData.items) {
+      const item = i.data;
+      if (item.type === 'weapon-fantasy' && !item.data.stored) {
+        item.data.cacmod = item.data.addmod + data.attributes.str.mod + data.traits.atk.value;
+        item.data.prjmod = item.data.addmod + data.attributes.dex.mod + data.traits.atk.value;
+      }
+      
+    }
+  }
+
+  /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
     this._prepareAttributesData(actorData);
     this._prepareEncumbranceData(actorData);
     this._prepareDefenseData(actorData);
+    this._prepareAttackData(actorData);
   }
 }
