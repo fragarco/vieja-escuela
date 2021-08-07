@@ -39,7 +39,7 @@
         <li>
             <div class="flexrow">
                 <input type="text" name="data.traits.hp.value" value="{{data.traits.hp.value}}" data-dtype="Number"/>
-                <span>|</span>
+                <span class=>|</span>
                 <input type="text" name="data.traits.hp.max" value="{{data.traits.hp.max}}" data-dtype="Number"/>
             </div>
             <h4>{{localize "VEJDR.HP"}}</h4>
@@ -60,7 +60,9 @@
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.def.value" value="{{data.traits.def.value}}" data-dtype="Number"/>
+                <input type="text" name="data.traits.def.base" value="{{data.traits.def.base}}" data-dtype="Number"/>
+                <span class=>|</span>
+                <input type="text" name="data.traits.def.current" value="{{data.traits.def.current}}" data-dtype="Number" readonly/>
             </div>
             <h4>{{localize "VEJDR.Def"}}</h4>
         </li>

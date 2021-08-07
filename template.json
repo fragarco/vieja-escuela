@@ -99,7 +99,8 @@
           "label": "Movement"
         },
         "def": {
-          "value": 10,
+          "base": 10,
+          "current": 0,
           "label": "Defense"
         },
         "atk": {

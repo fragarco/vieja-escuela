@@ -60,11 +60,24 @@ export class VEActor extends Actor {
     }
   }
 
+  _prepareDefenseData(actorData) {
+    const data = actorData.data;
+    let def = data.traits.def.base;
+    for (let i of actorData.items) {
+      const item = i.data;
+      if (item.type === 'armor-fantasy' && !item.data.stored) {
+          def = def + item.data.defmod;
+      }
+    }
+    data.traits.def.current = def;
+  }
+
   /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
     this._prepareAttributesData(actorData);
     this._prepareEncumbranceData(actorData);
+    this._prepareDefenseData(actorData);
   }
 }
