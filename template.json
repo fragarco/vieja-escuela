@@ -147,23 +147,16 @@
       },
       "armor-basic": {
         "defmod": 0
-      },
-      "cost-fantasy": {
-        "cost": {
-          "mo": 0,
-          "mp": 0,
-          "mc": 0
-        }
       }
     },
     "weapon-fantasy": {
-      "templates": ["gear-common", "cost-fantasy", "weapon-basic"]
+      "templates": ["gear-common", "weapon-basic"]
     },
     "armor-fantasy": {
-      "templates": ["gear-common", "cost-fantasy", "armor-basic"]
+      "templates": ["gear-common", "armor-basic"]
     },
     "gear-fantasy": {
-      "templates": ["gear-common", "cost-fantasy"]
+      "templates": ["gear-common"]
     },
     "talent": {
       "description": ""
