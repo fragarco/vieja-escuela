@@ -45,6 +45,9 @@ export class VEActorSheet extends ActorSheet {
     if (this.actor.data.type == 'pc-base') {
       this._prepareBaseCharacterItems(data);
     }
+    if (this.actor.data.type == 'npc-base') {
+      this._prepareBaseCharacterItems(data);
+    }
     return data;
   }
 
