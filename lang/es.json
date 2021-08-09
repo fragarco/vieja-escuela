@@ -1,6 +1,10 @@
 {
     "VEJDR.Setting.Version": "Versión",
     "VEJDR.Setting.VersionHint": "No modificar, se usa internamente en procesos de actualización",
+    "VEJDR.Setting.AttribMods": "Escala de Modificadores",
+    "VEJDR.Setting.AttribModsHint": "Modificadores que se otorgan por attributo",
+    "VEJDR.Setting.BasicMods": "básico (-2/+2)",
+    "VEJDR.Setting.HeroMods": "heróico (-3/+3)",
 
     "VEJDR.Name": "Nombre",
     "VEJDR.Type": "Tipo",
