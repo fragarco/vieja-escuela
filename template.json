@@ -1,129 +1,160 @@
 {
   "Actor": {
-    "types": ["pc-fantasy"],
-    "templates": {},
-    "pc-fantasy": {
-      "header": {
-        "race": {
-          "value": "",
-          "label": "Race"
-        },
-        "class": {
-          "value": "",
-          "label": "Class"
-        },
-        "level": {
-          "value": 1,
-          "min": 0,
-          "max": 20,
-          "label": "Level"
-        },
-        "xp": {
-          "value": 0,
-          "min": 0,
-          "max": 200,
-          "label": "Experience"
+    "types": ["pc-base", "npc-base"],
+    "templates": {
+      "base-header": {
+        "header": {
+          "race": {
+            "value": "",
+            "label": "Race"
+          },
+          "class": {
+            "value": "",
+            "label": "Class"
+          },
+          "level": {
+            "value": 1,
+            "min": 0,
+            "max": 20,
+            "label": "Level"
+          },
+          "xp": {
+            "value": 0,
+            "min": 0,
+            "max": 200,
+            "label": "Experience"
+          }
         }
       },
-      "attributes": {
-        "str": {
-          "value": 10,
-          "mod": 0,
-          "label": "VEJDR.str"
-        },
-        "dex": {
-          "value": 10,
-          "mod": 0,
-          "label": "VEJDR.dex"
-        },
-        "con": {
-          "value": 10,
-          "mod": 0,
-          "label": "VEJDR.con"
-        },
-        "int": {
-          "value": 10,
-          "mod": 0,
-          "label": "VEJDR.int"
-        },
-        "wis": {
-          "value": 10,
-          "mod": 0,
-          "label": "VEJDR.wis"
-        },
-        "cha": {
-          "value": 10,
-          "mod": 0,
-          "label": "VEJDR.cha"
+      "base-attributes": {
+        "attributes": {
+          "str": {
+            "value": 10,
+            "mod": 0,
+            "label": "VEJDR.str"
+          },
+          "dex": {
+            "value": 10,
+            "mod": 0,
+            "label": "VEJDR.dex"
+          },
+          "con": {
+            "value": 10,
+            "mod": 0,
+            "label": "VEJDR.con"
+          },
+          "int": {
+            "value": 10,
+            "mod": 0,
+            "label": "VEJDR.int"
+          },
+          "wis": {
+            "value": 10,
+            "mod": 0,
+            "label": "VEJDR.wis"
+          },
+          "cha": {
+            "value": 10,
+            "mod": 0,
+            "label": "VEJDR.cha"
+          }
         }
       },
-      "skills": {
-        "alertness": {
-          "value": 0,
-          "label": "VEJDR.Alertness"
-        },
-        "communication": {
-          "value": 0,
-          "label": "VEJDR.Communication"
-        },
-        "lore": {
-          "value": 0,
-          "label": "VEJDR.Lore"
-        },
-        "manipulation": {
-          "value": 0,
-          "label": "VEJDR.Manipulation"
-        },
-        "stealth": {
-          "value": 0,
-          "label": "VEJDR.Stealth"
-        },
-        "survival": {
-          "value": 0,
-          "label": "VEJDR.Survival"
+      "base-skills": {
+        "skills": {
+          "alertness": {
+            "value": 0,
+            "label": "VEJDR.Alertness"
+          },
+          "communication": {
+            "value": 0,
+            "label": "VEJDR.Communication"
+          },
+          "lore": {
+            "value": 0,
+            "label": "VEJDR.Lore"
+          },
+          "manipulation": {
+            "value": 0,
+            "label": "VEJDR.Manipulation"
+          },
+          "stealth": {
+            "value": 0,
+            "label": "VEJDR.Stealth"
+          },
+          "survival": {
+            "value": 0,
+            "label": "VEJDR.Survival"
+          }
         }
       },
-      "traits": {
-        "hp": {
-          "value": 0,
-          "max": 0,
-          "label": "Hit Points"
-        },
-        "mp": {
-          "value": 0,
-          "max": 0,
-          "label": "Magic Points"
-        },
-        "mov": {
-          "value": 12,
-          "label": "Movement"
-        },
-        "def": {
-          "base": 10,
+      "base-traits": {
+        "traits": {
+          "hp": {
+            "value": 0,
+            "max": 0,
+            "label": "Hit Points"
+          },
+          "mp": {
+            "value": 0,
+            "max": 0,
+            "label": "Magic Points"
+          },
+          "mov": {
+            "value": 12,
+            "label": "Movement"
+          },
+          "def": {
+            "base": 10,
+            "current": 0,
+            "label": "Defense"
+          },
+          "atk": {
+            "value": 0,
+            "label": "Attack Bonus"
+          },
+          "ins": {
+            "value": 0,
+            "label": "Instincts"
+          }
+        }
+      },
+      "base-encumbrance": {
+        "encumbrance": {
           "current": 0,
-          "label": "Defense"
-        },
-        "atk": {
-          "value": 0,
-          "label": "Attack Bonus"
-        },
-        "ins": {
-          "value": 0,
-          "label": "Instincts"
+          "max": 0
         }
       },
-      "encumbrance": {
-        "current": 0,
-        "max": 0
+      "base-money": {
+        "money": {
+          "gp": 0,
+          "sp": 0,
+          "cp": 0
+        }
       },
-      "money": {
-        "gp": 0,
-        "sp": 0,
-        "cp": 0
-      },
-      "story": "",
-      "enemies": "",
-      "allies": ""
+      "base-bio": {
+        "story": "",
+        "enemies": "",
+        "allies": ""
+      }
+    },
+    "pc-base": {
+      "templates": [
+        "base-header",
+        "base-attributes",
+        "base-skills",
+        "base-traits",
+        "base-encumbrance",
+        "base-money",
+        "base-bio"
+      ]
+    },
+    "npc-base": {
+      "templates": [
+        "base-header",
+        "base-attributes",
+        "base-traits"
+      ]
     }
   },
   "Item": {

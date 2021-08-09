@@ -32,9 +32,16 @@ Hooks.once('init', async function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("vieja-escuela", VEActorSheet, { makeDefault: true });
+  Actors.registerSheet("vieja-escuela", VEActorSheet, { 
+    types: ["pc-base", "npc-base"],
+    makeDefault: true,
+  });
+
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("vieja-escuela", VEItemSheet, { makeDefault: true });
+  Items.registerSheet("vieja-escuela", VEItemSheet, {
+    types: ["weapon", "armor", "gear", "talent", "spell", "background"],
+    makeDefault: true
+  });
 
   // Handlebars helpers, we use prefix "ve_" to avoid problems with other modules
   Handlebars.registerHelper('ve_concat', function() {

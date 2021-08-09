@@ -33,8 +33,8 @@ export class VEActorSheet extends ActorSheet {
     data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
     // Prepare items.
-    if (this.actor.data.type == 'pc-fantasy') {
-      this._prepareFantasyCharacterItems(data);
+    if (this.actor.data.type == 'pc-base') {
+      this._prepareBaseCharacterItems(data);
     }
     return data;
   }
@@ -46,7 +46,7 @@ export class VEActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareFantasyCharacterItems(sheetData) {
+  _prepareBaseCharacterItems(sheetData) {
     const actorData = sheetData.actor;
 
     // Initialize containers.
