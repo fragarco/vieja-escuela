@@ -83,14 +83,22 @@ export class VEActor extends Actor {
    */
    _prepareAttackData(actorData) {
     const data = actorData.data;
-    let def = data.traits.def.base;
     for (let i of actorData.items) {
       const item = i.data;
-      if (item.type === 'weapon-fantasy' && !item.data.stored) {
-        item.data.cacmod = item.data.addmod + data.attributes.str.mod + data.traits.atk.value;
-        item.data.prjmod = item.data.addmod + data.attributes.dex.mod + data.traits.atk.value;
+      const base = item.data.addmod + data.traits.atk.value;
+      if (item.type === 'weapon-fantasy') {
+        switch(item.data.weapontype) {
+          case "strtype":
+            item.data.attackmod = base + data.attributes.str.mod;
+            break;
+          case "dextype":
+            item.data.attackmod = base + data.attributes.dex.mod;
+            break;
+          case "othtype":
+            item.data.attackmod = base;
+            break;
+        }
       }
-      
     }
   }
 

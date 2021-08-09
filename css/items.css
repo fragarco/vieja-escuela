@@ -36,6 +36,7 @@
     max-width: 8em;
 }
 
+.vieja-escuela.sheet.item .name-line select,
 .vieja-escuela.sheet.item .name-line input {
     height: 20px;
     margin: 0;

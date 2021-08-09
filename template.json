@@ -137,10 +137,9 @@
         "stored": false
       },
       "weapon-basic": {
-        "weapontype": "",
+        "attackmod": 0,
+        "weapontype": "strtype",
         "attacks": 1,
-        "cacmod": 0,
-        "prjmod": 0,
         "addmod": 0,
         "damage": "1d4",
         "range": 0
