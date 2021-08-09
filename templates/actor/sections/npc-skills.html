@@ -1,0 +1,45 @@
+<div class="flexrow">
+    <div class="gear flexrow flex0">
+        <ul class="money-box flexrow" style="width: 5em; padding-top: 7px;">
+            <li>
+                <input name="data.attributes.dex.value" type="text" value="{{data.attributes.dex.value}}" data-dtype="Number"/>
+                <label class="velabel">{{localize "VEJDR.Initiative"}}</label>
+            </li>
+        </ul>
+    </div>
+    <div class="combat">
+        {{> "systems/vieja-escuela/templates/actor/sections/basic-combat.html"}}
+        <table class="items-list">
+            <colgroup>
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 60%;">
+                <col span="1" style="width: 10%;">
+            </colgroup>
+            <thead class="item gear-header">
+                <th class="item-name">{{localize "VEJDR.Talents"}}</th>
+                <th></th>
+                <th class="add-button">
+                    <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="talent">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </th>
+            </thead>
+            <tbody>
+                {{#each talents as |item id|}}
+                <tr class="item" data-item-id="{{item._id}}">
+                    <td class="flexrow">
+                        <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                        <span class="gear-name">{{item.name}}</span>
+                    </td>
+                    <td class="gear-values"></td>
+                    <td class="gear-values">
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
