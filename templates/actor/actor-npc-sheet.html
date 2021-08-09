@@ -1,0 +1,27 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        {{> "systems/vieja-escuela/templates/actor/sections/basic-header.html"}}
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "VEJDR.Stats"}}</a>
+        <a class="item" data-tab="spells">{{localize "VEJDR.Spells"}}</a>
+        <a class="item" data-tab="notes">{{localize "VEJDR.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            Skills
+        </div>
+        <div class="tab spells" data-group="primary" data-tab="spells">
+            {{> "systems/vieja-escuela/templates/actor/sections/basic-spells.html"}}
+        </div>
+        <div class="tab bio" data-group="primary" data-tab="notes">
+            Notes
+        </div>
+    </section>
+</form>
+

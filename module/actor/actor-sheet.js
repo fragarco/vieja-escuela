@@ -8,13 +8,22 @@ export class VEActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["vieja-escuela", "sheet", "actor"],
-      template: "systems/vieja-escuela/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }]
     });
   }
 
+  /** @override */
+  get template() {
+    const path = "systems/vieja-escuela/templates/actor";
+    let sheet = "actor-sheet.html";
+    if (this.actor.data.type !== "pc-base") {
+      sheet = "actor-npc-sheet.html";
+    }
+    return `${path}/${sheet}`;
+  }
+  
   /* -------------------------------------------- */
 
   /** @override */
