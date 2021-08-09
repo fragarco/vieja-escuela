@@ -48,15 +48,26 @@ export class VEActor extends Actor {
    */
    _prepareAttributesData(actorData) {
     const data = actorData.data;
-
+    const modscale = game.settings.get("vieja-escuela", "attribute-mods");
     // attribute mods
     for (let [key, attribute] of Object.entries(data.attributes)) {
-      // VE mods -2, -1, 0, +1, +2
-      if (attribute.value <= 3) attribute.mod = -2;
-      else if (attribute.value <= 6) attribute.mod = -1;
-      else if (attribute.value <= 14) attribute.mod = 0;
-      else if (attribute.value <= 17) attribute.mod = 1;
-      else attribute.mod = 2;
+      if (modscale === "basic") {
+        // VE mods -2, -1, 0, +1, +2
+        if (attribute.value <= 3) attribute.mod = -2;
+        else if (attribute.value <= 6) attribute.mod = -1;
+        else if (attribute.value <= 14) attribute.mod = 0;
+        else if (attribute.value <= 17) attribute.mod = 1;
+        else attribute.mod = 2;
+      } else {
+        // VE mods -3, -2, -1, 0, +1, +2. +3
+        if (attribute.value <= 3) attribute.mod = -3;
+        else if (attribute.value <= 5) attribute.mod = -2;
+        else if (attribute.value <= 8) attribute.mod = -1;
+        else if (attribute.value <= 12) attribute.mod = 0;
+        else if (attribute.value <= 15) attribute.mod = 1;
+        else if (attribute.value <= 17) attribute.mod = 2;
+        else attribute.mod = 3;
+      }
     }
   }
 

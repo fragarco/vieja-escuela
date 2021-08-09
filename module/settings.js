@@ -19,6 +19,7 @@ export const registerSettings = function () {
     choices: {
       basic: "VEJDR.Setting.BasicMods",
       hero: "VEJDR.Setting.HeroMods",
-    }
+    },
+    onChange: _ => window.location.reload()
   });
 };
