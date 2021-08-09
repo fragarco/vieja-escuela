@@ -1,30 +1,26 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <div class="header-image-col">
-            <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-            <h3>{{localize VRJDR.Cost}}</h3>
-            <div name="data.cost" class="flex-group-center">
-                <label for="data.cost.mo" class="resource-label">{{localize "VEJDR.CostMO"}}</label>
-                <input type="text" name="data.cost.mo" value="{{data.cost.mo}}" data-dtype="Number"/>
-                <label for="data.cost.mp" class="resource-label">{{localize "VEJDR.CostMP"}}</label>
-                <input type="text" name="data.cost.mp" value="{{data.cost.mp}}" data-dtype="Number"/>
-                <label for="data.cost.mc" class="resource-label">{{localize "VEJDR.CostMC"}}</label>
-                <input type="text" name="data.cost.mc" value="{{data.cost.mc}}" data-dtype="Number"/>
-            </div>
+        <div class="flex0">
+            <img class="profile-img" src="{{item.img}}" title="{{item.name}}" data-edit="img"/>
         </div>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'VEJDR.Name'}}"/></h1>
-            <div class="grid grid-3col">
-                <div class="flex-group-center">
-                    <label for="data.defmod" class="resource-label">{{localize "VEJDR.DefMod"}}</label>
-                    <input type="text" name="data.defmod" value="{{data.defmod}}" data-dtype="Number"/>
-                </div>
-                <div class="flex-group-center">
-                    <label for="data.weight" class="resource-label">{{localize "VEJDR.Weight"}}</label>
-                    <input type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
-                </div>
+        <section class="flex1">
+            <div class="name-line flexrow">
+                <h1 class="charname flexcol">
+                    <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
+                    <label class="velabel">{{localize 'VEJDR.Name'}}</label>
+                </h1>
             </div>
-        </div>
+            <ul class="flexrow flex0">
+                <li>
+                    <input class="valuebox" type="text" name="data.defmod" value="{{numberFormat data.defmod decimals=0 sign=true}}" data-dtype="Number"/>
+                    <label class="velabel">{{localize "VEJDR.DefMod"}}</label>
+                </li>
+                <li>
+                    <input class="valuebox" type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
+                    <label class="velabel">{{localize "VEJDR.Weight"}}</label>
+                </li>
+            </div>
+        </section>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
