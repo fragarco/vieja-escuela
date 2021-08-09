@@ -1,4 +1,7 @@
 {
+    "VEJDR.Setting.Version": "Versión",
+    "VEJDR.Setting.VersionHint": "No modificar, se usa internamente en procesos de actualización",
+
     "VEJDR.Name": "Nombre",
     "VEJDR.Type": "Tipo",
     "VEJDR.Class": "Clase",

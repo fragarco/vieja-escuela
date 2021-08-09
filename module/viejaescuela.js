@@ -4,6 +4,8 @@ import { VEActorSheet } from "./actor/actor-sheet.js";
 import { VEItem } from "./item/item.js";
 import { VEItemSheet } from "./item/item-sheet.js";
 import { preloadHandlebarsTemplates } from "./preloadtemplates.js";
+import { registerSettings } from "./settings.js";
+import { upgradeWorld } from "./upgrade.js";
 
 Hooks.once('init', async function() {
 
@@ -22,15 +24,17 @@ Hooks.once('init', async function() {
     decimals: 2
   };
 
+  registerSettings();
+
   // Define custom Entity classes
-  CONFIG.Actor.entityClass = VEActor;
-  CONFIG.Item.entityClass = VEItem;
+  CONFIG.Actor.documentClass = VEActor;
+  CONFIG.Item.documentClass = VEItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("VE", VEActorSheet, { makeDefault: true });
+  Actors.registerSheet("vieja-escuela", VEActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("VE", VEItemSheet, { makeDefault: true });
+  Items.registerSheet("vieja-escuela", VEItemSheet, { makeDefault: true });
 
   // Handlebars helpers, we use prefix "ve_" to avoid problems with other modules
   Handlebars.registerHelper('ve_concat', function() {
@@ -55,6 +59,7 @@ Hooks.once('init', async function() {
 });
 
 Hooks.once("ready", async function() {
+  upgradeWorld();
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createVEMacro(data, slot));
 });
