@@ -127,7 +127,7 @@
     }
   },
   "Item": {
-    "types": ["weapon-fantasy", "armor-fantasy", "gear-fantasy", "talent", "spell", "background"],
+    "types": ["weapon", "armor", "gear", "talent", "spell", "background"],
     "templates": {
       "gear-common": {
         "number": 1,
@@ -148,13 +148,13 @@
         "defmod": 0
       }
     },
-    "weapon-fantasy": {
+    "weapon": {
       "templates": ["gear-common", "weapon-basic"]
     },
-    "armor-fantasy": {
+    "armor": {
       "templates": ["gear-common", "armor-basic"]
     },
-    "gear-fantasy": {
+    "gear": {
       "templates": ["gear-common"]
     },
     "talent": {

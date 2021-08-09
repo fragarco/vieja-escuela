@@ -64,7 +64,7 @@ export class VEActorSheet extends ActorSheet {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       switch (i.type) {
-        case 'weapon-fantasy':
+        case 'weapon':
           if (item.stored) {
             stored.push(i);
            } else {
@@ -72,7 +72,7 @@ export class VEActorSheet extends ActorSheet {
             weapons.push(i);
           }
           break;
-        case 'armor-fantasy':
+        case 'armor':
           if (item.stored) {
             stored.push(i);
           } else {
@@ -80,7 +80,7 @@ export class VEActorSheet extends ActorSheet {
             armor.push(i);
           }
           break;
-        case 'gear-fantasy':
+        case 'gear':
           if (item.stored) {
             stored.push(i);
           } else {

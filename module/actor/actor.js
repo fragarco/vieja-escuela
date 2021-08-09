@@ -34,7 +34,7 @@ export class VEActor extends Actor {
     // encumbrance due to carried items
     for (let i of actorData.items) {
       const item = i.data;
-      if (item.type === 'weapon-fantasy' || item.type === 'armor-fantasy' || item.type === 'gear-fantasy') {
+      if (item.type === 'weapon' || item.type === 'armor' || item.type === 'gear') {
         if (!item.data.stored) {
           encumbrance = encumbrance + item.data.weight;
         }
@@ -70,7 +70,7 @@ export class VEActor extends Actor {
     let def = data.traits.def.base;
     for (let i of actorData.items) {
       const item = i.data;
-      if (item.type === 'armor-fantasy' && !item.data.stored) {
+      if (item.type === 'armor' && !item.data.stored) {
           def = def + item.data.defmod;
       }
     }
@@ -86,7 +86,7 @@ export class VEActor extends Actor {
     for (let i of actorData.items) {
       const item = i.data;
       const base = item.data.addmod + data.traits.atk.value;
-      if (item.type === 'weapon-fantasy') {
+      if (item.type === 'weapon') {
         switch(item.data.weapontype) {
           case "strtype":
             item.data.attackmod = base + data.attributes.str.mod;
