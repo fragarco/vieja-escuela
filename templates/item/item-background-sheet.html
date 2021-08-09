@@ -1,9 +1,16 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{VEJDR.Name}}"/></h1>
+        <div class="flex0">
+            <img class="profile-img" src="{{item.img}}" title="{{item.name}}" data-edit="img"/>
         </div>
+        <section class="flex1">
+            <div class="name-line flexrow">
+                <h1 class="charname flexcol">
+                    <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
+                    <label class="velabel">{{localize 'VEJDR.Name'}}</label>
+                </h1>
+            </div>
+        </section>
     </header>
     
     {{!-- Sheet Tab Navigation --}}
