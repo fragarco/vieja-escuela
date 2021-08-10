@@ -17,15 +17,37 @@ export class VEActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     switch (actorData.type) {
-      case 'pc-base': this._prepareCharacterData(actorData); break;
-      case 'npc-base': this._prepareNonCharacterData(actorData); break;
-      case 'pc-pulp':
+      case 'player':
         this._prepareCharacterData(actorData);
+        break;
+      case 'non-player':
+        this._prepareNonCharacterData(actorData);
+        break;
+    }
+    this._applySelectedHack(actorData);
+  }
+
+  /**
+   * 
+   * Apply configured hack differences
+   */
+  _applySelectedHack(actorData) {
+    const hack = game.settings.get("vieja-escuela", "flavor");
+    const data = actorData.data;
+    switch (hack) {
+      case 'fantasy':
+        data.traits.mp.label = "VEJDR.MP";
+        break;
+      case 'pulp':
         data.traits.mp.label = "VEJDR.PULP";
         break;
-      case 'npc-pulp':
-        this._prepareNonCharacterData(actorData);
-        data.traits.mp.label = "VEJDR.PULP";
+      case 'cyber':
+        break;
+      case 'stars':
+        break;
+      case 'peplum':
+        break;
+      case 'piratas':
         break;
     }
   }

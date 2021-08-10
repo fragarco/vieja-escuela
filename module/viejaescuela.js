@@ -33,7 +33,7 @@ Hooks.once('init', async function() {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("vieja-escuela", VEActorSheet, { 
-    types: ["pc-base", "npc-base", "pc-pulp", "npc-pulp"],
+    types: ["player", "non-player"],
     makeDefault: true,
   });
 

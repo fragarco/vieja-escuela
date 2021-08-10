@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["pc-base", "npc-base", "pc-pulp", "npc-pulp"],
+    "types": ["player", "non-player"],
     "templates": {
       "base-header": {
         "header": {
@@ -138,7 +138,7 @@
         "allies": ""
       }
     },
-    "pc-base": {
+    "player": {
       "templates": [
         "base-header",
         "base-attributes",
@@ -149,25 +149,7 @@
         "base-bio"
       ]
     },
-    "npc-base": {
-      "templates": [
-        "base-header",
-        "base-attributes",
-        "base-traits"
-      ]
-    },
-    "pc-pulp": {
-      "templates": [
-        "base-header",
-        "base-attributes",
-        "base-skills",
-        "base-traits",
-        "base-encumbrance",
-        "base-money",
-        "base-bio"
-      ]
-    },
-    "npc-pulp": {
+    "non-player": {
       "templates": [
         "base-header",
         "base-attributes",

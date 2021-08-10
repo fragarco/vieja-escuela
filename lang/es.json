@@ -5,6 +5,8 @@
     "VEJDR.Setting.AttribModsHint": "Modificadores que se otorgan por attributo",
     "VEJDR.Setting.BasicMods": "básico (-2/+2)",
     "VEJDR.Setting.HeroMods": "heróico (-3/+3)",
+    "VEJDR.Setting.Flavor": "Sabor de Vieja Escuela",
+    "VEJDR.Setting.FlavorHint": "Vieja Escuela es un sistema que cuenta con varios 'hacks' o sabores",
 
     "VEJDR.Name": "Nombre",
     "VEJDR.Type": "Tipo",

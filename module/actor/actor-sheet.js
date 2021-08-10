@@ -18,11 +18,27 @@ export class VEActorSheet extends ActorSheet {
   get template() {
     const path = "systems/vieja-escuela/templates/actor";
     let sheet = "";
-    switch (this.actor.data.type) {
-      case 'pc-base':  sheet = "actor-sheet.html"; break;
-      case 'npc-base': sheet = "actor-npc-sheet.html"; break;
-      case 'pc-pulp':  sheet = "pulp-sheet.html"; break;
-      case 'npc-pulp': sheet = "pulp-npc-sheet.html"; break;
+    const atype = this.actor.data.type; 
+    const hack = game.settings.get("vieja-escuela", "flavor");
+    switch (hack) {
+      case 'fantasy':
+        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html"; 
+        break;
+      case 'pulp':
+        sheet = (atype === 'player') ? "pulp-sheet.html" : "pulp-npc-sheet.html";
+        break;
+      case 'cyber':
+        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        break;
+      case 'stars':
+        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        break;
+      case 'peplum':
+        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        break;
+      case 'piratas':
+        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        break;
     }
     return `${path}/${sheet}`;
   }
