@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["pc-base", "npc-base"],
+    "types": ["pc-base", "npc-base", "pc-pulp", "npc-pulp"],
     "templates": {
       "base-header": {
         "header": {
@@ -98,7 +98,7 @@
           "mp": {
             "value": 0,
             "max": 0,
-            "label": "Magic Points"
+            "label": "VEJDR.MP"
           },
           "mov": {
             "value": 12,
@@ -150,6 +150,24 @@
       ]
     },
     "npc-base": {
+      "templates": [
+        "base-header",
+        "base-attributes",
+        "base-traits"
+      ]
+    },
+    "pc-pulp": {
+      "templates": [
+        "base-header",
+        "base-attributes",
+        "base-skills",
+        "base-traits",
+        "base-encumbrance",
+        "base-money",
+        "base-bio"
+      ]
+    },
+    "npc-pulp": {
       "templates": [
         "base-header",
         "base-attributes",

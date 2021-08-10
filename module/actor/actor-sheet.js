@@ -17,9 +17,12 @@ export class VEActorSheet extends ActorSheet {
   /** @override */
   get template() {
     const path = "systems/vieja-escuela/templates/actor";
-    let sheet = "actor-sheet.html";
-    if (this.actor.data.type !== "pc-base") {
-      sheet = "actor-npc-sheet.html";
+    let sheet = "";
+    switch (this.actor.data.type) {
+      case 'pc-base':  sheet = "actor-sheet.html"; break;
+      case 'npc-base': sheet = "actor-npc-sheet.html"; break;
+      case 'pc-pulp':  sheet = "pulp-sheet.html"; break;
+      case 'npc-pulp': sheet = "pulp-npc-sheet.html"; break;
     }
     return `${path}/${sheet}`;
   }
@@ -41,13 +44,9 @@ export class VEActorSheet extends ActorSheet {
     data.items = actorData.items;
     data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
-    // Prepare items.
-    if (this.actor.data.type == 'pc-base') {
-      this._prepareBaseCharacterItems(data);
-    }
-    if (this.actor.data.type == 'npc-base') {
-      this._prepareBaseCharacterItems(data);
-    }
+    // Prepare items. Could be filtered if needed by type
+    // using this.actor.data.type
+    this._prepareBaseCharacterItems(data);
     return data;
   }
 

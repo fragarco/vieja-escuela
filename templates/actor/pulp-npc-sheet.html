@@ -1,0 +1,25 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        {{> "systems/vieja-escuela/templates/actor/sections/basic-header.html"}}
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "VEJDR.Stats"}}</a>
+        <a class="item" data-tab="notes">{{localize "VEJDR.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            {{> "systems/vieja-escuela/templates/actor/sections/npc-skills.html"}}
+        </div>
+        <div class="tab bio" data-group="primary" data-tab="notes">
+            <div class="textinfo" style="height: 350px;">
+                {{editor content=data.story target="data.story" button=true owner=owner editable=editable}}
+            </div>
+        </div>
+    </section>
+</form>
+

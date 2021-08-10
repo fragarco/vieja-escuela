@@ -1,0 +1,31 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        {{> "systems/vieja-escuela/templates/actor/sections/basic-header.html"}}
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "VEJDR.Stats"}}</a>
+        <a class="item" data-tab="combat">{{localize "VEJDR.Combat"}}</a>
+        <a class="item" data-tab="gear">{{localize "VEJDR.Gear"}}</a>
+        <a class="item" data-tab="bio">Bio</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            {{> "systems/vieja-escuela/templates/actor/sections/basic-skills.html"}}
+        </div>
+        <div class="tab combat" data-group="primary" data-tab="combat">
+            {{> "systems/vieja-escuela/templates/actor/sections/basic-combat.html"}}
+        </div>
+        <div class="tab gear" data-group="primary" data-tab="gear">
+            {{> "systems/vieja-escuela/templates/actor/sections/basic-gear.html"}}
+        </div>
+        <div class="tab bio" data-group="primary" data-tab="bio">
+            {{> "systems/vieja-escuela/templates/actor/sections/basic-bio.html"}}
+        </div>
+    </section>
+</form>
+

@@ -16,8 +16,18 @@ export class VEActor extends Actor {
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    if (actorData.type === 'pc-base') this._prepareCharacterData(actorData);
-    if (actorData.type === 'npc-base') this._prepareNonCharacterData(actorData);
+    switch (actorData.type) {
+      case 'pc-base': this._prepareCharacterData(actorData); break;
+      case 'npc-base': this._prepareNonCharacterData(actorData); break;
+      case 'pc-pulp':
+        this._prepareCharacterData(actorData);
+        data.traits.mp.label = "VEJDR.PULP";
+        break;
+      case 'npc-pulp':
+        this._prepareNonCharacterData(actorData);
+        data.traits.mp.label = "VEJDR.PULP";
+        break;
+    }
   }
 
   /**
