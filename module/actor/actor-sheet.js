@@ -28,7 +28,7 @@ export class VEActorSheet extends ActorSheet {
         sheet = (atype === 'player') ? "pulp-sheet.html" : "pulp-npc-sheet.html";
         break;
       case 'cyber':
-        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        sheet = (atype === 'player') ? "cyber-sheet.html" : "actor-npc-sheet.html";
         break;
       case 'stars':
         sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
@@ -84,6 +84,8 @@ export class VEActorSheet extends ActorSheet {
     const talents = [];
     const backgrounds = [];
     const spells = [];
+    const implants = [];
+    const programs = [];
 
     // Iterate through items, allocating to containers
     for (let i of sheetData.items) {
@@ -116,6 +118,8 @@ export class VEActorSheet extends ActorSheet {
           break;
         case 'talent': talents.push(i); break;
         case 'spell':  spells.push(i); break;
+        case 'implant': implants.push(i); break;
+        case 'program': programs.push(i); break;
         case 'background': backgrounds.push(i); break;
       }
     }
@@ -126,6 +130,8 @@ export class VEActorSheet extends ActorSheet {
     sheetData.armor = armor;
     sheetData.talents = talents;
     sheetData.spells = spells;
+    sheetData.implants = implants;
+    sheetData.programs = programs;
     sheetData.backgrounds = backgrounds;
   }
 

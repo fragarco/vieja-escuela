@@ -3,16 +3,20 @@
         <ul class="money-box flexrow">
             <li>
                 <input name="data.money.gp" type="text" value="{{data.money.gp}}" data-dtype="Number"/>
-                <label class="velabel">{{localize "VEJDR.CostMO"}}</label>
+                <label class="velabel">{{localize data.money.gplabel}}</label>
             </li>
+            {{#if data.money.splabel}}
             <li>
                 <input name="data.money.sp" type="text" value="{{data.money.sp}}" data-dtype="Number"/>
-                <label class="velabel">{{localize "VEJDR.CostMP"}}</label>
+                <label class="velabel">{{localize data.money.splabel}}</label>
             </li>
+            {{/if}}
+            {{#if data.money.cplabel}}
             <li>
                 <input name="data.money.cp" type="text" value="{{data.money.cp}}" data-dtype="Number"/>
-                <label class="velabel">{{localize "VEJDR.CostMC"}}</label>
+                <label class="velabel">{{localize data.money.cplabel}}</label>
             </li>
+            {{/if}}
         </ul>
     </div>
     <div style="text-align: center;">

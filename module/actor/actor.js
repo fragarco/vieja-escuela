@@ -37,17 +37,39 @@ export class VEActor extends Actor {
     switch (hack) {
       case 'fantasy':
         data.traits.mp.label = "VEJDR.MP";
+        data.money.gplabel = "VEJDR.CostMO";
+        data.money.splabel = "VEJDR.CostMP";
+        data.money.cplabel = "VEJDR.CostMC";
         break;
       case 'pulp':
         data.traits.mp.label = "VEJDR.PULP";
+        data.money.gplabel = "VEJDR.CostDOLAR";
+        data.money.splabel = "";
+        data.money.cplabel = "";
         break;
       case 'cyber':
+        data.traits.mp.label = "VEJDR.POWERUPS";
+        data.money.gplabel = "VEJDR.CostBIT";
+        data.money.splabel = "";
+        data.money.cplabel = "";
         break;
       case 'stars':
+        data.traits.mp.label = "VEJDR.MP";
+        data.money.gplabel = "VEJDR.CostCR";
+        data.money.splabel = "";
+        data.money.cplabel = "";
         break;
       case 'peplum':
+        data.traits.mp.label = "VEJDR.PEPLUM";
+        data.money.gplabel = "VEJDR.CostMO";
+        data.money.splabel = "VEJDR.CostMP";
+        data.money.cplabel = "VEJDR.CostMC";
         break;
       case 'piratas':
+        data.traits.mp.label = "VEJDR.MP";
+        data.money.gplabel = "VEJDR.CostMO";
+        data.money.splabel = "VEJDR.CostMP";
+        data.money.cplabel = "VEJDR.CostMC";
         break;
     }
   }

@@ -39,7 +39,7 @@ Hooks.once('init', async function() {
 
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("vieja-escuela", VEItemSheet, {
-    types: ["weapon", "armor", "gear", "talent", "spell", "background"],
+    types: ["weapon", "armor", "gear", "talent", "spell", "implant", "program", "background"],
     makeDefault: true
   });
 
