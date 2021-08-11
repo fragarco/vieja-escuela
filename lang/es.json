@@ -27,7 +27,7 @@
     "VEJDR.SOUL": "ALMA",
     "VEJDR.PULP": "Ptos. PULP!",
     "VEJDR.POWERUPS": "POWER-UPs",
-    "VEJDR.PELUM": "PEPLUM",
+    "VEJDR.PEPLUM": "PEPLUM",
     "VEJDR.Initiative": "Iniciativa",
 
     "VEJDR.Stats": "Estats",
@@ -47,6 +47,13 @@
     "VEJDR.Manipulation": "Manipulación",
     "VEJDR.Stealth": "Subterfugio",
     "VEJDR.Survival": "Superviviencia",
+    "VEJDR.Corporate": "Corporate",
+    "VEJDR.Cyber": "Cyber",
+    "VEJDR.Hardware": "Hardware",
+    "VEJDR.Punk": "Punk",
+    "VEJDR.Savage": "Savage",
+    "VEJDR.Urban": "Urban",
+    "VEJDR.Tech": "Tecnología",
 
     "VEJDR.AddTalent": "Nuevo",
     "VEJDR.Talents": "Talentos",
@@ -88,6 +95,8 @@
 
     "VEJDR.Spells": "Conjuros",
     "VEJDR.SpellMinPow": "Poder Mínimo",
+    "VEJDR.Powers": "Poderes",
+    "VEJDR.Marvels": "Prodigios",
 
     "VEJDR.AddItem": "Nuevo",
     "VEJDR.DelItem": "Borrar",
@@ -98,5 +107,7 @@
 
     "VEJDR.Story": "Historial, personalidad, aspecto físico, etc.",
     "VEJDR.Allies": "Aliados",
-    "VEJDR.Enemies": "Enemigos"
+    "VEJDR.Enemies": "Enemigos",
+    "VEJDR.Implants": "Implantes",
+    "VEJDR.Programs": "Programas"
 }

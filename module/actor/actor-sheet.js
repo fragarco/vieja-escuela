@@ -31,10 +31,10 @@ export class VEActorSheet extends ActorSheet {
         sheet = (atype === 'player') ? "cyber-sheet.html" : "actor-npc-sheet.html";
         break;
       case 'stars':
-        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        sheet = (atype === 'player') ? "stars-sheet.html" : "actor-npc-sheet.html";
         break;
       case 'peplum':
-        sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";
+        sheet = (atype === 'player') ? "peplum-sheet.html" : "actor-npc-sheet.html";
         break;
       case 'piratas':
         sheet = (atype === 'player') ? "actor-sheet.html" : "actor-npc-sheet.html";

@@ -1,0 +1,66 @@
+<table class="items-list">
+    <colgroup>
+        <col span="1" style="width: 40%;">
+        <col span="1" style="width: 50%;">
+        <col span="1" style="width: 10%;">
+     </colgroup>
+    <thead class="item gear-header">
+        <th class="item-name">{{localize "VEJDR.Implants"}}</th>
+        <th class="item-name">{{localize "VEJDR.Description"}}</th>
+        <th class="add-button">
+            <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="implant">
+                <i class="fas fa-plus"></i>
+            </a>
+        </th>
+    </thead>
+    <tbody>
+        {{#each implants as |item id|}}
+        <tr class="item" data-item-id="{{item._id}}">
+            <td class="flexrow">
+                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span class="spell-name">{{item.name}}</span>
+            </td>
+            <td style="text-align: center;">{{item.data.description}}</td>
+            <td style="text-align: center;">
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<table class="items-list">
+    <colgroup>
+        <col span="1" style="width: 40%;">
+        <col span="1" style="width: 50%;">
+        <col span="1" style="width: 10%;">
+     </colgroup>
+    <thead class="item gear-header">
+        <th class="item-name">{{localize "VEJDR.Programs"}}</th>
+        <th class="item-name">{{localize "VEJDR.Description"}}</th>
+        <th class="add-button">
+            <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="program">
+                <i class="fas fa-plus"></i>
+            </a>
+        </th>
+    </thead>
+    <tbody>
+        {{#each programs as |item id|}}
+        <tr class="item" data-item-id="{{item._id}}">
+            <td class="flexrow">
+                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span class="spell-name">{{item.name}}</span>
+            </td>
+            <td style="text-align: center;">{{item.data.description}}</td>
+            <td style="text-align: center;">
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

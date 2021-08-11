@@ -27,6 +27,39 @@ export class VEActor extends Actor {
     this._applySelectedHack(actorData);
   }
 
+  _applyDefaultHackSkills(data) {
+    data.skills.alertness.label = "VEJDR.Alertness";
+    data.skills.communication.label = "VEJDR.Communication";
+    data.skills.lore.label = "VEJDR.Lore";
+    data.skills.manipulation.label = "VEJDR.Manipulation";
+    data.skills.stealth.label = "VEJDR.Stealth";
+    data.skills.survival.label = "VEJDR.Survival";
+  }
+
+  _applyCyberHackSkills(data) {
+    data.skills.alertness.label = "VEJDR.Corporate";
+    data.skills.communication.label = "VEJDR.Cyber";
+    data.skills.lore.label = "VEJDR.Hardware";
+    data.skills.manipulation.label = "VEJDR.Punk";
+    data.skills.stealth.label = "VEJDR.Savage";
+    data.skills.survival.label = "VEJDR.Urban";
+  }
+
+  _applyStarsHackSkills(data) {
+    data.skills.alertness.label = "VEJDR.Alertness";
+    data.skills.communication.label = "VEJDR.Communication";
+    data.skills.lore.label = "VEJDR.Lore";
+    data.skills.manipulation.label = "VEJDR.Tech";
+    data.skills.stealth.label = "VEJDR.Stealth";
+    data.skills.survival.label = "VEJDR.Survival";
+  }
+
+  _applyDefaultHackCoins(data) {
+    data.money.gplabel = "VEJDR.CostMO";
+    data.money.splabel = "VEJDR.CostMP";
+    data.money.cplabel = "VEJDR.CostMC";
+  }
+
   /**
    * 
    * Apply configured hack differences
@@ -37,39 +70,39 @@ export class VEActor extends Actor {
     switch (hack) {
       case 'fantasy':
         data.traits.mp.label = "VEJDR.MP";
-        data.money.gplabel = "VEJDR.CostMO";
-        data.money.splabel = "VEJDR.CostMP";
-        data.money.cplabel = "VEJDR.CostMC";
+        this._applyDefaultHackCoins(data);
+        this._applyDefaultHackSkills(data);
         break;
       case 'pulp':
         data.traits.mp.label = "VEJDR.PULP";
         data.money.gplabel = "VEJDR.CostDOLAR";
         data.money.splabel = "";
         data.money.cplabel = "";
+        this._applyDefaultHackSkills(data);
         break;
       case 'cyber':
         data.traits.mp.label = "VEJDR.POWERUPS";
         data.money.gplabel = "VEJDR.CostBIT";
         data.money.splabel = "";
         data.money.cplabel = "";
+        this._applyCyberHackSkills(data);
         break;
       case 'stars':
         data.traits.mp.label = "VEJDR.MP";
         data.money.gplabel = "VEJDR.CostCR";
         data.money.splabel = "";
         data.money.cplabel = "";
+        this._applyStarsHackSkills(data);
         break;
       case 'peplum':
         data.traits.mp.label = "VEJDR.PEPLUM";
-        data.money.gplabel = "VEJDR.CostMO";
-        data.money.splabel = "VEJDR.CostMP";
-        data.money.cplabel = "VEJDR.CostMC";
+        this._applyDefaultHackCoins(data);
+        this._applyDefaultHackSkills(data);
         break;
       case 'piratas':
         data.traits.mp.label = "VEJDR.MP";
-        data.money.gplabel = "VEJDR.CostMO";
-        data.money.splabel = "VEJDR.CostMP";
-        data.money.cplabel = "VEJDR.CostMC";
+        this._applyDefaultHackCoins(data);
+        this._applyDefaultHackSkills(data);
         break;
     }
   }

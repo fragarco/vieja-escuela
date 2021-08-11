@@ -1,0 +1,72 @@
+<div class="skills-tab grid grid-3col">
+    <div class="attributes flexcol">
+        <h3 class="subhead">{{localize "VEJDR.Attributes"}}</h3>
+        <ol>
+            {{#each data.attributes as |attribute key|}}
+            <li class="flexrow">
+                <label class="rollable" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
+                <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+                <span>{{numberFormat attribute.mod decimals=0 sign=true}}</span>
+            </li>
+            {{/each}}
+            <li class="flexrow">
+                <label class="rollable">{{localize data.traits.soul.label}}</label>
+                <input type="text" name="data.traits.soul.value" value="{{data.traits.soul.value}}" data-dtype="Number"/>
+                <span></span>
+            </li>
+        </ol>
+    </div>
+    <div class="skills flexcol">
+        <h3 class="subhead">{{localize "VEJDR.Skills"}}</h3>
+        <ol>
+            {{#each data.skills as |skill key|}}
+                <li class="flexrow">
+                    <label class="rollable" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</label>
+                    <input type="number" name="data.skills.{{key}}.value" value="{{numberFormat skill.value decimals=0 sign=true}}" data-dtype="Number"/>
+                </li>
+            {{/each}}
+        </ol>
+    </div>
+    <div class="talents flexcol">
+        <h3 class="subhead flexrow">
+            <i class="flex1">{{localize "VEJDR.Talents"}}</i>
+            <span class="add-button">
+                <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="talent">
+                    <i class="fas fa-plus"></i>
+                </a>
+            </span>
+        </h3>
+        <ol>
+            {{#each talents as |item id|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <div class="flex0"><img src="{{item.img}}" title="{{item.name}}"/></div>
+                    <h4 class="flex1">{{item.name}}</h4>
+                    <div class="item-controls talent-buttons">
+                        <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+        </ol>
+        <h3 class="subhead flexrow">
+            <i class="flex1">{{localize "VEJDR.Backgrounds"}}</i>
+            <span class="add-button">
+                <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="background">
+                    <i class="fas fa-plus"></i>
+                </a>
+            </span>
+        </h3>
+        <ol>
+            {{#each backgrounds as |item id|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <div class="flex0"><img src="{{item.img}}" title="{{item.name}}"/></div>
+                    <h4 class="flex1">{{item.name}}</h4>
+                    <div class="item-controls talent-buttons">
+                        <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+        </ol>
+    </div>
+</div>
