@@ -160,7 +160,9 @@
       "templates": [
         "base-header",
         "base-attributes",
-        "base-traits"
+        "base-skills",
+        "base-traits",
+        "base-money"
       ]
     }
   },

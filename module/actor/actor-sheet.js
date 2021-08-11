@@ -28,7 +28,7 @@ export class VEActorSheet extends ActorSheet {
         sheet = (atype === 'player') ? "pulp-sheet.html" : "pulp-npc-sheet.html";
         break;
       case 'cyber':
-        sheet = (atype === 'player') ? "cyber-sheet.html" : "actor-npc-sheet.html";
+        sheet = (atype === 'player') ? "cyber-sheet.html" : "pulp-npc-sheet.html";
         break;
       case 'stars':
         sheet = (atype === 'player') ? "stars-sheet.html" : "actor-npc-sheet.html";
