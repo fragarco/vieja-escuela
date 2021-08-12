@@ -36,6 +36,6 @@
   "secondaryTokenAttribute": null,
   "url": "https://github.com/fragarco/vieja-escuela",
   "manifest": "https://github.com/fragarco/vieja-escuela/blob/main/system.json",
-  "download": "",
+  "download": "https://github.com/fragarco/vieja-escuela/releases/release-1.0.0.zip",
   "license": "LICENSE"
 }
