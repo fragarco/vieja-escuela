@@ -16,7 +16,7 @@ Para instalar y usar el sistema Vieja Escuela JdR en Foundry Virtual Tabletop, s
 
 https://github.com/fragarco/vieja-escuela/blob/main/system.json
 
-Si desea instalar manualmente el sistema, debe clonarlo o extraerlo en la carpeta ``Data/systems/vieja-escuela``.
+Si desea instalar manualmente el sistema, debe clonarlo o extraerlo en la carpeta "Data/systems/vieja-escuela".
 
 ## CONFIGURACIÓN
 
