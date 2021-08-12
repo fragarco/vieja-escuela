@@ -24,7 +24,13 @@ For each world created using the Vieja Escuela JdR system, it is possible to con
 
 ## FINAL REMARKS
 
+### Vehicles
+
+Currently the system does not offer a token for vehicles. In the case of flavors that include this option (such as Cyberpunk or Old Star), it is recommended to simply use a standard game aid with the data of the vehicle in question.
+
 Although some automations have been implemented, several values must be entered by hand (Instincts, Base Attack, or Defense). It has been done on purpose, since most values can be subject to modifications by special equipment, spells, talents, etc., and its better to have a functional system rather than offering a very automated tool that does not cover all the possible cases.
+
+### Defense value
 
 The Defense value is a good example of this. The sheet provides two values, one editable and one calculated. The manual value should correspond to the base Defense (normally 10) plus the Dexterity modifier, while the calculated one will add to the previous value the "armor" type objects used by the character.
 
