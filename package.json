@@ -1,23 +1,13 @@
 {
   "name": "vieja-escuela",
-  "version": "1.0.0",
-  "description": "CSS compiler for viejae-escuela system",
-  "scripts": {
-    "build": "gulp",
-    "compile": "gulp css",
-    "watch": "gulp",
-    "gulp": "gulp"
-  },
+  "version": "1.0.2",
+  "description": "vieja-escuela system for Foundry VTT",
+  "scripts": {},
   "browserslist": [
     "last 3 versions"
   ],
   "author": "Javier 'Dwayne Hicks' Garcia",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^3.0.0"
-  }
+  "dependencies": {}
 }
