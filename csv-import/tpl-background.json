@@ -1,0 +1,9 @@
+{
+    "name": "{{name}}",
+    "type": "background",
+    "img": "systems/vieja-escuela/assets/icons/backgrounds/profesion.png",
+    "data": {
+        "description": "{{description}}"
+    }
+}
+

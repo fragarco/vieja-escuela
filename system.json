@@ -19,6 +19,13 @@
   "scripts": [],
   "packs": [
     {
+      "name": "veexp-trasfondos",
+      "label": "VE Exp: Trasfondos básicos",
+      "system": "vieja-escuela",
+      "path": "./packs/veexp-trasfondos.db",
+      "entity": "Item"
+    },
+    {
       "name": "veexp-equipo",
       "label": "VE Exp: Equipo",
       "system": "vieja-escuela",
