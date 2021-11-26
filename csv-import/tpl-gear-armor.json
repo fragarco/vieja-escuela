@@ -1,14 +1,14 @@
 {
     "name": "{{name}}",
-    "type": "gear",
-    "img": "systems/vieja-escuela/assets/icons/gear/abaco.png",
+    "type": "armor",
+    "img": "systems/vieja-escuela/assets/icons/gear-armor/acolchada.png",
     "data": {
         "number": {{number}},
         "description": "{{description}}",
         "weight": {{peso}},
-        "capacity": {{capacity}},
+        "capacity": 0,
         "stored": false,
+        "defmod": {{def}}
     }
 }
-
 

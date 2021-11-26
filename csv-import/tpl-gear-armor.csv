@@ -1,0 +1,8 @@
+"name","number","peso","def","description"
+"Cuero blando",1,0,1,"Ligera. Tiene un precio habitual de 5 mo."
+"Cuero",1,1,2,"Ligera. Tiene un precio habitual de 15 mo."
+"Anillas",1,1,3,"Intermedia. Tiene un precio habitual de 30 mo."
+"Mallas",1,1,4,"Intermedia. Tiene un precio habitual de 75 mo."
+"Placas",1,2,6,"Pesada. Tiene un precio habitual de 100 mo. Esta armadura solo permite un movimiento base de 6 metros como máximo y el personaje aplica las penalizaciones de estar sobrecargado."
+"Completa",1,2,7,"Pesada. Tiene un precio habitual de 300 mo. Esta armadura solo permite un movimiento base de 6 metros como máximo y el personaje aplica las penalizaciones de estar sobrecargado."
+"Escudo",1,1,1,,"Tiene un precio habitual de 15 mo."
