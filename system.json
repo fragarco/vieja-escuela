@@ -17,7 +17,15 @@
     "css/items.css"
   ],
   "scripts": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "veexp-conjuros",
+      "label": "VE Exp: Conjuros",
+      "system": "vieja-escuela",
+      "path": "./packs/veexp-conjuros.db",
+      "entity": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "es",

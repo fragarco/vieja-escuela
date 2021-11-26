@@ -1,0 +1,10 @@
+{
+    "name": "{{name}}",
+    "type": "spell",
+    "img": "systems/vieja-escuela/assets/icons/spells/{{icono}}",
+    "data": {
+        "minmp": {{poder}},
+        "description": "{{resumen}}",
+        "notes": "{{description}}"
+    }
+}

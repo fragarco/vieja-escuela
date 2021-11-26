@@ -39,3 +39,16 @@ The Defense value is a good example of this. The sheet provides two values, one 
 All of the code (HTML/CSS/JavaScript) in this repository is released under the GPLv3 license (see LICENSE file for details).
 
 Game content like character attributes, monsters characteristics, spells descriptions, and rules information is designated as Open Game Content as descrived by the Open Game License 1.0a (see OGL.txt file for details). The name "Vieja Escuela" is designated as Product Identity and covered by the license CC-By-NC-SA 4.0, while "vieja Escuela el juego de rol" is designate as Product Identity too, and covered by the license CC-By-SA 4.0.
+
+Icons provided under the Creative Commons 3.0 BY different contributor. Icons made by:
+
+- Lorc, http://lorcblog.blogspot.com
+- Delapouite, https://delapouite.com
+- Carl Olsen, https://twitter.com/unstoppableCarl
+- Sbed, http://opengameart.org/content/95-game-icons
+- Willdabeast, http://wjbstories.blogspot.com
+- Lucas
+- Skoll
+- DarkZaitzev, http://darkzaitzev.deviantart.com
+
+More info and icons available at https://game-icons.net
