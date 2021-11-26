@@ -1,0 +1,18 @@
+{
+    "name": "{{name}}",
+    "type": "weapon",
+    "img": "systems/vieja-escuela/assets/icons/gear-weapon/alabarda.png",
+    "data": {
+        "number": {{number}},
+        "description": "{{description}}",
+        "weight": {{peso}},
+        "capacity": 0,
+        "stored": false,
+        "attackmod": 0,
+        "weapontype": "strtype",
+        "attacks": {{ataques}},
+        "addmod": 0,
+        "damage": "{{damage}}",
+        "range": {{rango}}
+    }
+}
