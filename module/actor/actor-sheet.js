@@ -123,6 +123,13 @@ export class VEActorSheet extends ActorSheet {
         case 'background': backgrounds.push(i); break;
       }
     }
+    // Reorder spells for minmp and then by name 
+    spells.sort((a, b) => {
+      if (a.data.minmp > b.data.minmp) return 1;
+      else if (a.data.minmp === b.data.minmp && a.name > b.name) return 1;
+      return -1;
+    });
+
     // Assign and return
     sheetData.gear = gear;
     sheetData.stored = stored;
