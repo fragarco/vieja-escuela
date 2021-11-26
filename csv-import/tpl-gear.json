@@ -1,0 +1,14 @@
+{
+    "name": "{{name}}",
+    "type": "gear",
+    "img": "systems/vieja-escuela/assets/icons/gear/abaco.png",
+    "data": {
+        "number": {{number}},
+        "description": "{{description}}",
+        "weight": {{peso}},
+        "capacity": {{capacity}},
+        "stored": false
+    }
+}
+
+

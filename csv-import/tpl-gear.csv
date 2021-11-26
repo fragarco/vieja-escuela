@@ -1,0 +1,26 @@
+"name","number","description","peso","capacity"
+"Aceite para quemar (frasco)",1,"Tiene un precio habitual de 5 mp. Consume 1 punto de carga por cada dos viales.",0,0
+"Agua bendita (frasco)",1,"Tiene un precio habitual de 25 mo. Consume 1 punto de carga por cada dos viales.",0,0
+"Antorcha (1 hora de luz)",4,"Tiene un precio habitual de 4 mc",1,0
+"Cantimplora (2 litros)",1,"Tiene un precio habitual de 1 mo",1,0
+"Carcaj y 20 flechas",20,"Tiene un precio habitual de 8 mp",1,0
+"Cuerda común (15 metros)",1,"Tiene un precio habitual de 1 mo",1,0
+"Espejo pequeño de acero",1,"Tiene un precio habitual de 20 mo",0,0
+"Estacas (4) y maza de madera",4,"Tiene un precio habitual de 3 mo",1,0
+"Farol con capuchón (4 horas de luz) ",1,"Tiene un precio habitual de 7 mo",1,0
+"Farol de ojo de buey (4 horas de luz)",1,"Tiene un precio habitual de 12 mo",1,0
+"Garfio de escalada",1,"Tiene un precio habitual de 1 mo",1,0
+"Herramientas de ladrón",1,"Tiene un precio habitual de 25 mo",1,0
+"Instrumento musical",1,"Tiene un precio habitual de 5 mo",1,0
+"Libro de conjuros (50 hojas)",1,"Tiene un precio habitual de 25 mo",1,0
+"Mochila",1,"Tiene un precio habitual de 5 mo",0,8
+"Palanca",1,"Tiene un precio habitual de 2 mp",1,0
+"Pértiga de madera (3 metros)",1,"Tiene un precio habitual de 2 mp",2,0
+"Piquetas de hierro (10)",10,"Tiene un precio habitual de 5 mp",1,0
+"Raciones comunes (1 día)",1,"Tiene un precio habitual de 5 mp. Consume 1 punto de carga por cada cinco raciones.",1,0
+"Raciones de viaje (1 día)",1,"Tiene un precio habitual de 1 mo. Consume 1 punto de carga por cada cinco raciones.",1,0
+"Saco",1,"Tiene un precio habitual de 1 mo",0,10
+"Saco de dormir",1,"Tiene un precio habitual de 2 mp",1,0
+"Símbolo religioso (plata)",1,"Tiene un precio habitual de 25 mo",0,0
+"Vendas para heridas (x1)",1,"Tiene un precio habitual de 1mp. Consume 1 punto de carga porque cada 6.",0,0
+"Yesca y pedernal",1,"Tiene un precio habitual de 1 mp",1,0

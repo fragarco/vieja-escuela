@@ -19,6 +19,13 @@
   "scripts": [],
   "packs": [
     {
+      "name": "veexp-equipo",
+      "label": "VE Exp: Equipo",
+      "system": "vieja-escuela",
+      "path": "./packs/veexp-equipo.db",
+      "entity": "Item"
+    },
+    {
       "name": "veexp-conjuros",
       "label": "VE Exp: Conjuros",
       "system": "vieja-escuela",
