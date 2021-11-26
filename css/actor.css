@@ -38,10 +38,8 @@
 .vieja-escuela.sheet .sheet-header ul.level-box {
     list-style: none;
     max-width: 8em;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 20px; 
+    margin: 20px 0 0 0;
+    padding: 0; 
   }
 
 .vieja-escuela.sheet .sheet-header ul.level-box input,
@@ -139,8 +137,8 @@
 
 .vieja-escuela.sheet .attributes input{
     max-width: 3em;
-    border: 2px groove black;
-    border-radius: 4px;
+    border: 1px groove black;
+    border-radius: 0px;
     text-align: center;
     height: auto;
 }
@@ -163,8 +161,8 @@
 
 .vieja-escuela.sheet .skills input{
     max-width: 3em;
-    border: 2px groove black;
-    border-radius: 4px;
+    border: 1px groove black;
+    border-radius: 0px;
     text-align: center;
     height: auto;
 }
