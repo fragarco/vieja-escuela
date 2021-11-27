@@ -45,6 +45,13 @@
       "system": "vieja-escuela",
       "path": "./packs/veexp-conjuros.db",
       "entity": "Item"
+    },
+    {
+      "name": "veexp-bestiario",
+      "label": "VE Exp: Bestiario",
+      "system": "vieja-escuela",
+      "path": "./packs/veexp-bestiario.db",
+      "entity": "Actor"
     }
   ],
   "languages": [
