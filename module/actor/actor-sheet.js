@@ -59,7 +59,6 @@ export class VEActorSheet extends ActorSheet {
     // Owned items.
     data.items = actorData.items;
     data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-
     // Prepare items. Could be filtered if needed by type
     // using this.actor.data.type
     this._prepareBaseCharacterItems(data);

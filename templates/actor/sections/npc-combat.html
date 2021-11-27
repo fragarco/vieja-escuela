@@ -36,6 +36,9 @@
             <td class="gear-values">
                 <div class="item-controls">
                     <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    {{#unless isPlayer}}
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                    {{/unless}}
                 </div>
             </td>
         </tr>
@@ -71,6 +74,9 @@
             <td class="gear-values">
                 <div class="item-controls">
                     <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                    {{#unless isPlayer}}
+                    <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
+                    {{/unless}}
                 </div>
             </td>
         </tr>

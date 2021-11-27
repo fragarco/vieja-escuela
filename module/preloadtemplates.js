@@ -18,7 +18,8 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/vieja-escuela/templates/actor/sections/basic-spells.html',
         'systems/vieja-escuela/templates/actor/sections/cyber-implants.html',
         'systems/vieja-escuela/templates/actor/sections/basic-bio.html',
-        'systems/vieja-escuela/templates/actor/sections/npc-skills.html'
+        'systems/vieja-escuela/templates/actor/sections/npc-skills.html',
+        'systems/vieja-escuela/templates/actor/sections/npc-combat.html'
     ];
     
     return loadTemplates(templatePaths);

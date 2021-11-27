@@ -14,7 +14,7 @@
         </ul>
     </div>
     <div class="combat">
-        {{> "systems/vieja-escuela/templates/actor/sections/basic-combat.html"}}
+        {{> "systems/vieja-escuela/templates/actor/sections/npc-combat.html"}}
         <table class="items-list">
             <colgroup>
                 <col span="1" style="width: 30%;">
@@ -41,6 +41,7 @@
                     <td class="gear-values">
                         <div class="item-controls">
                             <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="{{localize 'VEJDR.DelItem'}}"><i class="fas fa-trash"></i></a>
                         </div>
                     </td>
                 </tr>
