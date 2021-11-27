@@ -19,6 +19,13 @@
   "scripts": [],
   "packs": [
     {
+      "name": "veexp-talentos",
+      "label": "VE Exp: Talentos",
+      "system": "vieja-escuela",
+      "path": "./packs/veexp-talentos.db",
+      "entity": "Item"
+    },
+    {
       "name": "veexp-trasfondos",
       "label": "VE Exp: Trasfondos básicos",
       "system": "vieja-escuela",

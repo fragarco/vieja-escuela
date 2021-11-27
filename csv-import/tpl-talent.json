@@ -1,0 +1,9 @@
+{
+    "name": "{{name}}",
+    "type": "talent",
+    "img": "systems/vieja-escuela/assets/icons/talents/alto_elfo.png",
+    "data": {
+        "description": "{{description}}"
+    }
+}
+
