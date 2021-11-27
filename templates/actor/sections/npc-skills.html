@@ -6,7 +6,7 @@
                 <label class="velabel">{{localize "VEJDR.Initiative"}}</label>
             </li>
             <li style="text-align: center;">
-                <a class="rollable" data-roll="1d20 + {{data.header.level.value}}" data-label="{{localize 'VEJDR.Skills'}}"><i class="fas fa-dice-d20"></i></a>
+                <a class="rollable" data-roll="1d20 + {{ve_min 10 data.header.level.value}}" data-label="{{localize 'VEJDR.Skills'}}"><i class="fas fa-dice-d20"></i></a>
             </li>
             <li style="text-align: center;">
                 <label class="velabel">{{localize "VEJDR.Skills"}}</label>

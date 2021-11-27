@@ -62,6 +62,10 @@ Hooks.once('init', async function() {
     return Math.max(num1, num2);
   });
 
+  Handlebars.registerHelper('ve_min', function(num1, num2) {
+    return Math.min(num1, num2);
+  });
+
   Handlebars.registerHelper('ve_colorRoll', function(rollstr) {
     const dice = rollstr.slice(0,2).trim();
     let style = "";
