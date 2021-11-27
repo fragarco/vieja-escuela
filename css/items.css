@@ -31,7 +31,7 @@
 }
 
 .vieja-escuela.sheet.item .name-line div.name-side-box {
-    position: relative; 
+    margin: 20px 0 0 0;
     top: 20px;
     max-width: 8em;
 }
