@@ -314,11 +314,17 @@ export class VEActorSheet extends ActorSheet {
 
       await roll1.evaluate({async: true});
       await roll2.evaluate({async: true});
+      // Prepare rolls in case Dice So Nice! is being used
+      const rolls = [roll1,roll2]; //array of Roll
+      const pool = PoolTerm.fromRolls(rolls);
+      const dsnroll = Roll.fromTerms([pool]);
       renderTemplate("systems/vieja-escuela/templates/dice/simpledualroll.html",{roll1, roll2})
       .then(
         (msg) => {
           ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+            roll: dsnroll,
             flavor: label,
             content: msg,
           });
@@ -343,11 +349,17 @@ export class VEActorSheet extends ActorSheet {
       await roll1.evaluate({async: true});
       await roll2.evaluate({async: true});
       await damage.evaluate({async: true});
+      // Prepare rolls in case Dice So Nice! is being used
+      const rolls = [roll1,roll2]; //array of Roll
+      const pool = PoolTerm.fromRolls(rolls);
+      const dsnroll = Roll.fromTerms([pool]);
       renderTemplate("systems/vieja-escuela/templates/dice/attackdualroll.html",{roll1, roll2, damage})
       .then(
         (msg) => {
           ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+            roll: dsnroll,
             flavor: label,
             content: msg,
           });
