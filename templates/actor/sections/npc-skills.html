@@ -23,7 +23,7 @@
             </colgroup>
             <thead class="item gear-header">
                 <th class="item-name">{{localize "VEJDR.Talents"}}</th>
-                <th></th>
+                <th clasS="item-name">{{localize "VEJDR.Description"}}</th>
                 <th class="add-button">
                     <a class="item-control item-create" title="{{localize 'VEJDR.AddItem'}}" data-type="talent">
                         <i class="fas fa-plus"></i>
@@ -37,7 +37,7 @@
                         <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
                         <span class="gear-name">{{item.name}}</span>
                     </td>
-                    <td class="gear-values"></td>
+                    <td class="gear-values">{{ve_stripHTML item.data.description}}</td>
                     <td class="gear-values">
                         <div class="item-controls">
                             <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
