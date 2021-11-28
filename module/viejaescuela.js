@@ -88,6 +88,7 @@ Hooks.once('init', async function() {
     param = param.replaceAll("&oacute;", "ó");
     param = param.replaceAll("&uacute;", "ú");
     param = param.replaceAll("&ntilde;", "ñ");
+    param = param.replaceAll("&nbsp;", " ");
     return param;
   });
 
