@@ -1,71 +1,17 @@
-"description","name","level","pg","ini","mov","atqname","atqnum","atqdmg","def","talname","taldesc"
-"ELEMENTAL DE AIRE
-Niv 12; Iniciativa 14; Mov 12 (volando); Atq golpe (2d8); Def 17
-Talentos: Puede transformarse en un tornado y empujar a su víctima hasta 5m. Inmune a las armas mundanas.","Elemental de aire",12,72,14,12,"Golpe",1,"2d8",17,"Tornado"," Puede transformarse en un tornado y empujar a su víctima hasta 5m."
-"ELEMENTAL DE TIERRA
-Niv 12;Iniciativa 10; Mov 9; Atq puño (3d6); Def 17
-Talentos: Pueden desgarrar estructuras de piedra, paredes, etc., en 1d4+4 minutos. No sufre daño por armas mundanas.","Elemental de tierra",12,72,10,9,"Puño",1,"3d6",17,"Desmenuzar","Puede desgarrar estructuras de piedra, paredes, etc., en 1d4+4 minutos."
-"ELEMENTAL DE FUEGO
-Niv 12; Iniciativa 13; Mov 12; Atq golpe (3d8); Def 17
-Talentos: Sus ataques incendian material inflamable (madera,etc.). No sufre daño por armas mundanas.","Elemental de fuego",12,72,13,12,"Golpe",1,"3d8",17,"Incendiar"," Sus ataques incendian material inflamable (madera,etc.)."
-"ELEMENTAL DE AGUA
-Niv 12; Iniciativa 13; Mov 12/15 (nadando); Atq golpe (3d6); Def 17
-Talentos: Pueden volcar barcos. No sufre daño por armas mundanas.","Elemental de agua",12,72,13,12,"Golpe",1,"3d6",17,"Tsunami","Pueden volcar barcos."
-"ELFO
-Niv 2; Iniciativa 12; Mov 12; Atq espada (1d8) o arco (1d6); Def 14
-Talentos: Vista aguda e Infravisión 20m.""Elfo","Elfo",2,12,12,12,"Espada",1,"1d8",14,"Vista aguda",
-"ELFO, GUERRERO
-Niv 8; Iniciativa 12; Mov 12; Atq espada (1d8) o arco (1d6); Def 16
-Talentos: Vista aguda. Infravisión 20 metros.","Elfo, Guerrero",8,48,12,12,"Espada",2,"1d8",16,"Vista aguda",
-"ELFO OSCURO
-Elfos depravados de piel oscura que viven en el interior de la tierra. Su sociedad es matriarcal y esclavista. Se organizan en familias que compiten entre sí. Cada casa está bajo el mando de una sacerdotisa.
-Niv 3; Iniciativa 12; Mov 12; Atq arma (1d6); Def 15
-Talentos: Infravisión 20 metros.","Elfo oscuro",3,18,12,12,"Lanza",1,"1d6",15,"Infravisión 20m",
-"ELFO OSCURO, EXPLORADOR
-Niv 3; Iniciativa 12; Mov 12; Atq arma (1d6); Def 13
-Talentos: Emboscar. Vista aguda e Infravisión 20m.","Elfo oscuro, Explorador",3,18,12,12,"Lanza",1,"1d6",13,"Emboscar",
-"ELFO OSCURO, GUERRERO
-Niv 5; Iniciativa 12; Mov 12; Atq espada (1d8) o arco (1d6); Def 16
-Talentos: Ensañarse (si impacta dos veces al mismo enemigo gana +1 en sus próximos ataques contra él). Infravisión 20 metros.","Elfo oscuro, Guerrero",5,30,12,12,"Espada",2,"1d8",16,"Ensañarse","Si impacta dos veces al mismo enemigo gana +1 en sus próximos ataques contra él."
-"ENANO
-Niv 2; Iniciativa 10; Mov 9; Atq martillo de guerra (1d4 + 1); Def 15
-Talentos: Afín a la piedra e Infravisión 20m.","Enano",2,12,10,9,"Martillo de guerra",1,"1d4+1",15,"Afin a la piedra",
-"ESCARABAJO GIGANTE
-Niv 1; Iniciativa 10; Mov 9; Atq mordisco (2d4); Def 15
-Talentos: Ninguno.","Escarabajo gigante",1,6,10,9,"Mordisco",1,"2d4",15,,
-"ESCARABAJO GIGANTE DE FUEGO
-Se les denomina así por su color rojizo y la luz que emiten sus glándulas.
-Nivel 1; Iniciativa 10; Mov 9; Atq mordisco (2d4); Def 15
-Talentos: glándulas iridiscentes por las que reciben el nombre.","Escarabajo gigante de fuego",1,6,10,9,"Mordisco",1,"2d4",15,"Glándulas iridiscentes","Pueden emitir luz durante 8 horas después de la muerte del escarabajo."
-"ESFINGE
-Suele tener cabeza de mujer o de hombre barbudo, cuerpo de león y alas de águila.
-Niv 6; Iniciativa 12; Mov 15; Atq garras(1d8+1) y mordisco(3d4); Def 15
-Talentos: Magia arcana [Poder 8] (con predilección por los conjuros comprensión idiomática, detectar magia, clarividencia y sueño).","Esfinge",6,36,12,15,"Garras",1,"1d8+1",15,"Magia arcana","Con predilección por los conjuros comprensión idiomática, detectar magia, clarividencia y sueño."
-"ESQUELETO
-Niv 1; Iniciativa 9; Mov 12; Atq arma (1d6); Def 11
-Talentos: Inmune a cualquier efecto sobre la mente.","Esqueleto",1,6,9,12,"Lanza",1,"1d6",11,"Sin mente"," Inmune a cualquier efecto sobre la mente."
-"ESQUELETO CAMPEÓN
-Niv 3; Iniciativa 9; Mov 12; Atq arma (2d4+2); Def 16
-Talentos: Inmune a cualquier efecto sobre la mente.","Esqueleto, campeón",3,18,9,12,"Espadón",1,"2d4+2",16,"Sin mente"," Inmune a cualquier efecto sobre la mente."
-"ESQUELETO ARDIENTE
-Muerto viviente que se aparece como un esqueleto envuelto en llamas.
-Niv 3; Iniciativa 9; Mov 12; Atq garras flamígeras (1d4+2 fuego); Def 12
-Talentos: Inmune a cualquier efecto sobre la mente e Inmune al fuego.","Esqueleto ardiente",3,18,9,12,"Garras flamígeras",1,"1d4+2",12,"Sin mente"," Inmune a cualquier efecto sobre la mente."
-"ESPADA VOLADORA
-Armas poseídas por las almas vengativas de sus antiguos dueños.
-Niv 2; Iniciativa 14; Mov 12; Atq espada(1d8); Def 17
-Talentos: Volar, Inmune a cualquier efecto sobre la mente.","Espada voladora",2,12,14,12,"Espada",1,"1d8",17,"Sin mente"," Inmune a cualquier efecto sobre la mente."
-"ESPECTRO
-Los espectros son muertos vivientes fantasmales cuyo toque absorbe el alma de sus víctimas.
-Niv 6; Iniciativa 12; Mov 9; Atq arma espectral o toque (1d8 + drenar vida); Def 17
-Talentos: Drenar vida (si causa daño absorbe 1d6 puntos de Carisma de forma permanente).","Espectro",6,36,12,9,"Arma espectral",1,"1d8",17,"Drenar vida","Si causa daño absorbe 1d6 puntos de Carisma de forma permanente."
-"ESTATUA GUARDIÁN
-Niv 4; Iniciativa 12; Mov 9; Atq arma de piedra (2d4+1); Def 16
-Talentos: Inmune a cualquier efecto sobre la mente.","Estatua guardían",4,24,12,9,"Arma de piedra",1,"2d4+1",16,"Sin mente"," Inmune a cualquier efecto sobre la mente."
-"ESTIRGE
-Se asemejan a pequeños osos hormigueros con plumas y alas de murciélago.
-Niv 1; Iniciativa 14; Mov 12 (volando); Atq picadura (1d3 + drenaje sangre); Def 12
-Talentos: Drenar sangre (si causa daño se adhiere y drena 1d4 Pv / asalto posterior de forma automática, el blanco puede librarse con una tirada de Instintos Fuerza 10+).","Estirge",1,6,14,12,"Picadura",1,"1d3",12,"Drenar sangre","Si causa daño se adhiere y drena 1d4 Pv / asalto posterior de forma automática, el blanco puede librarse con una tirada de Instintos Fuerza 10+"
-"FÉNIX, AVE
-Niv 11; Iniciativa 12; Mov 6/15 (volando); Atq 2 garras (1d3), pico (3d6); Def 12
-Talentos: Resurgir de las cenizas (cuando cae muerto, puede resucitar con sus Pv al máximo. Una vez por año). Sudario de llamas (causa a sus oponentes adyacentes 1d6 Pv por fuego durante 1fd6 asaltos).","Fénix, ave",11,66,12,6,"Garras",2,"1d3",12,"Resurgir de las cenizas","Cuando cae muerto, puede resucitar con sus Pv al máximo. Una vez por año."
+"description","name","level","pg","ini","mov","atqname","atqnum","atqdmg","def","talname","taldesc","talname2","taldesc2"
+"GÁRGOLA Estas estatuas animadas se transforman en piedra inerte a la luz del día. Niv 4; Iniciativa 10; Mov 6/12 (volando); Atq 2 garras (1d3), 1 mordisco (1d4), 1 cornada (1d6); Def 14 Talentos: Volar.","Gárgola",4,24,10,6,"Garras",2,"1d3",14,"Volar","Movimiento 12",,
+"GARRAPATA GIGANTE Nivel 3; Iniciativa 12; Mov 9; Atq picadura (1d4); Def 15 Talentos: Si causa daño se adhiere y drena 4 Puntos de vida cada asalto posterior (soltarse con Instintos Fuerza 11+). transmitir enfermedad mortal en 2d4 días (1 entre 10, evitar con Instintos Constitución 10+).","Garrapata gigante",3,18,12,9,"Picadura",1,"1d4",15,"Parasitar","Si causa daño se adhiere y drena 4 Puntos de vida cada asalto posterior (soltarse con Instintos Fuerza 11+).","Transmitir enfermedad","Al causar daño puede contagiar una enfermedad mortal en 2d4 días (1 entre 10, evitar con Instintos Constitución 10+)."
+"GELATINA OCRE Cienos amorfos de consistencia gelatinosa. Dañan a sus víctimas a través de su superficie ácida. Niv 5; Iniciativa 9; Mov 3; Atq golpe ácido (3d4 por ácido); Def 11 Talentos: Disuelve aquello que mata, sin posibilidad de resucitarlo o convertirlo en muerto viviente.","Gelatina ocre",5,30,9,3,"Golpe ácido",1,"3d4",11,"Digerir","Disuelve aquello que mata, sin posibilidad de resucitarlo o convertirlo en muerto viviente.",,
+"GIGANTE DE LAS COLINAS Son los más pequeños de entre los gigantes, poco más que grandes cavernícolas salvajes. Niv 8; Iniciativa 13; Mov 12; Atq arma (2d6); Def 15 Talentos: Lanzar rocas de 2d8 de daño hasta 10 metros.","Gigante de las colinas",8,48,13,12,"Garrote",1,"2d6",15,"Arrojar","Lanzar rocas, +8. 2d8 de daño. Hasta 10 metros.",,
+"GIGANTE DE LA ESCARCHA Habitan en lugares fríos e inhóspitos dominados por el hielo y la nieve. Niv 12; Iniciativa 13; Mov 12; Atq arma (3d6); Def 15 Talentos: Inmunes al frío. Lanzar rocas o grandes trozos de hielo de 4d6 de daño hasta 10 metros.","Gigante de la escarcha",12,72,13,12,"Garrote",1,"3d6",15,"Arrojar"," Lanzar rocas o grandes trozos de hielo de 4d6 de daño hasta 10 metros.",,
+"GIGANTE DE FUEGO Suelen vivir cerca de grandes volcanes, ya que su piel es inmune al fuego y disfrutan las altas temperaturas. Niv 12; Iniciativa 12; Mov 12; Atq arma (3d6); Def 15 Talentos: Inmunes al fuego. Lanzar rocas de magma candente de 5d6 de daño hasta 10 metros.","Gigante de fuego",12,72,12,12,"Alfanje",1,"3d6",15,"Arrojar","Lanzar rocas de magma candente de 5d6 de daño hasta 10 metros.","Resistencia elemental","Inmune al fuego"
+"GIGANTE DE LAS NUBES Son criaturas muy astutas. A menudo viven en el cielo, en castillos mágicos construidos en las nubes. Niv 14; Iniciativa 12; Mov 12; Atq arma (3d6); Def 15 Talentos: Olfato muy sensible. Lanzar rocas de 5d6 de daño hasta 10m.","Gigante de las nubes",14,84,12,12,"Lanza",1,"3d6",15,"Arrojar","Lanzar rocas de 5d6 de daño hasta 10m.","Sentidos agudos","Olfato muy sensible."
+"GIGANTE DE PIEDRA Se les puede encontrar en las montañas más inexpugnables viviendo en cuevas aisladas. Niv 9; Iniciativa 10; Mov 12; Atq garrote (2d6); Def 19 Talentos: Lanzar rocas de 3d6 de daño hasta 10 metros.","Gigante de piedra",9,54,10,12,"Garrote",1,"2d6",19,"Arrojar","Lanzar rocas de 3d6 de daño hasta 10 metros.",,
+"GIGANTE DE LA TORMENTA Son la raza de gigantes más grande, inteligente y mágica. También son los más propensos a hablar con otras razas en lugar de comérselas sin más —lo que no quiere decir que no lo hagan después—. Niv 15; iniciativa 12; Mov 12; Atq arma (3d6); Def 18 Talentos: Lanzar rocas de 5d6 de daño hasta 10 metros. Controlar el clima durante 1d6 asaltos.","Gigante de la tormenta",15,90,12,12,"Lanza",1,"3d6",18,"Arrojar","Lanzar rocas de 5d6 de daño hasta 10 metros","Controlar el clima","Durante 1d6 asaltos."
+"GNOLL Humanoides con cabeza de hiena. Muy violentos y salvajes. Niv 2; Iniciativa 12; Mov 12; Atq mordisco (2d4) o arma (1d8); Def 14 Talentos: Ninguno.","Gnoll",2,12,12,12,"Mordisco",1,"2d4",14,,,,
+"GOBLIN Humanoides de piel verde que huyen de la luz solar. Niv 1; Iniciativa 11; Mov 9; Atq arma (1d6); Def 12 Talentos: Ninguno.","Goblin",12,72,10,9,"Lanza",1,"1d6",12,,,,
+"GOLEM DE PIEDRA Niv 12; Iniciativa 10; Mov 9; Atq puño (3d8); Def 14 Talentos: Inmune a las armas mundanas. Inmune a la magia excepto hechizos que afecten a la roca o basados en el fuego.","Golem de piedra",12,72,10,9,"Puño",1,"3d8",14,"Protección contra la magia","Inmune a las armas mundanas. Inmune a la magia excepto hechizos que afecten a la roca o basados en el fuego.",,
+"GORGONA Enormes criaturas parecidas a toros. Niv 8; Iniciativa 14; Mov 12; Atq cornear (2d6); Def 17 Talentos: Su aliento puede convertir en piedra a los blancos dentro de un alcance de 20 metros. Los efectos se pueden evitar con una tirada de Instintos Constitución 15+.","Gorgona",8,48,14,12,"Cornear",1,"2d6",17,"Arma de aliento","Su aliento puede convertir en piedra a los blancos dentro de un alcance de 20 metros. Los efectos se pueden evitar con una tirada de Instintos Constitución 15+.",,
+"GORILA Niv 2; Iniciativa 13; Mov 12; Atq golpe (1d10); Def 12 Talentos: Trepar.","Gorila",2,12,13,12,"Golpe",1,"1d10",12,"Trepar",,,
+"GRIFO Criaturas con cuerpo de león, y cabeza, garras y alas de águila. Niv 7; Iniciativa 11; Atq 2 garras (1d4), 1 mordisco (1d8+1); Def 16 Talentos: Ninguno.","Grifo",7,42,11,12,"Garras",2,"1d4",16,,,,
+"GUSANO PÚRPURA Enormes gusanos subterráneos de color violáceo. Su cola está rema- tada por un terrible aguijón. Niv 15; Iniciativa 10; Mov 9; 15 (volando); Atq Mordisco (2d8), picadura (1d8+veneno); Def 13 Talentos: Pueden tragarse hasta un caballo con un resultado crítico. Su veneno es mortal (evitar con una tirada de Instintos Constitución 14+).","Gusano púrpura",15,90,10,9,"Mordisco",1,"2d8",13,"Engulllir","Pueden tragarse hasta un caballo con un resultado crítico.","Veneno mortal","Su ataque de picadura contiene un veneno que es mortal (evitar con una tirada de Instintos Constitución 14+)."

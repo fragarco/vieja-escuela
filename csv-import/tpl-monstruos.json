@@ -100,11 +100,11 @@
             }
         },
         {
-            "name":"Talento2",
+            "name":"{{talname2}}",
             "type":"talent",
             "img":"icons/svg/aura.svg",
             "data":{
-                "description":""
+                "description":"{{taldesc2}}"
             }
         }
     ]

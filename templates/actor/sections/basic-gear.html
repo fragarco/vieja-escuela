@@ -56,7 +56,7 @@
         <tr class="item" data-item-id="{{item._id}}">
             <td class="flexrow">
                 <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
-                <span class="storable gear-name">{{item.name}}</span>
+                <span title="{{ve_stripHTML item.data.description}}" class="storable gear-name">{{item.name}}</span>
             </td>
             <td class="gear-values">{{item.data.number}}</td>
             <td class="gear-values">{{item.data.weight}}</td>
