@@ -162,7 +162,8 @@
         "base-attributes",
         "base-skills",
         "base-traits",
-        "base-money"
+        "base-money",
+        "base-bio"
       ]
     }
   },

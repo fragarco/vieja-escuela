@@ -1,0 +1,71 @@
+"description","name","level","pg","ini","mov","atqname","atqnum","atqdmg","def","talname","taldesc"
+"ELEMENTAL DE AIRE
+Niv 12; Iniciativa 14; Mov 12 (volando); Atq golpe (2d8); Def 17
+Talentos: Puede transformarse en un tornado y empujar a su víctima hasta 5m. Inmune a las armas mundanas.","Elemental de aire",12,72,14,12,"Golpe",1,"2d8",17,"Tornado"," Puede transformarse en un tornado y empujar a su víctima hasta 5m."
+"ELEMENTAL DE TIERRA
+Niv 12;Iniciativa 10; Mov 9; Atq puño (3d6); Def 17
+Talentos: Pueden desgarrar estructuras de piedra, paredes, etc., en 1d4+4 minutos. No sufre daño por armas mundanas.","Elemental de tierra",12,72,10,9,"Puño",1,"3d6",17,"Desmenuzar","Puede desgarrar estructuras de piedra, paredes, etc., en 1d4+4 minutos."
+"ELEMENTAL DE FUEGO
+Niv 12; Iniciativa 13; Mov 12; Atq golpe (3d8); Def 17
+Talentos: Sus ataques incendian material inflamable (madera,etc.). No sufre daño por armas mundanas.","Elemental de fuego",12,72,13,12,"Golpe",1,"3d8",17,"Incendiar"," Sus ataques incendian material inflamable (madera,etc.)."
+"ELEMENTAL DE AGUA
+Niv 12; Iniciativa 13; Mov 12/15 (nadando); Atq golpe (3d6); Def 17
+Talentos: Pueden volcar barcos. No sufre daño por armas mundanas.","Elemental de agua",12,72,13,12,"Golpe",1,"3d6",17,"Tsunami","Pueden volcar barcos."
+"ELFO
+Niv 2; Iniciativa 12; Mov 12; Atq espada (1d8) o arco (1d6); Def 14
+Talentos: Vista aguda e Infravisión 20m.""Elfo","Elfo",2,12,12,12,"Espada",1,"1d8",14,"Vista aguda",
+"ELFO, GUERRERO
+Niv 8; Iniciativa 12; Mov 12; Atq espada (1d8) o arco (1d6); Def 16
+Talentos: Vista aguda. Infravisión 20 metros.","Elfo, Guerrero",8,48,12,12,"Espada",2,"1d8",16,"Vista aguda",
+"ELFO OSCURO
+Elfos depravados de piel oscura que viven en el interior de la tierra. Su sociedad es matriarcal y esclavista. Se organizan en familias que compiten entre sí. Cada casa está bajo el mando de una sacerdotisa.
+Niv 3; Iniciativa 12; Mov 12; Atq arma (1d6); Def 15
+Talentos: Infravisión 20 metros.","Elfo oscuro",3,18,12,12,"Lanza",1,"1d6",15,"Infravisión 20m",
+"ELFO OSCURO, EXPLORADOR
+Niv 3; Iniciativa 12; Mov 12; Atq arma (1d6); Def 13
+Talentos: Emboscar. Vista aguda e Infravisión 20m.","Elfo oscuro, Explorador",3,18,12,12,"Lanza",1,"1d6",13,"Emboscar",
+"ELFO OSCURO, GUERRERO
+Niv 5; Iniciativa 12; Mov 12; Atq espada (1d8) o arco (1d6); Def 16
+Talentos: Ensañarse (si impacta dos veces al mismo enemigo gana +1 en sus próximos ataques contra él). Infravisión 20 metros.","Elfo oscuro, Guerrero",5,30,12,12,"Espada",2,"1d8",16,"Ensañarse","Si impacta dos veces al mismo enemigo gana +1 en sus próximos ataques contra él."
+"ENANO
+Niv 2; Iniciativa 10; Mov 9; Atq martillo de guerra (1d4 + 1); Def 15
+Talentos: Afín a la piedra e Infravisión 20m.","Enano",2,12,10,9,"Martillo de guerra",1,"1d4+1",15,"Afin a la piedra",
+"ESCARABAJO GIGANTE
+Niv 1; Iniciativa 10; Mov 9; Atq mordisco (2d4); Def 15
+Talentos: Ninguno.","Escarabajo gigante",1,6,10,9,"Mordisco",1,"2d4",15,,
+"ESCARABAJO GIGANTE DE FUEGO
+Se les denomina así por su color rojizo y la luz que emiten sus glándulas.
+Nivel 1; Iniciativa 10; Mov 9; Atq mordisco (2d4); Def 15
+Talentos: glándulas iridiscentes por las que reciben el nombre.","Escarabajo gigante de fuego",1,6,10,9,"Mordisco",1,"2d4",15,"Glándulas iridiscentes","Pueden emitir luz durante 8 horas después de la muerte del escarabajo."
+"ESFINGE
+Suele tener cabeza de mujer o de hombre barbudo, cuerpo de león y alas de águila.
+Niv 6; Iniciativa 12; Mov 15; Atq garras(1d8+1) y mordisco(3d4); Def 15
+Talentos: Magia arcana [Poder 8] (con predilección por los conjuros comprensión idiomática, detectar magia, clarividencia y sueño).","Esfinge",6,36,12,15,"Garras",1,"1d8+1",15,"Magia arcana","Con predilección por los conjuros comprensión idiomática, detectar magia, clarividencia y sueño."
+"ESQUELETO
+Niv 1; Iniciativa 9; Mov 12; Atq arma (1d6); Def 11
+Talentos: Inmune a cualquier efecto sobre la mente.","Esqueleto",1,6,9,12,"Lanza",1,"1d6",11,"Sin mente"," Inmune a cualquier efecto sobre la mente."
+"ESQUELETO CAMPEÓN
+Niv 3; Iniciativa 9; Mov 12; Atq arma (2d4+2); Def 16
+Talentos: Inmune a cualquier efecto sobre la mente.","Esqueleto, campeón",3,18,9,12,"Espadón",1,"2d4+2",16,"Sin mente"," Inmune a cualquier efecto sobre la mente."
+"ESQUELETO ARDIENTE
+Muerto viviente que se aparece como un esqueleto envuelto en llamas.
+Niv 3; Iniciativa 9; Mov 12; Atq garras flamígeras (1d4+2 fuego); Def 12
+Talentos: Inmune a cualquier efecto sobre la mente e Inmune al fuego.","Esqueleto ardiente",3,18,9,12,"Garras flamígeras",1,"1d4+2",12,"Sin mente"," Inmune a cualquier efecto sobre la mente."
+"ESPADA VOLADORA
+Armas poseídas por las almas vengativas de sus antiguos dueños.
+Niv 2; Iniciativa 14; Mov 12; Atq espada(1d8); Def 17
+Talentos: Volar, Inmune a cualquier efecto sobre la mente.","Espada voladora",2,12,14,12,"Espada",1,"1d8",17,"Sin mente"," Inmune a cualquier efecto sobre la mente."
+"ESPECTRO
+Los espectros son muertos vivientes fantasmales cuyo toque absorbe el alma de sus víctimas.
+Niv 6; Iniciativa 12; Mov 9; Atq arma espectral o toque (1d8 + drenar vida); Def 17
+Talentos: Drenar vida (si causa daño absorbe 1d6 puntos de Carisma de forma permanente).","Espectro",6,36,12,9,"Arma espectral",1,"1d8",17,"Drenar vida","Si causa daño absorbe 1d6 puntos de Carisma de forma permanente."
+"ESTATUA GUARDIÁN
+Niv 4; Iniciativa 12; Mov 9; Atq arma de piedra (2d4+1); Def 16
+Talentos: Inmune a cualquier efecto sobre la mente.","Estatua guardían",4,24,12,9,"Arma de piedra",1,"2d4+1",16,"Sin mente"," Inmune a cualquier efecto sobre la mente."
+"ESTIRGE
+Se asemejan a pequeños osos hormigueros con plumas y alas de murciélago.
+Niv 1; Iniciativa 14; Mov 12 (volando); Atq picadura (1d3 + drenaje sangre); Def 12
+Talentos: Drenar sangre (si causa daño se adhiere y drena 1d4 Pv / asalto posterior de forma automática, el blanco puede librarse con una tirada de Instintos Fuerza 10+).","Estirge",1,6,14,12,"Picadura",1,"1d3",12,"Drenar sangre","Si causa daño se adhiere y drena 1d4 Pv / asalto posterior de forma automática, el blanco puede librarse con una tirada de Instintos Fuerza 10+"
+"FÉNIX, AVE
+Niv 11; Iniciativa 12; Mov 6/15 (volando); Atq 2 garras (1d3), pico (3d6); Def 12
+Talentos: Resurgir de las cenizas (cuando cae muerto, puede resucitar con sus Pv al máximo. Una vez por año). Sudario de llamas (causa a sus oponentes adyacentes 1d6 Pv por fuego durante 1fd6 asaltos).","Fénix, ave",11,66,12,6,"Garras",2,"1d3",12,"Resurgir de las cenizas","Cuando cae muerto, puede resucitar con sus Pv al máximo. Una vez por año."
