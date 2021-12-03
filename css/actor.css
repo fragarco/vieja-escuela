@@ -130,6 +130,11 @@
     font-weight: bold;
 }
 
+.vieja-escuela.sheet .skills li,
+.vieja-escuela.sheet .attributes li{
+    margin: 10px 0 0 0;
+}
+
 .vieja-escuela.sheet .attributes label{
     text-align: center;
     margin: 4px 0 0 0;
@@ -174,10 +179,10 @@
 
 .vieja-escuela.sheet .backgrounds img,
 .vieja-escuela.sheet .talents img {
-    flex: 0 0 24px;
-    max-width: 24px;
-    height: 24px;
-    margin: 5px;
+    flex: 0;
+    max-width: 32px;
+    height: 32px;
+    margin-right: 5px;
 }
 
 .vieja-escuela.sheet .backgrounds h4,

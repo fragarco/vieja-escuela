@@ -9,16 +9,6 @@
                     <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
                     <label class="velabel">{{localize 'VEJDR.Name'}}</label>
                 </h1>
-                <div class="name-side-box">
-                    <select class="flexrow weapon-type" name="data.weapontype">
-                        {{#select data.weapontype}}
-                        <option value="strtype">{{localize "VEJDR.TypeSTR"}}</option>
-                        <option value="dextype">{{localize "VEJDR.TypeDEX"}}</option>
-                        <option value="othtype">{{localize "VEJDR.TypeOTH"}}</option>
-                        {{/select}}
-                    </select>
-                    <label class="velabel">{{localize "VEJDR.AttackWith"}}</label>
-                </div>
             </div>
             <ul class="flexrow">
                 <li>
@@ -30,18 +20,38 @@
                     <label class="velabel">{{localize "VEJDR.Weight"}}</label>
                 </li>
                 <li>
+                    <input class="valuebox" type="text" name="data.attacks" value="{{data.attacks}}" data-dtype="Number"/>
+                    <label class="velabel">{{localize "VEJDR.Attacks"}}</label>
+                </li>
+                <li>
                     <input class="valuebox" type="text" name="data.range" value="{{data.range}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Range"}}</label>
                 </li>
             </ul>
             <ul class="flexrow">
                 <li>
-                    <input class="valuebox" type="text" name="data.attacks" value="{{data.attacks}}" data-dtype="Number"/>
-                    <label class="velabel">{{localize "VEJDR.Attacks"}}</label>
+                    <select id="attack-mod-selector" class="flexrow weapon-type" name="data.weapontype">
+                        {{#select data.weapontype}}
+                        <option value="othtype">{{localize "VEJDR.TypeOTH"}}</option>
+                        <option value="strtype">{{localize "VEJDR.TypeSTR"}}</option>
+                        <option value="dextype">{{localize "VEJDR.TypeDEX"}}</option>
+                        {{/select}}
+                    </select>
+                    <label class="velabel">{{localize "VEJDR.AttackWith"}}</label>
                 </li>
                 <li>
                     <input class="valuebox" type="text" name="data.addmod" value="{{numberFormat data.addmod decimals=0 sign=true}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.AddMod"}}</label>
+                </li>
+                <li>
+                    <select id="damage-mod-selector" class="flexrow weapon-type" name="data.damagetype">
+                        {{#select data.damagetype}}
+                        <option value="othtype">{{localize "VEJDR.TypeOTH"}}</option>
+                        <option value="strtype">{{localize "VEJDR.TypeSTR"}}</option>
+                        <option value="dextype">{{localize "VEJDR.TypeDEX"}}</option>
+                        {{/select}}
+                    </select>
+                    <label class="velabel">{{localize "VEJDR.DamageWith"}}</label>
                 </li>
                 <li>
                     <input class="valuebox" type="text" name="data.damage" value="{{data.damage}}" data-dtype="String"/>

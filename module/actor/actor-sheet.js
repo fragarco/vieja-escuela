@@ -183,10 +183,11 @@ export class VEActorSheet extends ActorSheet {
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
-      html.find('li.item').each((i, li) => {
-        if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
+      // Find all items on the character sheet.
+      html.find('tr.item').each((i, tr) => {
+        // Add draggable attribute and dragstart listener.
+        tr.setAttribute("draggable", true);
+        tr.addEventListener("dragstart", handler, false);
       });
     }
   }
@@ -287,16 +288,7 @@ export class VEActorSheet extends ActorSheet {
    */
    async _onAttackRoll(event) {
     event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-    const rolldata = this.actor.getRollData();
-    // reaplace attribute name by its value if it appears in the damage roll
-    const attributes = Object.keys(rolldata.attributes);
-    attributes.forEach((a) => {
-      const label = game.i18n.localize(rolldata.attributes[a].label);
-      dataset.damage = dataset.damage.replace(label, rolldata.attributes[a].mod);
-    });
-    await this.__handleAttackDualRoll(dataset);
+    await this.__handleAttackDualRoll(event.currentTarget.dataset);
   }
 
   /**
@@ -339,10 +331,15 @@ export class VEActorSheet extends ActorSheet {
    */
    async __handleAttackDualRoll(dataset) {
     const rollingstr = game.i18n.localize("VEJDR.AttackWith");
+    let damageroll = dataset.damage;
+    if (dataset.damagemod && dataset.damagemod !== "othtype") {
+      if (dataset.damagemod === "strtype") damageroll += " + @attributes.str.mod";
+      if (dataset.damagemod === "dextype") damageroll += " + @attributes.dex.mod";
+    }
     if (dataset.roll) {
       let roll1 = new Roll(dataset.roll, this.actor.getRollData());
       let roll2 = new Roll(dataset.roll, this.actor.getRollData());
-      let damage = new Roll(dataset.damage, this.actor.getRollData());
+      let damage = new Roll(damageroll, this.actor.getRollData());
       let label = dataset.label ? `${rollingstr} ${dataset.label}` : '';
 
       await roll1.evaluate({async: true});

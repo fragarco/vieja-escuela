@@ -19,6 +19,13 @@
   "scripts": [],
   "packs": [
     {
+      "name": "ve-macros",
+      "label": "VE Macros",
+      "system": "vieja-escuela",
+      "path": "./packs/ve-macros.db",
+      "entity": "Macro"
+    },
+    {
       "name": "veexp-talentos",
       "label": "VE Exp: Talentos",
       "system": "vieja-escuela",

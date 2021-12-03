@@ -30,7 +30,7 @@
     color: var(--color-label);
 }
 
-.vieja-escuela.sheet.item .name-line div.name-side-box {
+.vieja-escuela.sheet.item cd div.name-side-box {
     margin: 20px 0 0 0;
     top: 20px;
     max-width: 8em;
@@ -66,28 +66,10 @@
     padding: 0;
 }
 
-/*
-.vieja-escuela.sheet .sheet-header ul.level-box {
-    list-style: none;
-    max-width: 8em;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 20px; 
-  }
-
-.vieja-escuela.sheet .sheet-header ul.level-box input,
-.vieja-escuela.sheet .gear ul.money-box input {
+#attack-mod-selector,
+#damage-mod-selector {
     height: 20px;
-    margin: 0;
     border: 1px solid var(--color-label);
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
 }
-
-.vieja-escuela.sheet .sheet-header ul.summary {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-*/
