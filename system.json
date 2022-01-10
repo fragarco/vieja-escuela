@@ -2,9 +2,9 @@
   "name": "vieja-escuela",
   "title": "ViejaEscuela JdR",
   "description": "Vieja Escuela JdR system for Foundry VTT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "0.8.9",
+  "compatibleCoreVersion": "9",
   "templateVersion": 2,
   "author": "Javier 'Dwayne Hicks' Garcia",
   "esmodules": ["module/viejaescuela.js"],
@@ -79,6 +79,6 @@
   "secondaryTokenAttribute": null,
   "url": "https://github.com/fragarco/vieja-escuela",
   "manifest": "https://raw.githubusercontent.com/fragarco/vieja-escuela/main/system.json",
-  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.0.3.zip",
+  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.0.4.zip",
   "license": "LICENSE"
 }

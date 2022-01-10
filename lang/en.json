@@ -19,7 +19,7 @@
     "VEJDR.Notes": "Notes",
     
     "VEJDR.Mov": "Base Movement",
-    "VEJDR.Ins": "INSTINTS",
+    "VEJDR.Ins": "INSTINCTS",
     "VEJDR.Atk": "BASE ATTACK",
     "VEJDR.Def": "DEFENSE",
     "VEJDR.HP": "HIT POINTS",
@@ -103,7 +103,7 @@
     "VEJDR.DelItem": "Delete",
     "VEJDR.ModItem": "Edit",
     "VEJDR.Rolling": "Rolling",
-    "VEJDR.INSDialog": "Rolling Instints",
+    "VEJDR.INSDialog": "Rolling Instincts",
     "VEJDR.InsRollDetails": "Select relevant attribute",
 
     "VEJDR.Story": "Story, personality, appearance, etc.",
