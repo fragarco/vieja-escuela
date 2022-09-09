@@ -12,26 +12,26 @@
             </div>
             <ul class="flexrow">
                 <li>
-                    <input class="valuebox" type="text" name="data.number" value="{{data.number}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.number" value="{{system.number}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Number"}}/{{localize "VEJDR.Ammunition"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Weight"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.attacks" value="{{data.attacks}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.attacks" value="{{system.attacks}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Attacks"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.range" value="{{data.range}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.range" value="{{system.range}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Range"}}</label>
                 </li>
             </ul>
             <ul class="flexrow">
                 <li>
-                    <select id="attack-mod-selector" class="flexrow weapon-type" name="data.weapontype">
-                        {{#select data.weapontype}}
+                    <select id="attack-mod-selector" class="flexrow weapon-type" name="system.weapontype">
+                        {{#select system.weapontype}}
                         <option value="othtype">{{localize "VEJDR.TypeOTH"}}</option>
                         <option value="strtype">{{localize "VEJDR.TypeSTR"}}</option>
                         <option value="dextype">{{localize "VEJDR.TypeDEX"}}</option>
@@ -40,12 +40,12 @@
                     <label class="velabel">{{localize "VEJDR.AttackWith"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.addmod" value="{{numberFormat data.addmod decimals=0 sign=true}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.addmod" value="{{numberFormat system.addmod decimals=0 sign=true}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.AddMod"}}</label>
                 </li>
                 <li>
-                    <select id="damage-mod-selector" class="flexrow weapon-type" name="data.damagetype">
-                        {{#select data.damagetype}}
+                    <select id="damage-mod-selector" class="flexrow weapon-type" name="system.damagetype">
+                        {{#select system.damagetype}}
                         <option value="othtype">{{localize "VEJDR.TypeOTH"}}</option>
                         <option value="strtype">{{localize "VEJDR.TypeSTR"}}</option>
                         <option value="dextype">{{localize "VEJDR.TypeDEX"}}</option>
@@ -54,7 +54,7 @@
                     <label class="velabel">{{localize "VEJDR.DamageWith"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.damage" value="{{data.damage}}" data-dtype="String"/>
+                    <input class="valuebox" type="text" name="system.damage" value="{{system.damage}}" data-dtype="String"/>
                     <label class="velabel">{{localize "VEJDR.Damage"}}</label>
                 </li>
             </ul>
@@ -69,7 +69,7 @@
     <section class="sheet-body">
         {{!-- Description Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

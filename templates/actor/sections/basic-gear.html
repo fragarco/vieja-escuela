@@ -2,19 +2,19 @@
     <div style="text-align: center;">
         <ul class="money-box flexrow">
             <li>
-                <input name="data.money.gp" type="text" value="{{data.money.gp}}" data-dtype="Number"/>
-                <label class="velabel">{{localize data.money.gplabel}}</label>
+                <input name="system.money.gp" type="text" value="{{system.money.gp}}" data-dtype="Number"/>
+                <label class="velabel">{{localize system.money.gplabel}}</label>
             </li>
-            {{#if data.money.splabel}}
+            {{#if system.money.splabel}}
             <li>
-                <input name="data.money.sp" type="text" value="{{data.money.sp}}" data-dtype="Number"/>
-                <label class="velabel">{{localize data.money.splabel}}</label>
+                <input name="system.money.sp" type="text" value="{{system.money.sp}}" data-dtype="Number"/>
+                <label class="velabel">{{localize system.money.splabel}}</label>
             </li>
             {{/if}}
-            {{#if data.money.cplabel}}
+            {{#if system.money.cplabel}}
             <li>
-                <input name="data.money.cp" type="text" value="{{data.money.cp}}" data-dtype="Number"/>
-                <label class="velabel">{{localize data.money.cplabel}}</label>
+                <input name="system.money.cp" type="text" value="{{system.money.cp}}" data-dtype="Number"/>
+                <label class="velabel">{{localize system.money.cplabel}}</label>
             </li>
             {{/if}}
         </ul>
@@ -22,11 +22,11 @@
     <div style="text-align: center;">
         <ul class="weight-box flexrow">
             <li>
-                <input name="data.encumbrance.current" type="text" value="{{data.encumbrance.current}}" data-dtype="Number" readonly/>
+                <input name="system.encumbrance.current" type="text" value="{{system.encumbrance.current}}" data-dtype="Number" readonly/>
                 <label class="velabel">{{localize "VEJDR.Encumbrance"}}</label>
             </li>
             <li>
-                <input name="data.encumbrance.max" type="text" value="{{data.encumbrance.max}}" data-dtype="Number" readonly/>
+                <input name="system.encumbrance.max" type="text" value="{{system.encumbrance.max}}" data-dtype="Number" readonly/>
                 <label class="velabel">{{localize "VEJDR.MaxEncumbrance"}}</label>
             </li>
         </ul>
@@ -56,11 +56,11 @@
         <tr class="item" data-item-id="{{item._id}}">
             <td class="flexrow">
                 <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
-                <span title="{{ve_stripHTML item.data.description}}" class="storable gear-name">{{item.name}}</span>
+                <span title="{{ve_stripHTML item.system.description}}" class="storable gear-name">{{item.name}}</span>
             </td>
-            <td class="gear-values">{{item.data.number}}</td>
-            <td class="gear-values">{{item.data.weight}}</td>
-            <td class="gear-values">{{item.data.capacity}}</td>
+            <td class="gear-values">{{item.system.number}}</td>
+            <td class="gear-values">{{item.system.weight}}</td>
+            <td class="gear-values">{{item.system.capacity}}</td>
             <td class="gear-values">
                 <div class="item-controls">
                     <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
@@ -93,9 +93,9 @@
                 <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
                 <span class="storable gear-name">{{item.name}}</span>
             </td>
-            <td class="gear-values">{{item.data.number}}</td>
-            <td class="gear-values">{{item.data.weight}}</td>
-            <td class="gear-values">{{item.data.capacity}}</td>
+            <td class="gear-values">{{item.system.number}}</td>
+            <td class="gear-values">{{item.system.weight}}</td>
+            <td class="gear-values">{{item.system.capacity}}</td>
             <td class="gear-values">
                 <div class="item-controls">
                     <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>

@@ -2,16 +2,16 @@
     <div class="attributes flexcol">
         <h3 class="subhead">{{localize "VEJDR.Attributes"}}</h3>
         <ol>
-            {{#each data.attributes as |attribute key|}}
+            {{#each system.attributes as |attribute key|}}
             <li class="flexrow">
                 <label class="rollable" data-roll="1d20 + {{attribute.mod}}" data-label="{{localize attribute.label}}">{{localize attribute.label}}</label>
-                <input type="text" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+                <input type="text" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
                 <span>{{numberFormat attribute.mod decimals=0 sign=true}}</span>
             </li>
             {{/each}}
             <li class="flexrow">
-                <label class="rollable">{{localize data.traits.soul.label}}</label>
-                <input type="text" name="data.traits.soul.value" value="{{data.traits.soul.value}}" data-dtype="Number"/>
+                <label class="rollable">{{localize system.traits.soul.label}}</label>
+                <input type="text" name="system.traits.soul.value" value="{{system.traits.soul.value}}" data-dtype="Number"/>
                 <span></span>
             </li>
         </ol>
@@ -19,10 +19,10 @@
     <div class="skills flexcol">
         <h3 class="subhead">{{localize "VEJDR.Skills"}}</h3>
         <ol>
-            {{#each data.skills as |skill key|}}
+            {{#each system.skills as |skill key|}}
                 <li class="flexrow">
                     <label class="rollable" data-roll="1d20 + {{skill.value}}" data-label="{{localize skill.label}}">{{localize skill.label}}</label>
-                    <input type="number" name="data.skills.{{key}}.value" value="{{numberFormat skill.value decimals=0 sign=true}}" data-dtype="Number"/>
+                    <input type="number" name="system.skills.{{key}}.value" value="{{numberFormat skill.value decimals=0 sign=true}}" data-dtype="Number"/>
                 </li>
             {{/each}}
         </ol>

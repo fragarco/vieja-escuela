@@ -24,14 +24,14 @@
         <tr class="item" data-item-id="{{item._id}}">
             <td class="flexrow">
                 <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
-                <span title="{{ve_stripHTML item.data.description}}" class="attackroll gear-name" data-damage="{{item.data.damage}}" data-damagemod="{{item.data.damagetype}}" data-roll="1d20 + {{item.data.attackmod}}" data-label="{{item.name}}">{{item.name}}</span>
+                <span title="{{ve_stripHTML item.system.description}}" class="attackroll gear-name" data-damage="{{item.system.damage}}" data-damagemod="{{item.system.damagetype}}" data-roll="1d20 + {{item.system.attackmod}}" data-label="{{item.name}}">{{item.name}}</span>
             </td>
-            <td class="gear-values">{{item.data.attacks}}</td>
+            <td class="gear-values">{{item.system.attacks}}</td>
             <td class="gear-values">
-                <span class="attackroll gear-name" data-damage="{{item.data.damage}}" data-damagemod="{{item.data.damagetype}}" data-roll="1d20 + {{item.data.attackmod}}" data-label="{{item.name}}">{{numberFormat item.data.attackmod decimals=0 sign=true}}</span>
+                <span class="attackroll gear-name" data-damage="{{item.system.damage}}" data-damagemod="{{item.system.damagetype}}" data-roll="1d20 + {{item.system.attackmod}}" data-label="{{item.name}}">{{numberFormat item.system.attackmod decimals=0 sign=true}}</span>
             </td>
-            <td class="gear-values">{{item.data.range}}</td>
-            <td class="gear-values">{{item.data.damage}}</td>
+            <td class="gear-values">{{item.system.range}}</td>
+            <td class="gear-values">{{item.system.damage}}</td>
             <td class="gear-values">
                 <div class="item-controls">
                     <a class="item-control item-edit" title="{{localize 'VEJDR.ModItem'}}"><i class="fas fa-edit"></i></a>
@@ -63,9 +63,9 @@
         <tr class="item" data-item-id="{{item._id}}">
             <td class="flexrow">
                 <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
-                <span title="{{ve_stripHTML item.data.description}}" class="gear-name">{{item.name}}</span>
+                <span title="{{ve_stripHTML item.sistem.description}}" class="gear-name">{{item.name}}</span>
             </td>
-            <td class="gear-values">{{numberFormat item.data.defmod decimals=0 sign=true}}</td>
+            <td class="gear-values">{{numberFormat item.system.defmod decimals=0 sign=true}}</td>
             <td class="gear-values"></td>
             <td class="gear-values">
                 <div class="item-controls">

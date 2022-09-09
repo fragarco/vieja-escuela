@@ -7,13 +7,14 @@
         <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'VEJDR.Name'}}"/>
         <label class="velabel">{{localize 'VEJDR.Name'}}</label>
     </h1>
+
     <ul class="level-box flexrow">
         <li>
-            <input name="data.header.level.value" type="text" value="{{data.header.level.value}}" data-dtype="Number"/>
+            <input name="system.header.level.value" type="text" value="{{system.header.level.value}}" data-dtype="Number"/>
             <label class="velabel">{{localize "VEJDR.Level"}}</label>
         </li>
         <li>
-            <input name="data.header.xp.value" type="text" value="{{data.header.xp.value}}" data-dtype="Number"/>
+            <input name="system.header.xp.value" type="text" value="{{system.header.xp.value}}" data-dtype="Number"/>
             <label class="velabel">{{localize "VEJDR.XP"}}</label>
         </li>
     </ul>
@@ -21,15 +22,15 @@
     <div class="flexrow">
     <ul class="summary flexrow">
         <li>
-            <input type="text" name="data.header.class.value" value="{{data.header.class.value}}" data-dtype="String"/>
+            <input type="text" name="system.header.class.value" value="{{system.header.class.value}}" data-dtype="String"/>
             <label class="velabel">{{localize "VEJDR.Class"}}</label>
         </li>
         <li>
-            <input type="text" name="data.header.race.value" value="{{data.header.race.value}}" data-dtype="String"/>
+            <input type="text" name="system.header.race.value" value="{{system.header.race.value}}" data-dtype="String"/>
             <label class="velabel">{{localize "VEJDR.Race"}}</label>
         </li>
         <li style="max-width: 8em;">
-            <input type="text" name="data.traits.mov.value" value="{{data.traits.mov.value}}" data-dtype="Number"/>
+            <input type="text" name="system.traits.mov.value" value="{{system.traits.mov.value}}" data-dtype="Number"/>
             <label class="velabel">{{localize "VEJDR.Mov"}}</label>
         </li>
     </ul>
@@ -38,39 +39,39 @@
     <ul class="traits flexrow">
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.hp.value" value="{{data.traits.hp.value}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.hp.value" value="{{system.traits.hp.value}}" data-dtype="Number"/>
                 <span class=>|</span>
-                <input type="text" name="data.traits.hp.max" value="{{data.traits.hp.max}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.hp.max" value="{{system.traits.hp.max}}" data-dtype="Number"/>
             </div>
             <h4>{{localize "VEJDR.HP"}}</h4>
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.mp.value" value="{{data.traits.mp.value}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.mp.value" value="{{system.traits.mp.value}}" data-dtype="Number"/>
                 <span>|</span>
-                <input type="text" name="data.traits.mp.max" value="{{data.traits.mp.max}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.mp.max" value="{{system.traits.mp.max}}" data-dtype="Number"/>
             </div>
-            <h4>{{localize data.traits.mp.label}}</h4>
+            <h4>{{localize system.traits.mp.label}}</h4>
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.atk.value" value="{{numberFormat data.traits.atk.value decimals=0 sign=true}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.atk.value" value="{{numberFormat system.traits.atk.value decimals=0 sign=true}}" data-dtype="Number"/>
             </div>
             <h4>{{localize "VEJDR.Atk"}}</h4>
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.def.base" value="{{data.traits.def.base}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.def.base" value="{{system.traits.def.base}}" data-dtype="Number"/>
                 <span class=>|</span>
-                <input type="text" name="data.traits.def.current" value="{{data.traits.def.current}}" data-dtype="Number" readonly/>
+                <input type="text" name="system.traits.def.current" value="{{system.traits.def.current}}" data-dtype="Number" readonly/>
             </div>
             <h4>{{localize "VEJDR.Def"}}</h4>
         </li>
         <li>
             <div class="flexrow">
-                <input type="text" name="data.traits.ins.value" value="{{numberFormat data.traits.ins.value decimals=0 sign=true}}" data-dtype="Number"/>
+                <input type="text" name="system.traits.ins.value" value="{{numberFormat system.traits.ins.value decimals=0 sign=true}}" data-dtype="Number"/>
             </div>
-            <h4 class="insroll" data-roll="1d20 + {{data.traits.ins.value}}" data-label="{{localize 'VEJDR.Ins'}}">{{localize "VEJDR.Ins"}}</h4>
+            <h4 class="insroll" data-roll="1d20 + {{system.traits.ins.value}}" data-label="{{localize 'VEJDR.Ins'}}">{{localize "VEJDR.Ins"}}</h4>
         </li>
     </ul>
     </div>

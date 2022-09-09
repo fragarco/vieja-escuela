@@ -18,7 +18,7 @@ export class VEActorSheet extends ActorSheet {
   get template() {
     const path = "systems/vieja-escuela/templates/actor";
     let sheet = "";
-    const atype = this.actor.data.type; 
+    const atype = this.actor.type; 
     const hack = game.settings.get("vieja-escuela", "flavor");
     switch (hack) {
       case 'fantasy':
@@ -46,23 +46,22 @@ export class VEActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
-    let isOwner = this.actor.isOwner;
-    const data = super.getData();
+  getData(options) {
+    const context = super.getData(options);
 
     // Redefine the template data references to the actor.
-    const actorData = this.actor.data.toObject(false);
-    data.actor = actorData;
-    data.data = actorData.data;
-    data.rollData = this.actor.getRollData.bind(this.actor);
+    const actorData = this.actor.toObject(false);
+    context.actor = actorData;
+    context.system = actorData.system;
+    context.rollData = this.actor.getRollData.bind(this.actor);
 
     // Owned items.
-    data.items = actorData.items;
-    data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.items = actorData.items;
+    context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     // Prepare items. Could be filtered if needed by type
-    // using this.actor.data.type
-    this._prepareBaseCharacterItems(data);
-    return data;
+    // using this.actor.type
+    this._prepareBaseCharacterItems(context);
+    return context;
   }
 
   /**
@@ -88,7 +87,7 @@ export class VEActorSheet extends ActorSheet {
 
     // Iterate through items, allocating to containers
     for (let i of sheetData.items) {
-      let item = i.data;
+      let item = i.system;
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       switch (i.type) {
@@ -124,8 +123,8 @@ export class VEActorSheet extends ActorSheet {
     }
     // Reorder spells for minmp and then by name 
     spells.sort((a, b) => {
-      if (a.data.minmp > b.data.minmp) return 1;
-      else if (a.data.minmp === b.data.minmp && a.name > b.name) return 1;
+      if (a.system.minmp > b.system.minmp) return 1;
+      else if (a.system.minmp === b.system.minmp && a.name > b.name) return 1;
       return -1;
     });
 
@@ -172,7 +171,7 @@ export class VEActorSheet extends ActorSheet {
     html.find('.storable').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
-      const stored = !item.data.data.stored;
+      const stored = !item.system.stored;
       item.update({'data.stored': stored});
     });
 
@@ -210,10 +209,10 @@ export class VEActorSheet extends ActorSheet {
     const itemData = {
       name: name,
       type: type,
-      data: data
+      system: data
     };
     // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.data["type"];
+    delete itemData.system["type"];
 
     // Finally, create the item!
     return await Item.create(itemData, {parent: this.actor});

@@ -44,20 +44,6 @@ Hooks.once('init', async function() {
   });
 
   // Handlebars helpers, we use prefix "ve_" to avoid problems with other modules
-  Handlebars.registerHelper('ve_concat', function() {
-    var outStr = '';
-    for (var arg in arguments) {
-      if (typeof arguments[arg] != 'object') {
-        outStr += arguments[arg];
-      }
-    }
-    return outStr;
-  });
-
-  Handlebars.registerHelper('ve_toLowerCase', function(str) {
-    return str.toLowerCase();
-  });
-
   Handlebars.registerHelper('ve_max', function(num1, num2) {
     return Math.max(num1, num2);
   });

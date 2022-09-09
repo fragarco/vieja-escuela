@@ -12,11 +12,11 @@
             </div>
             <ul class="flexrow flex0">
                 <li>
-                    <input class="valuebox" type="text" name="data.defmod" value="{{numberFormat data.defmod decimals=0 sign=true}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.defmod" value="{{numberFormat system.defmod decimals=0 sign=true}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.DefMod"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Weight"}}</label>
                 </li>
             </ul>
@@ -31,7 +31,7 @@
     <section class="sheet-body">
         {{!-- Description Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

@@ -17,7 +17,7 @@ export class VEItemSheet extends ItemSheet {
   /** @override */
   get template() {
     const path = "systems/vieja-escuela/templates/item";
-    return `${path}/item-${this.item.data.type}-sheet.html`;
+    return `${path}/item-${this.item.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -25,15 +25,15 @@ export class VEItemSheet extends ItemSheet {
   /** @override */
   getData() {
     // Retrieve base data structure.
-    const data = super.getData();
+    const context = super.getData();
 
-    // Grab the item's data.
-    const itemData = data.data;
+    // Grab the item
+    const item = context.data;
 
     // Re-define the template data references.
-    data.item = itemData;
-    data.data = itemData.data;
-    return data;
+    context.item = item;
+    context.system = item.system;
+    return context;
   }
 
   /* -------------------------------------------- */

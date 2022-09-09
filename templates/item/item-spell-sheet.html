@@ -10,12 +10,12 @@
                     <label class="velabel">{{localize 'VEJDR.Name'}}</label>
                 </h1>
                 <div class="name-side-box">
-                    <input name="data.minmp" type="text" value="{{data.minmp}}" data-dtype="Number"/>
+                    <input name="system.minmp" type="text" value="{{system.minmp}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.SpellMinPow"}}</label>
                 </div>
             </div>
             <div>
-                <input class="description-line" type="text" name="data.description" value="{{data.description}}" data-dtype="String"/>
+                <input class="description-line" type="text" name="system.description" value="{{system.description}}" data-dtype="String"/>
                 <label class="velabel">{{localize "VEJDR.Description"}}</label>
             </div>
         </div>
@@ -30,7 +30,7 @@
     <section class="sheet-body">
         {{!-- Notes Tab --}}
         <div class="tab" data-group="primary" data-tab="notes">
-            {{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+            {{editor system.notes target="system.notes" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

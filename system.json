@@ -1,12 +1,16 @@
 {
-  "name": "vieja-escuela",
+  "id": "vieja-escuela",
+  "version": "1.1.0",
   "title": "ViejaEscuela JdR",
+  "url": "https://github.com/fragarco/vieja-escuela",
   "description": "Vieja Escuela JdR system for Foundry VTT",
-  "version": "1.0.5",
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "9",
-  "templateVersion": 2,
-  "author": "Javier 'Dwayne Hicks' Garcia",
+  "license": "LICENSE",
+  "authors": [
+    {
+      "name": "Javier 'Dwayne Hicks' Garcia",
+      "url": "https://cabohicks.blogspot.com"
+    }
+  ],
   "esmodules": ["module/viejaescuela.js"],
   "styles": [
     "css/grid.css",
@@ -23,42 +27,42 @@
       "label": "VE Macros",
       "system": "vieja-escuela",
       "path": "./packs/ve-macros.db",
-      "entity": "Macro"
+      "type": "Macro"
     },
     {
       "name": "veexp-talentos",
       "label": "VE Exp: Talentos",
       "system": "vieja-escuela",
       "path": "./packs/veexp-talentos.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "veexp-trasfondos",
       "label": "VE Exp: Trasfondos básicos",
       "system": "vieja-escuela",
       "path": "./packs/veexp-trasfondos.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "veexp-equipo",
       "label": "VE Exp: Equipo",
       "system": "vieja-escuela",
       "path": "./packs/veexp-equipo.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "veexp-conjuros",
       "label": "VE Exp: Conjuros",
       "system": "vieja-escuela",
       "path": "./packs/veexp-conjuros.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "veexp-bestiario",
       "label": "VE Exp: Bestiario",
       "system": "vieja-escuela",
       "path": "./packs/veexp-bestiario.db",
-      "entity": "Actor"
+      "type": "Actor"
     }
   ],
   "languages": [
@@ -73,12 +77,15 @@
       "path": "lang/en.json"
     }
   ],
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.282",
+    "maximum": "10"
+  },
   "gridDistance": 3,
   "gridUnits": "m",
-  "primaryTokenAttribute": null,
-  "secondaryTokenAttribute": null,
-  "url": "https://github.com/fragarco/vieja-escuela",
+  "primaryTokenAttribute": "traits.hp",
+  "secondaryTokenAttribute": "traits.mp",
   "manifest": "https://raw.githubusercontent.com/fragarco/vieja-escuela/main/system.json",
-  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.0.5.zip",
-  "license": "LICENSE"
+  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.1.0.zip"
 }

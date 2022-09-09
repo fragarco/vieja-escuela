@@ -5,17 +5,15 @@
 export class VEActor extends Actor {
 
   /**
-   * Augment the basic actor data with additional dynamic data.
+   * Calculate all derived actor data.
+   * @inheritdoc
    */
-  prepareData() {
-    super.prepareData();
-
-    const actorData = this.data;
-    const data = actorData.data;
-    const flags = actorData.flags;
-
+  prepareDerivedData(options) {
+    super.prepareDerivedData(options);
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
+
+    const actorData = this;
     switch (actorData.type) {
       case 'player':
         this._prepareCharacterData(actorData);
@@ -66,7 +64,7 @@ export class VEActor extends Actor {
    */
   _applySelectedHack(actorData) {
     const hack = game.settings.get("vieja-escuela", "flavor");
-    const data = actorData.data;
+    const data = actorData.system;
     switch (hack) {
       case 'fantasy':
         data.traits.mp.label = "VEJDR.MP";
@@ -112,7 +110,7 @@ export class VEActor extends Actor {
    * calculate encumbrance data 
    */
   _prepareEncumbranceData(actorData) {
-    const data = actorData.data;
+    const data = actorData.system;
 
     data.encumbrance.max = data.attributes.str.value;
     // encumbrance due to coins
@@ -120,11 +118,10 @@ export class VEActor extends Actor {
     let encumbrance = Math.floor(coins/100);
 
     // encumbrance due to carried items
-    for (let i of actorData.items) {
-      const item = i.data;
+    for (let item of actorData.items) {
       if (item.type === 'weapon' || item.type === 'armor' || item.type === 'gear') {
-        if (!item.data.stored) {
-          encumbrance = encumbrance + item.data.weight;
+        if (!item.system.stored) {
+          encumbrance = encumbrance + item.system.weight;
         }
       }
     }
@@ -135,7 +132,7 @@ export class VEActor extends Actor {
    * Calculate character attribute modificators
    */
    _prepareAttributesData(actorData) {
-    const data = actorData.data;
+    const data = actorData.system;
     const modscale = game.settings.get("vieja-escuela", "attribute-mods");
     // attribute mods
     for (let [key, attribute] of Object.entries(data.attributes)) {
@@ -165,12 +162,11 @@ export class VEActor extends Actor {
    * Dex modificator should be added by hand by the user to the base value. 
    */
   _prepareDefenseData(actorData) {
-    const data = actorData.data;
+    const data = actorData.system;
     let def = data.traits.def.base;
-    for (let i of actorData.items) {
-      const item = i.data;
-      if (item.type === 'armor' && !item.data.stored) {
-          def = def + item.data.defmod;
+    for (let item of actorData.items) {
+      if (item.type === 'armor' && !item.system.stored) {
+          def = def + item.system.defmod;
       }
     }
     data.traits.def.current = def;
@@ -181,20 +177,19 @@ export class VEActor extends Actor {
    * Calculate attack values for all equiped weapons.
    */
    _prepareAttackData(actorData) {
-    const data = actorData.data;
-    for (let i of actorData.items) {
-      const item = i.data;
-      const base = item.data.addmod + data.traits.atk.value;
+    const data = actorData.system;
+    for (let item of actorData.items) {
+      const base = item.system.addmod + data.traits.atk.value;
       if (item.type === 'weapon') {
-        switch(item.data.weapontype) {
+        switch(item.system.weapontype) {
           case "strtype":
-            item.data.attackmod = base + data.attributes.str.mod;
+            item.system.attackmod = base + data.attributes.str.mod;
             break;
           case "dextype":
-            item.data.attackmod = base + data.attributes.dex.mod;
+            item.system.attackmod = base + data.attributes.dex.mod;
             break;
           case "othtype":
-            item.data.attackmod = base;
+            item.system.attackmod = base;
             break;
         }
       }

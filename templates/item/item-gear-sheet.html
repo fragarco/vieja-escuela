@@ -12,15 +12,15 @@
             </div>
             <ul class="flexrow">
                 <li>
-                    <input class="valuebox" type="text" name="data.number" value="{{data.number}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.number" value="{{system.number}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Number"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Weight"}}</label>
                 </li>
                 <li>
-                    <input class="valuebox" type="text" name="data.capacity" value="{{data.capacity}}" data-dtype="Number"/>
+                    <input class="valuebox" type="text" name="system.capacity" value="{{system.capacity}}" data-dtype="Number"/>
                     <label class="velabel">{{localize "VEJDR.Capacity"}}</label>
                 </li>
             </ul>
@@ -35,7 +35,7 @@
     <section class="sheet-body">
         {{!-- Description Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>
