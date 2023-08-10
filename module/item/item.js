@@ -32,10 +32,11 @@ export class VEItem extends Item {
         label: item.name
       });
     } else {
+      const trail = item.system.notes !== undefined? "<hr/>" + item.system.notes : "";
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: "<h2>" + item.name + "</h2>",
-        content: item.system.description
+        content: item.system.description + trail
       });
     }
   }

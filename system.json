@@ -1,6 +1,6 @@
 {
   "id": "vieja-escuela",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "title": "ViejaEscuela JdR",
   "url": "https://github.com/fragarco/vieja-escuela",
   "description": "Vieja Escuela JdR system for Foundry VTT",
@@ -8,10 +8,13 @@
   "authors": [
     {
       "name": "Javier 'Dwayne Hicks' Garcia",
-      "url": "https://cabohicks.blogspot.com"
+      "url": "https://cabohicks.blogspot.com",
+      "flags": {}
     }
   ],
-  "esmodules": ["module/viejaescuela.js"],
+  "esmodules": [
+    "module/viejaescuela.js"
+  ],
   "styles": [
     "css/grid.css",
     "css/fonts.css",
@@ -20,72 +23,102 @@
     "css/rolls.css",
     "css/items.css"
   ],
-  "scripts": [],
   "packs": [
     {
       "name": "ve-macros",
       "label": "VE Macros",
       "system": "vieja-escuela",
-      "path": "./packs/ve-macros.db",
-      "type": "Macro"
+      "path": "packs/ve-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "veexp-talentos",
       "label": "VE Exp: Talentos",
       "system": "vieja-escuela",
-      "path": "./packs/veexp-talentos.db",
-      "type": "Item"
+      "path": "packs/veexp-talentos",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "veexp-trasfondos",
       "label": "VE Exp: Trasfondos básicos",
       "system": "vieja-escuela",
-      "path": "./packs/veexp-trasfondos.db",
-      "type": "Item"
+      "path": "packs/veexp-trasfondos",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "veexp-equipo",
       "label": "VE Exp: Equipo",
       "system": "vieja-escuela",
-      "path": "./packs/veexp-equipo.db",
-      "type": "Item"
+      "path": "packs/veexp-equipo",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "veexp-conjuros",
       "label": "VE Exp: Conjuros",
       "system": "vieja-escuela",
-      "path": "./packs/veexp-conjuros.db",
-      "type": "Item"
+      "path": "packs/veexp-conjuros",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "veexp-bestiario",
       "label": "VE Exp: Bestiario",
       "system": "vieja-escuela",
-      "path": "./packs/veexp-bestiario.db",
-      "type": "Actor"
+      "path": "packs/veexp-bestiario",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "es",
       "name": "Spanish",
-      "path": "lang/es.json"
+      "path": "lang/es.json",
+      "flags": {}
     },
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     }
   ],
   "compatibility": {
     "minimum": "10",
-    "verified": "10.282",
-    "maximum": "10"
+    "verified": "11"
   },
   "gridDistance": 3,
   "gridUnits": "m",
   "primaryTokenAttribute": "traits.hp",
   "secondaryTokenAttribute": "traits.mp",
   "manifest": "https://raw.githubusercontent.com/fragarco/vieja-escuela/main/system.json",
-  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.1.0.zip"
+  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.2.1.zip"
 }

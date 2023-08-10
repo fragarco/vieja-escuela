@@ -179,6 +179,7 @@ export class VEActorSheet extends ActorSheet {
     html.find('.rollable').click(this._onSimpleDualRoll.bind(this));
     html.find('.insroll').click(this._onInsRoll.bind(this));
     html.find('.attackroll').click(this._onAttackRoll.bind(this));
+    html.find('.chatinfo').click(this._onPrintItemOnChat.bind(this));
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
@@ -216,6 +217,18 @@ export class VEActorSheet extends ActorSheet {
 
     // Finally, create the item!
     return await Item.create(itemData, {parent: this.actor});
+  }
+
+  /**
+   * callback for clickable info we want to show in the chat.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  async _onPrintItemOnChat(event) {
+    event.preventDefault();
+    const li = $(event.currentTarget).parents(".item");
+    const item = this.actor.items.get(li.data("itemId"));
+    await item.roll();
   }
 
   /**

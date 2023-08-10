@@ -55,8 +55,8 @@
         {{#each gear as |item id|}}
         <tr class="item" data-item-id="{{item._id}}">
             <td class="flexrow">
-                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
-                <span title="{{ve_stripHTML item.system.description}}" class="storable gear-name">{{item.name}}</span>
+                <img class="storable item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span title="{{ve_stripHTML item.system.description}}" class="chatinfo gear-name">{{item.name}}</span>
             </td>
             <td class="gear-values">{{item.system.number}}</td>
             <td class="gear-values">{{item.system.weight}}</td>
@@ -90,8 +90,8 @@
         {{#each stored as |item id|}}
         <tr class="item" data-item-id="{{item._id}}">
             <td class="flexrow">
-                <img class="item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
-                <span class="storable gear-name">{{item.name}}</span>
+                <img class="storable item-image" src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+                <span class="chatinfo gear-name">{{item.name}}</span>
             </td>
             <td class="gear-values">{{item.system.number}}</td>
             <td class="gear-values">{{item.system.weight}}</td>
