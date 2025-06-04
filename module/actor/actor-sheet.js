@@ -168,11 +168,11 @@ export class VEActorSheet extends ActorSheet {
     });
 
     // Carry/Store inventory item
-    html.find('.storable').click(ev => {
+    html.find('.storable').click(async ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       const stored = !item.system.stored;
-      item.update({'data.stored': stored});
+      await item.update({'system.stored': stored});
     });
 
     // Rollable abilities.
