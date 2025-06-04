@@ -1,6 +1,7 @@
 # SISTEMA VIEJA ESCUELA PARA FOUNDRY VTT
 
 Sistema para Foundry VTT que permite jugar con partidas basadas en Vieja Escuela JdR y varios de sus sabores adicionales (Pulp!, Cyberpunk, Peplum, etc.)
+Esta versión es compatible con Foundry VTT **v12** y **v13**.
 
 ## INTRODUCCIÓN
 
