@@ -112,8 +112,8 @@
     }
   ],
   "compatibility": {
-    "minimum": "10",
-    "verified": "11"
+    "minimum": "12",
+    "verified": "12"
   },
   "gridDistance": 3,
   "gridUnits": "m",

@@ -1,6 +1,7 @@
 # VIEJA ESCUELA FOUNDRY VTT SYSTEM
 
 Foundry VTT system for playing Vieja Escuela el Juego de Rol (Vieja Escuela JdR).
+This version is compatible with Foundry VTT **v12**.
 
 ## INTRODUCTION
 
