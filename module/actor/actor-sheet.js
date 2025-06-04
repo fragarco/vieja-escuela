@@ -168,11 +168,11 @@ export class VEActorSheet extends ActorSheet {
     });
 
     // Carry/Store inventory item
-    html.find('.storable').click(ev => {
+    html.find('.storable').click(async ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       const stored = !item.system.stored;
-      item.update({'data.stored': stored});
+      await item.update({'system.stored': stored});
     });
 
     // Rollable abilities.
@@ -203,7 +203,7 @@ export class VEActorSheet extends ActorSheet {
     // Get the type of item to create.
     const type = header.dataset.type;
     // Grab any data associated with this control.
-    const data = duplicate(header.dataset);
+    const data = foundry.utils.deepClone(header.dataset);
     // Initialize a default name.
     const name = `New ${type.capitalize()}`;
     // Prepare the item object.
