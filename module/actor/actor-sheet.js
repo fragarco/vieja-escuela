@@ -172,7 +172,7 @@ export class VEActorSheet extends ActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       const stored = !item.system.stored;
-      item.update({'data.stored': stored});
+      item.update({'system.stored': stored});
     });
 
     // Rollable abilities.
