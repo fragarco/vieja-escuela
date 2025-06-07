@@ -115,10 +115,12 @@
     "minimum": "12",
     "verified": "13"
   },
-  "gridDistance": 3,
-  "gridUnits": "m",
+  "grid": {
+    "distance": 3,
+    "units": "m"
+  },
   "primaryTokenAttribute": "traits.hp",
   "secondaryTokenAttribute": "traits.mp",
   "manifest": "https://raw.githubusercontent.com/fragarco/vieja-escuela/main/system.json",
-  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.2.1.zip"
+  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.2.2.zip"
 }
