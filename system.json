@@ -1,6 +1,6 @@
 {
   "id": "vieja-escuela",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "title": "ViejaEscuela JdR",
   "url": "https://github.com/fragarco/vieja-escuela",
   "description": "Vieja Escuela JdR system for Foundry VTT",
@@ -122,5 +122,5 @@
   "primaryTokenAttribute": "traits.hp",
   "secondaryTokenAttribute": "traits.mp",
   "manifest": "https://raw.githubusercontent.com/fragarco/vieja-escuela/main/system.json",
-  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.2.2.zip"
+  "download": "https://github.com/fragarco/vieja-escuela/archive/refs/tags/v1.2.3.zip"
 }
